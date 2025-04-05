@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DEVART - Oferta{% endblock %}
+
+{% block body %}
+<style>
+.offer-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.offer-header {
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    max-width: 300px;
+    background-color: #19191982;
+    border: 1px solid #3A3A3A;
+    padding: 30px;
+    border-radius: 10px;
+}
+</style>
+<div class="offer-header">
+    <h1>Co u nas znajdziesz</h1>
+</div>
+<div class="offer-main">
+    <div class="card">
+        <div class="card-header">
+            <h3>STRONY INTERNETOWE</h3>
+        </div>
+        <div class="card-body">
+            <p>
+                Potrzebujesz strony, która będzie reprezentować twój biznes?
+            </p>
+            <p>
+                My zrobimy ją dla ciebie.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h3>APLIKACJE WEWNĘTRZNE</h3>
+        </div>
+        <div class="card-body">
+            <p>
+                Chcesz mieć wydajny system, by usprawnił procesy w twojej firmie?
+            </p>
+            <p>
+                Skontaktuj się z nami.
+            </p>
+        </div>
+    </div>
+</div> 
+{% endblock %}

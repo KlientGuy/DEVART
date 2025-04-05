@@ -12,4 +12,10 @@ class AppController extends AbstractController
     {
         return $this->render('app/index.html.twig');
     }
+
+    #[Route('/offer', name: 'app_offer', methods: ['GET'])]
+    public function offer()
+    {
+        return $this->render('app/offer.html.twig');
+    }
 }

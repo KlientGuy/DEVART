@@ -1,8 +1,14 @@
 body {
     font-family: 'Poppins';
-    padding: 1rem 5rem;
+    /* padding: 1rem 5rem; */
     background-color: #191919;
     color: white;
+    overflow-x: hidden;
+}
+
+.app {
+    padding: 1rem 5rem;
+    /* overflow-x: hidden; */
 }
 
 .logo{
@@ -23,15 +29,25 @@ body {
 }
 
 .slogan-text {
-    font-family: 'Poppins ExtraBold';
+    /* font-family: 'Poppins ExtraBold'; */
+    font-weight: 700;
     font-size: 24px;
     text-align: center;
 }
 
 .slogan-subtext {
-    font-family: 'Poppins Thin';
+    /* font-family: 'Poppins Thin'; */
+    font-weight: 300;
     font-size: 20px;
     text-align: center;
+}
+
+.slogan-left {
+    flex: 1;
+    /* font-family: 'Poppins Thin'; */
+    font-weight: 300;
+    display: flex;
+    justify-content: center
 }
 
 header, footer {
@@ -87,22 +103,38 @@ footer {
 .background {
     z-index: -1;
     position: absolute;
-    right: 2vw;
+    right: -30vw;
+    /* top: 25vh; */
+    top: 200px;
+    aspect-ratio: 1;
+    width: 60vw;
+    /* background: radial-gradient(circle, rgba(23,0,69,1) 0%, rgba(25,25,25,1) 75%); */
+    background: radial-gradient(circle, #002284 0%, rgba(25,25,25,1) 75%);
+    background-repeat: no-repeat;
+}
+.background-2 {
+    z-index: -1;
+    position: absolute;
+    left: -30vw;
+    /* top: 25vh; */
     top: 0;
     aspect-ratio: 1;
-    width: 55vw;
-    background: radial-gradient(circle, rgba(23,0,69,1) 0%, rgba(25,25,25,1) 75%);
+    width: 60vw;
+    /* background: radial-gradient(circle, rgba(23,0,69,1) 0%, rgba(25,25,25,1) 75%); */
+    background: radial-gradient(circle, #002284 0%, rgba(25,25,25,1) 75%);
     background-repeat: no-repeat;
 }
 
 .background::before {
-    z-index: -1;
-    position: absolute;
-    content: '';
-    left: -40vw;
-    top: -15vh;
-    aspect-ratio: 1;
-    width: 50vw;
-    background: radial-gradient(circle, rgba(52,0,0,1) 0%, rgba(25,25,25,0) 70%);
-    background-repeat: no-repeat;
+    /* z-index: -1; */
+    /* position: absolute; */
+    /* content: ''; */
+    /* left: -80vw; */
+    /* top: -50vh; */
+    /* top: -400px; */
+    /* aspect-ratio: 1; */
+    /* width: 60vw; */
+    /* background: radial-gradient(circle, rgba(52,0,0,1) 0%, rgba(25,25,25,0) 70%); */
+    /* background: radial-gradient(circle, #002284 0%, rgba(25,25,25,0) 70%); */
+    /* background-repeat: no-repeat; */
 }

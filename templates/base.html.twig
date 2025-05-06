@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         {% endblock %}
@@ -28,16 +29,17 @@
                 </nav>
             </header>
             <div class="logo">
-                <div style="flex: 1; font-family: 'Poppins Thin'; display: flex; justify-content: center">
+                <div class="slogan-left">
                     <div style="font-size: 20px;rotate: 90deg; width: max-content">thinking first</div>
                 </div>
-                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" width="416">
+                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" style="max-width: 50%;">
                 <div style="flex: 1"></div>
             </div>
             <div class="slogan-wrapper">
                 <div class="slogan-text">agencja brandingowa.</div>
                 <div class="slogan-subtext">thinking people</div>
             </div>
+            <div class="background-2"></div>
             <div class="background"></div>
             <main>
                 {% block body %}{% endblock %}

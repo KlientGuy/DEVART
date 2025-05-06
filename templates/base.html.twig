@@ -17,46 +17,57 @@
     <body>
         <div class="app">
             <header>
-                <div class="logo">
-                    <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo">
+                <div>
+                    <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">
                 </div>
-                <div class="nav-menu">
-                    <a href="{{ path('app_offer') }}" class="nav-btn">Oferta</a>
-                    <a href="#" class="nav-btn">O nas</a>
-                    <a href="#" class="nav-btn">Portfolio</a>
+                <nav class="nav-menu">
+                    <a href="{{ path('app_offer') }}" class="nav-btn">Portfolio</a>
+                    <a href="#" class="nav-btn">Oferta</a>
                     <a href="#" class="nav-btn">Kontakt</a>
-                </div>
+                    <a href="#" class="nav-btn"><img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska" width="60" height="30"></a>
+                </nav>
             </header>
+            <div class="logo">
+                <div style="flex: 1; font-family: 'Poppins Thin'; display: flex; justify-content: center">
+                    <div style="font-size: 20px;rotate: 90deg; width: max-content">thinking first</div>
+                </div>
+                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" width="416">
+                <div style="flex: 1"></div>
+            </div>
+            <div class="slogan-wrapper">
+                <div class="slogan-text">agencja brandingowa.</div>
+                <div class="slogan-subtext">thinking people</div>
+            </div>
             <div class="background"></div>
             <main>
                 {% block body %}{% endblock %}
             </main>
             <footer>
-                <div id="main-info">
-                    <p>
-                        Devart sp. z o. o. <br>
-                        Tadeusza Kościuszki 35 <br>
-                        Kraków <br>
-                    </p>
-                    <p>
-                        NIP: 0000000000
-                    </p>
-                <div class="logo">
-                    <img src="{{ asset('svg/logo.svg') }}" alt="logo">
-                </div>
-                </div>
-                <div id="contact-info">
-                    <h3>Kontakt</h3>
-                    <p>
-                        Biuro: <br>
-                        biuro@devartists.com <br>
-                        Tadeusza Kościuszki 35, 32-100 Kraków <br>
-                    </p>
-                    <p>
-                        Pierwsza linia wsparcia: <br>
-                        support@devartists.com
-                    </p>
-                </div>
+{#                <div id="main-info">#}
+{#                    <p>#}
+{#                        Devart sp. z o. o. <br>#}
+{#                        Tadeusza Kościuszki 35 <br>#}
+{#                        Kraków <br>#}
+{#                    </p>#}
+{#                    <p>#}
+{#                        NIP: 0000000000#}
+{#                    </p>#}
+{#                <div class="logo">#}
+{#                    <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" width="200">#}
+{#                </div>#}
+{#                </div>#}
+{#                <div id="contact-info">#}
+{#                    <h3>Kontakt</h3>#}
+{#                    <p>#}
+{#                        Biuro: <br>#}
+{#                        biuro@devartists.com <br>#}
+{#                        Tadeusza Kościuszki 35, 32-100 Kraków <br>#}
+{#                    </p>#}
+{#                    <p>#}
+{#                        Pierwsza linia wsparcia: <br>#}
+{#                        support@devartists.com#}
+{#                    </p>#}
+{#                </div>#}
             </footer>
         </div>
     </body>

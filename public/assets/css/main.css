@@ -1,9 +1,15 @@
+html, body {
+    overflow-x: hidden;
+}
+
 body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
     font-family: 'Poppins';
     /* padding: 1rem 5rem; */
     background-color: #191919;
     color: white;
-    overflow-x: hidden;
 }
 
 .app {
@@ -28,6 +34,10 @@ body {
     align-items: center;
 }
 
+.slogan-text, .slogan-subtext, .slogan-left {
+    user-select: none;
+}
+
 .slogan-text {
     /* font-family: 'Poppins ExtraBold'; */
     font-weight: 700;
@@ -46,8 +56,34 @@ body {
     flex: 1;
     /* font-family: 'Poppins Thin'; */
     font-weight: 300;
+    font-size: 20px;
     display: flex;
-    justify-content: center
+    justify-content: center;
+}
+
+.slogan-left-text {
+    rotate: 90deg;
+    width: max-content;
+}
+.slogan-subtext, .slogan-text, .slogan-left-text {
+    animation: slide-up 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(40px);
+    opacity: 0;
+    will-change: transform;
+    transform-origin: 50% 52%;
+}
+
+.slogan-subtext, .slogan-text {
+    animation-delay: 400ms;
+}
+
+
+@keyframes slide-up {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 header, footer {

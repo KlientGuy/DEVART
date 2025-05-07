@@ -32,19 +32,23 @@
                     <a href="#" class="nav-btn"><img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska" width="60" height="30"></a>
                 </nav>
             </header>
-            <div class="logo">
-                <div class="slogan-left">
-                    <div class="slogan-left-text">thinking first</div>
-                </div>
-                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" style="max-width: 50%;">
-                <div style="flex: 1"></div>
-            </div>
-            <div class="slogan-wrapper">
-                <div class="slogan-text">agencja brandingowa.</div>
-                <div class="slogan-subtext">thinking people</div>
-            </div>
+{#            <div class="logo">#}
+{#                <div class="slogan-left">#}
+{#                    <div class="slogan-left-text">thinking first</div>#}
+{#                </div>#}
+{#                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" style="max-width: 50%;">#}
+{#                <div style="flex: 1"></div>#}
+{#            </div>#}
+{#            <div class="slogan-wrapper">#}
+{#                <div class="slogan-text">agencja brandingowa.</div>#}
+{#                <div class="slogan-subtext">thinking people</div>#}
+{#            </div>#}
+            <div class="background-2"></div>
+            <div class="background"></div>
             <main>
-                {% block body %}{% endblock %}
+                {% block body %}
+
+                {% endblock %}
             </main>
             <footer>
                 <div class="w-100 flex-start foot-head">

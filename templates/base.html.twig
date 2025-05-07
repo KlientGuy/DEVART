@@ -16,6 +16,10 @@
         {% endblock %}
     </head>
     <body>
+        <div class="background-wrap">
+            <div class="background-2"></div>
+            <div class="background"></div>
+        </div>
         <div class="app">
             <header>
                 <div>
@@ -39,12 +43,43 @@
                 <div class="slogan-text">agencja brandingowa.</div>
                 <div class="slogan-subtext">thinking people</div>
             </div>
-            <div class="background-2"></div>
-            <div class="background"></div>
             <main>
                 {% block body %}{% endblock %}
             </main>
             <footer>
+                <div class="w-100 flex-start foot-head">
+                    <div class="nav-mini-i nav-mini">
+                        <a href="" class="">Portfolio</a>
+                        <a href="" class="">Oferta</a>
+                    </div>
+                    <!-- <div style="flex: 3"></div> -->
+                    <div class="socials">
+                        <div>
+                            <a href="">
+                                <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
+                                <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div style="padding-left: 1rem">
+                            <a href="">
+                                <img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="credits">&copy; 2025 2Dev Polska</span>
+                    <span class="credits">Polityka prywatności</span>
+                </div>
 {#                <div id="main-info">#}
 {#                    <p>#}
 {#                        Devart sp. z o. o. <br>#}

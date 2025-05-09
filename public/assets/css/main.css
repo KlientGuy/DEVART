@@ -257,6 +257,38 @@ a {
     line-height: 1.5;
 }
 
+.person-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.person-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.person-card img {
+    width: 200px;
+    height: auto;
+}
+
+.person-text {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.person-text div {
+    margin: 2px 0;
+}
+
 #contact-info {
     margin-left: 50px;
     padding-left: 20px;

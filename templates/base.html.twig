@@ -11,9 +11,6 @@
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         {% endblock %}
-
-        {% block javascripts %}
-        {% endblock %}
     </head>
     <body>
         <div class="background-wrap">
@@ -21,6 +18,7 @@
             <div class="background"></div>
             <div class="background-2 bg-clone"></div>
             <div class="background bg-clone"></div>
+            <div class="bg-bottom"></div>
         </div>
         <div class="app">
             <header>
@@ -31,7 +29,7 @@
                     <a href="{{ path('app_offer') }}" class="nav-btn">Portfolio</a>
                     <a href="#" class="nav-btn">Oferta</a>
                     <a href="#" class="nav-btn">Kontakt</a>
-                    <a href="#" class="nav-btn" style="padding-left: 1em;"><img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska" width="60" height="30"></a>
+                    <a href="#" class="nav-btn d-flex flex-end"><img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska" width="60" height="30"></a>
                 </nav>
             </header>
 {#            <div class="logo">#}
@@ -61,7 +59,7 @@
                     <!-- <div style="flex: 3"></div> -->
                     <div class="socials">
                         <div>
-                            <a href="">
+                            <a href="https://www.instagram.com/studio2dev" target="_blank">
                                 <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
                             </a>
                         </div>
@@ -71,7 +69,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="">
+                            <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
                                 <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
                             </a>
                         </div>
@@ -113,5 +111,36 @@
 {#                </div>#}
             </footer>
         </div>
+        {% block javascripts %}
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bg1 = document.querySelector('.background.bg-clone');
+            const bg2 = document.querySelector('.background-2.bg-clone');
+
+            const titlePos = document.querySelector('.offer-topics').getBoundingClientRect();
+
+            const initPos1 = bg1.getBoundingClientRect();
+            const initPos2 = bg2.getBoundingClientRect();
+
+            bg1.style.setProperty('--end-pos', initPos1.y + window.scrollY + (titlePos.y + window.scrollY - 200) + 'px');
+            bg2.style.setProperty('--end-pos', initPos2.y + window.scrollY + (titlePos.y + window.scrollY + titlePos.height / 2 + initPos1.height / 2) + 'px');
+            const globalTitleY = titlePos.y + window.scrollY;
+
+            const scroll = window.pageYOffset / globalTitleY;
+            document.querySelectorAll('.bg-clone').forEach((element) => {
+                element.style.setProperty('--scroll', scroll);
+            })
+            
+            window.addEventListener('scroll', () => {
+                const windowTop = 0;
+
+                const scroll = window.pageYOffset / globalTitleY;
+                document.querySelectorAll('.bg-clone').forEach((element) => {
+                    element.style.setProperty('--scroll', scroll);
+                })
+            })
+        })
+        </script>
+        {% endblock %}
     </body>
 </html>

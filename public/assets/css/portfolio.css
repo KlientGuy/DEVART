@@ -5,8 +5,11 @@
 
 .p-name {
     font-size: 1.3rem;
+    font-weight: 200;
 }
 
 .p-desc {
     font-weight: 300;
 }
+
+

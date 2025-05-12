@@ -18,4 +18,10 @@ class AppController extends AbstractController
     {
         return $this->render('app/offer.html.twig');
     }
+
+    #[Route('/portfolio', name: 'app_portfolio', methods: ['GET'])]
+    public function portfolio() 
+    {
+        return $this->render('app/portfolio.html.twig');
+    }
 }

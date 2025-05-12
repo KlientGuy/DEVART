@@ -26,7 +26,10 @@
                     <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">
                 </div>
                 <nav class="nav-menu">
-                    <a href="{{ path('app_offer') }}" class="nav-btn">Portfolio</a>
+                    <a href="{{ path('app_portfolio') }}" class="nav-btn">
+                        <img src="{{ asset('assets/svg/logo.svg') }}" alt="polska" width="80">
+                    </a>
+                    <a href="{{ path('app_portfolio') }}" class="nav-btn">Portfolio</a>
                     <a href="#" class="nav-btn">Oferta</a>
                     <a href="#" class="nav-btn">Kontakt</a>
                     <a href="#" class="nav-btn d-flex flex-end"><img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska" width="60" height="30"></a>
@@ -53,7 +56,7 @@
             <footer>
                 <div class="w-100 flex-start foot-head">
                     <div class="nav-mini-i nav-mini">
-                        <a href="" class="">Portfolio</a>
+                        <a href="{{ path('app_portfolio') }}" class="">Portfolio</a>
                         <a href="" class="">Oferta</a>
                     </div>
                     <!-- <div style="flex: 3"></div> -->

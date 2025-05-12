@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
     <div class="logo">
         <div class="slogan-left">
             <div class="slogan-left-text">thinking first</div>
@@ -8,6 +9,7 @@
         <img src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="max-width: 50%;">
         <div style="flex: 1"></div>
     </div>
+    {{ include('portfolio/sahur.html.twig') }}
 {% endblock %}
 {% block javascripts %}
 <script>

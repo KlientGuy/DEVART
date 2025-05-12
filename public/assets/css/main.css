@@ -519,6 +519,11 @@ img {
     justify-content: flex-end;
 }
 
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 840px) {
     .carousel-item {
         width: calc(33vw - 20px);

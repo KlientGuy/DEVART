@@ -519,12 +519,31 @@ img {
     justify-content: flex-end;
 }
 
+.align-end {
+    align-items: flex-end;
+}
+
 .col {
     display: flex;
     flex-direction: column;
 }
 
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.ps-5 {
+    padding-left: 5rem;
+}
+
 @media screen and (max-width: 840px) {
+    :root {
+        font-size: 14px;
+    }
     .carousel-item {
         width: calc(33vw - 20px);
     }
@@ -584,6 +603,10 @@ img {
 }
 
 @media screen and (max-width: 500px) and (max-width: 840px) {
+    :root {
+        font-size: 10px;
+    }
+
     .carousel-item {
         width: calc(50vw - 20px);
     }

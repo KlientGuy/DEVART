@@ -1,0 +1,39 @@
+<style>
+@media screen and (max-width: 1000px) {
+    .colors {
+        display: none;
+    }
+    .desc-card {
+        margin-top: 0;
+    }
+
+    .p-card, .book {
+        width: 100% !important;
+    }
+}
+</style>
+<div class="row p-row" style="position: relative;">
+    <div class="d-flex justify-center align-center colors" style="position: absolute; width: 100%; height: 100%; z-index: -1">
+        <img src="{{ asset('assets/img/portfolio/prelitech_colors.png') }}" alt="prelitech_colors" style="width: 20%;">
+    </div>
+    <div class="col" style="flex: 1">
+        <div>
+            <h1 class="p-header">Branding</h1><sub>(03)</sub>
+        </div>
+        <span class="p-title">Prelitech</span>
+        <p class="p-desc">
+            Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.
+        </p>
+        <div>
+            <img src="{{ asset('assets/img/portfolio/prelitech_card.png') }}" alt="prelitech_card" class="p-card" style="width: 75%;">
+        </div>
+    </div>
+    <div class="col" style="flex: 1">
+        <div class="d-flex flex-end">
+            <img src="{{ asset('assets/img/portfolio/prelitech_book.png') }}" alt="prelitech_book" class="w-100 book" style="width: 75%;">
+        </div>
+        <p class="p-desc mt-5 desc-card">
+            Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.
+        </p>
+    </div>
+</div>

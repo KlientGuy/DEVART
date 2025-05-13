@@ -193,7 +193,14 @@ header {
 }
 
 header {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+header > .anv-btn {
+    flex: 1 0;
+}
+header > div, header > .nav-menu {
+    flex: 3
 }
 
 footer {
@@ -205,6 +212,7 @@ footer {
 }
 
 .nav-menu {
+    justify-content: flex-end;
     display: flex;
     font-size: 20px;
 }
@@ -223,7 +231,7 @@ a {
 .nav-btn {
     display: block;
     padding: 10px 0;
-    width: 100px;
+    /* width: 100px; */
     margin: 0 20px;
     transition: background-color 200ms;
     /*border-radius: 100px;*/
@@ -521,6 +529,10 @@ img {
 
 .align-end {
     align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
 }
 
 .col {

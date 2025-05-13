@@ -1,6 +1,7 @@
 .p-header {
     font-weight: normal;
     font-size: 2rem;
+    display: inline-block;
 }
 
 .p-name {
@@ -12,7 +13,20 @@
     font-weight: 300;
 }
 
+.p-row {
+    gap: 1rem;
+}
+
+.p-link {
+    color: #0A84FF;
+}
+
 .social-media {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(40%, 250px), 1fr));
+}
+
+.portfiolio-item {
+    margin: 4rem 0;
 }

@@ -12,4 +12,7 @@
     font-weight: 300;
 }
 
-
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}

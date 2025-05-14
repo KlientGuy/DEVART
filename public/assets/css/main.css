@@ -17,6 +17,7 @@ html, body {
 }
 
 body {
+    min-height: 100vh;
     /* min-height: 100vh; */
     /* position: relative; */
     margin: 0;
@@ -207,7 +208,6 @@ footer {
     margin-top: 50px;
     font-size: 20px;
     position: relative;
-    bottom: 20px;
     width: 100%;
 }
 
@@ -362,7 +362,7 @@ a {
 @property --gradient-p {
     inherits: false;
     syntax: '<percentage>';
-    initial-value: 0%;
+    initial-value: 75%;
 }
 
 @keyframes animate-gradient {
@@ -379,6 +379,10 @@ a {
     position: absolute;
     aspect-ratio: 1;
     background: radial-gradient(circle, #002284 0%, #00000000 var(--gradient-p));
+}
+
+.bg-animated {
+    --gradient-p: 0%;
     animation-name: animate-gradient;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -558,6 +562,10 @@ img {
 
 .justify-center {
     justify-content: center;
+}
+
+.d-none {
+    display: none !important;
 }
 
 @media screen and (max-width: 840px) {

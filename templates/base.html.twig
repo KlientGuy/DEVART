@@ -14,20 +14,22 @@
     </head>
     <body>
         <div class="background-wrap">
-            <div class="background-2"></div>
-            <div class="background"></div>
-            <div class="background-2 bg-clone"></div>
-            <div class="background bg-clone"></div>
-            <div class="bg-bottom"></div>
+            <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
+            <div class="background {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
+            <div class="background-2 bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
+            <div class="background bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
+            <div class="bg-bottom {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
         </div>
         <div class="app">
             <header>
                 <div>
                     <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">
                 </div>
+                {% if app.request.attributes.get('_route') in ['app_portfolio'] %}
                 <a href="{{ path('app_index') }}" class="nav-btn justify-center" style="flex: 0">
                     <img src="{{ asset('assets/svg/logo.svg') }}" alt="polska" width="80">
                 </a>
+                {% endif %}
                 <nav class="nav-menu">
                     <a href="{{ path('app_portfolio') }}" class="nav-btn">Portfolio</a>
                     <a href="#" class="nav-btn">Oferta</a>

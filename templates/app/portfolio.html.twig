@@ -9,54 +9,89 @@
         <img src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="max-width: 50%;">
         <div style="flex: 1"></div>
     </div>
-{#    <div class="row">#}
-{#        <div class="hashtags-categories">#}
-{#            #Wszystkie#}
-{#            #Branding#}
-{#            #Strony internetowe#}
-{#            #Aplikacje#}
-{#            #Opakowania#}
-{#            #SocialMedia#}
-{#            #Fashion#}
-{#        </div>#}
-{#    </div>#}
+    <div style="padding: 0 6vw">
+        <div class="hashtags-categories">
+            <span class="p-link" data-cat="all">#Wszystkie</span>
+            <span data-cat="brand">#Branding</span>
+            <span data-cat="web">#Strony internetowe</span>
+            <span data-cat="app">#Aplikacje</span>
+            <span data-cat="pack">#Opakowania</span>
+            <span data-cat="social">#SocialMedia</span>
+            <span data-cat="fashion">#Fashion</span>
+        </div>
+    </div>
 <div style="padding: 0 6vw">
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="brand">
         {{ include('portfolio/foco.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="web">
         {{ include('portfolio/sahur.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="web">
         {{ include('portfolio/gopr.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="social">
         {{ include('portfolio/socialmedia.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="web">
         {{ include('portfolio/merceria.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="pack">
         {{ include('portfolio/prelitech.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="pack">
         {{ include('portfolio/forest.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="brand">
         {{ include('portfolio/prelitech_2.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="fashion">
         {{ include('portfolio/fashion.html.twig') }}
     </div>
-    <div class="portfiolio-item">
+    <div class="portfolio-item" data-cat="fashion">
         {{ include('portfolio/stockholm.html.twig') }}
+    </div>
+    <div class="portfolio-item nothing d-none w-100 d-flex justify-center">
+        <h1>Niestety nic tutaj jeszcze nie ma</h1>
     </div>
 </div>
 {% endblock %}
 {% block javascripts %}
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const spans = document.querySelectorAll('.hashtags-categories > span');
 
+    for(const one of spans) {
+        one.addEventListener('click', function() {
+            const cat = this.dataset.cat;
+
+            document.querySelector('.hashtags-categories > span.p-link').classList.remove('p-link');
+            this.classList.add('p-link');
+
+            if(cat === 'all') {
+                document.querySelectorAll(`.portfolio-item`).forEach(elem => elem.classList.remove('d-none'));
+                return;
+            }
+
+            const hide = document.querySelectorAll(`.portfolio-item:not([data-cat="${cat}"])`);
+            const items = document.querySelectorAll(`.portfolio-item[data-cat="${cat}"]`);
+
+            for(const one of hide) {
+                one.classList.add('d-none');
+            }
+
+            if(items.length == 0) {
+                document.querySelector('.nothing').classList.remove('d-none');
+                return;
+            }
+
+            document.querySelector('.nothing').classList.add('d-none');
+            for(const one of items) {
+                one.classList.remove('d-none');
+            }
+
+        })
+    }
 })
 </script>
 {% endblock %}

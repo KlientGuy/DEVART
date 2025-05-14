@@ -16,9 +16,9 @@
         <div class="background-wrap">
             <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
             <div class="background {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
-            <div class="background-2 bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
-            <div class="background bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
-            <div class="bg-bottom {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
+            <div class="background-2 bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? 'no-anim' : '' }}"></div>
+            <div class="background bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? 'no-anim' : '' }}"></div>
+            <div class="bg-bottom"></div>
         </div>
         <div class="app">
             <header>
@@ -117,35 +117,6 @@
             </footer>
         </div>
         {% block javascripts %}
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const bg1 = document.querySelector('.background.bg-clone');
-            const bg2 = document.querySelector('.background-2.bg-clone');
-
-            const titlePos = document.querySelector('.offer-topics').getBoundingClientRect();
-
-            const initPos1 = bg1.getBoundingClientRect();
-            const initPos2 = bg2.getBoundingClientRect();
-
-            bg1.style.setProperty('--end-pos', initPos1.y + window.scrollY + (titlePos.y + window.scrollY - 200) + 'px');
-            bg2.style.setProperty('--end-pos', initPos2.y + window.scrollY + (titlePos.y + window.scrollY + titlePos.height / 2 + initPos1.height / 2) + 'px');
-            const globalTitleY = titlePos.y + window.scrollY;
-
-            const scroll = window.pageYOffset / globalTitleY;
-            document.querySelectorAll('.bg-clone').forEach((element) => {
-                element.style.setProperty('--scroll', scroll);
-            })
-            
-            window.addEventListener('scroll', () => {
-                const windowTop = 0;
-
-                const scroll = window.pageYOffset / globalTitleY;
-                document.querySelectorAll('.bg-clone').forEach((element) => {
-                    element.style.setProperty('--scroll', scroll);
-                })
-            })
-        })
-        </script>
         {% endblock %}
     </body>
 </html>

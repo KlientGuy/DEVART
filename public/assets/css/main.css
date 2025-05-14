@@ -435,8 +435,13 @@ a {
     }
 }
 
+.no-anim {
+    animation: unset !important;
+}
+
 .bg-clone {
     opacity: 0;
+    transition: top 300ms ease-out, opacity 1s ease-out;
     width: 80vw;
     max-width: 800px;
     animation: move-gradient 1s ease-in-out;

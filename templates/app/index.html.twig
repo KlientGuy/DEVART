@@ -19,7 +19,7 @@
         {% for num in range(0, 1) %}
             <div class="carousel-item">
                 <img src="{{ asset('assets/img/home/m_01.webp') }}" alt="m1">
-                <div class="caption">MERCER KOSZULE</div>
+                <div class="caption">MERCERIA</div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('assets/img/home/m_02.webp') }}" alt="m1">
@@ -35,7 +35,7 @@
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('assets/img/home/m_05.webp') }}" alt="m1">
-                <div class="caption">MEBLE</div>
+                <div class="caption">BIUROLAND</div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('assets/img/home/m_06.webp') }}" alt="m1">
@@ -138,6 +138,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bg1 = document.querySelector('.background.bg-clone');
     const bg2 = document.querySelector('.background-2.bg-clone');
+    const offerButton = document.querySelector('.offer-btn');
+    const contactButton = document.querySelector('.concact-btn');
+    const offerSection = document.querySelector('.offer-home');
+    const contactSection = document.querySelector('.person-info');
 
     const titlePos = document.querySelector('.offer-topics').getBoundingClientRect();
 
@@ -152,6 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.bg-clone').forEach((element) => {
         element.style.setProperty('--scroll', scroll);
     })
+
+
+    offerButton.addEventListener('click', () => {
+        offerSection.scrollIntoView({ behavior: 'smooth' });
+    });
+    contactButton.addEventListener('click', () => {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
     
     window.addEventListener('scroll', () => {
         const windowTop = 0;

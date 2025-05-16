@@ -9,11 +9,66 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <meta name="viewport" content="initial-scale=1, width=device-width">
+        <script>
+        let consentCookie = getCookie('consent');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){dataLayer.push(arguments);}
+
+        if(consentCookie === 'true') {
+            loadAnalytics();
+        }
+        else if(!consentCookie) {
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.cookie-consent').classList.remove('d-none');
+            })
+        }
+
+        function acceptCookies() {
+            document.cookie = 'consent=true';
+            document.querySelector('.cookie-consent').remove();
+            loadAnalytics();
+        }
+
+        function declineCookies() {
+            document.cookie = 'consent=false';
+            document.querySelector('.cookie-consent').remove();
+        }
+
+        function loadAnalytics() {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-KJ4L6HGC';
+            script.async = "true";
+            document.querySelector('head').append(script);
+            gtag('js', new Date());
+            gtag('config', 'GTM-KJ4L6HGC');
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        </script>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         {% endblock %}
     </head>
     <body>
+        <div class="cookie-consent d-none">
+            <div style="flex: 4">Klikając "Akceptuj wszystkie" zgadzasz się na przechowywanie ciastek na twoim urządzeniu by analizować użytkowanie strony</div>
+            <button type="button" class="accept-cookies" onclick="(() => acceptCookies())()">Akceptuj wszystkie</button>
+            <button type="button" class="decline-cookies" onclick="(() => declineCookies())()">Odrzuć</button>
+        </div>
         <div class="background-wrap">
             <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
             <div class="background {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>

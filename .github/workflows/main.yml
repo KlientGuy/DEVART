@@ -9,6 +9,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout
       - name: test
         run: ls -al .
 #      - name: Add to known_hosts

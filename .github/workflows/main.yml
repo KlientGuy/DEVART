@@ -1,0 +1,19 @@
+name: Deploy
+run-name: Deploying to remote server
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to known_hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Rsync
+        run: rsync -avrz ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/2dev/domains/2dev.com.pl/devart/
+      - name: Composer Install
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd /home/2dev/domains/2dev.com.pl/devart/ && composer install'
+      - name: Cache clear
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd /home/2dev/domains/2dev.com.pl/devart/ && php bin/console c:c'

@@ -49,7 +49,7 @@
             <a href="{{ path('app_portfolio') }}">Zobacz więcej</a>
         </div>
     </div>
-    <div class="offer-home">
+    <div id="offer-home" class="offer-home">
         <div class="offer-title">
             oferta
         </div>
@@ -111,16 +111,48 @@
             </div>
         </div>
     </div>
-    <div class="person-info">
-        <div class="person-card row">
-            <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr">
-            <div class="person-text">
-                <span style="font-weight: 300">Piotr Sumara</span>
-                <span style="font-weight: 100; margin-bottom: 40px">Dyrektor artystyczny</span>
-                <span style="font-weight: 100">+48 510 730 071</span>
-                <span style="font-weight: 100">piotrsumaracontact@gmail.com</span>
+    <div id="person-info" class="person-info">
+        <div class="row" style="flex-wrap: wrap; gap: 4rem">
+            <div class="person-card row">
+                <div class="person-text">
+                    <span style="font-weight: 300">Gabriel Socha</span>
+                    <span style="font-weight: 100; margin-bottom: 40px">Dyrektor techniczny</span>
+                </div>
+                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
+            </div>
+            <div class="person-card">
+                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr">
+                <div class="person-text">
+                    <span style="font-weight: 300">Piotr Sumara</span>
+                    <span style="font-weight: 100; margin-bottom: 1rem">Dyrektor artystyczny</span>
+                    <span style="font-weight: 100">+48 510 730 071</span>
+                    <span style="font-weight: 100">kontakt@2dev.com.pl</span>
+                </div>
+            </div>
+            <div class="person-card">
+                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
+                <div class="person-text">
+                    <span style="font-weight: 300">Patryk Kubala</span>
+                    <span style="font-weight: 100; margin-bottom: 40px">Dyrektor techniczny</span>
+                </div>
             </div>
         </div>
+{#        <div class="row" style="margin-top: 3rem">#}
+{#            <div class="person-card-no-photo row" style="justify-content: flex-end">#}
+{#                <div class="person-text">#}
+{#                    <span style="font-weight: 300">Gabriel Socha</span>#}
+{#                    <span style="font-weight: 100; margin-bottom: 40px">Programista</span>#}
+{#                    <span style="font-weight: 100">kontakt@2dev.com.pl</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="person-card-no-photo row" style="justify-content: flex-start">#}
+{#                <div class="person-text">#}
+{#                    <span style="font-weight: 300">Patryk Kubala</span>#}
+{#                    <span style="font-weight: 100; margin-bottom: 40px">Programista</span>#}
+{#                    <span style="font-weight: 100">kontakt@2dev.com.pl</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
     </div>
     <div class="content-card">
         <div class="card">
@@ -173,31 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
             element.style.setProperty('--scroll', scroll);
         })
     })
-
-    const burgerButton = document.querySelector('.burger-button');
-    const socialsNavbar = document.querySelector('.socials-navbar');
-
-    // if (burgerButton && socialsNavbar) {
-    //     burgerButton.addEventListener('click', () => {
-    //         console.log('sdasd')
-    //         socialsNavbar.classList.toggle('inactive');
-    //     });
-    // }
-
-    if (burgerButton && socialsNavbar) {
-        burgerButton.addEventListener('click', () => {
-            if (socialsNavbar.classList.contains('active')) {
-                socialsNavbar.classList.add('deactivating');
-
-                setTimeout(() => {
-                    socialsNavbar.classList.remove('active');
-                    socialsNavbar.classList.remove('deactivating');
-                }, 100);
-            } else {
-                socialsNavbar.classList.add('active');
-            }
-        });
-    }
 })
 </script>
 {% endblock %}

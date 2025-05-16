@@ -22,10 +22,45 @@
             <div class="bg-bottom"></div>
         </div>
         <div class="app">
+            <div class="mobile-overlay">
+                <div class="mobile-overlay-content" style="height: 100%">
+                    <div class="mobile-links">
+                        <div class="mobile-menu-link">
+                            <a href="{{ path('app_portfolio') }}">Portfolio</a>
+                        </div>
+                        <div class="mobile-menu-link">
+                            <a href="#offer-home">Oferta</a>
+                        </div>
+                        <div class="mobile-menu-link">
+                            <a href="#person-info">Kontakt</a>
+                        </div>
+                    </div>
+                    <div class="socials-mobile" style="position:absolute; bottom: 15vw">
+                        <div>
+                            <a href="https://www.instagram.com/studio2dev" target="_blank">
+                                <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
+                                <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
+                                <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <header>
                 <div class="d-flex align-center" style="position: relative">
                     <div class="burger-button" style="cursor: pointer">
-                        <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">
+{#                        <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">#}
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     <div class="socials-navbar" style="justify-content: flex-start">
                         <div>
@@ -54,25 +89,12 @@
                     <a href="{{ path('app_portfolio') }}" class="nav-btn">Portfolio</a>
                     <a href="#" class="nav-btn offer-btn">Oferta</a>
                     <a href="#" class="nav-btn concact-btn">Kontakt</a>
-                    <a href="#" class="nav-btn d-flex flex-end" style="padding-left: 1rem">
-                        <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
-                        <img src="{{ asset('assets/svg/chevron.svg') }}" alt="chevron" width="20" height="30">
-                    </a>
+{#                    <a href="#" class="nav-btn d-flex flex-end" style="padding-left: 1rem">#}
+{#                        <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">#}
+{#                        <img src="{{ asset('assets/svg/chevron.svg') }}" alt="chevron" width="20" height="30">#}
+{#                    </a>#}
                 </nav>
             </header>
-{#            <div class="logo">#}
-{#                <div class="slogan-left">#}
-{#                    <div class="slogan-left-text">thinking first</div>#}
-{#                </div>#}
-{#                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" style="max-width: 50%;">#}
-{#                <div style="flex: 1"></div>#}
-{#            </div>#}
-{#            <div class="slogan-wrapper">#}
-{#                <div class="slogan-text">agencja brandingowa.</div>#}
-{#                <div class="slogan-subtext">thinking people</div>#}
-{#            </div>#}
-            <!-- <div class="background-2"></div> -->
-            <!-- <div class="background"></div> -->
             <main>
                 {% block body %}
 
@@ -101,47 +123,66 @@
                                 <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
                             </a>
                         </div>
-                        <div style="padding-left: 1rem">
-                            <a href="">
-                                <img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska">
-                            </a>
-                        </div>
+{#                        <div style="padding-left: 1rem">#}
+{#                            <a href="">#}
+{#                                <img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska">#}
+{#                            </a>#}
+{#                        </div>#}
                     </div>
                 </div>
                 <div class="row">
                     <span class="credits">&copy; 2025 2Dev Polska</span>
                     <span class="credits">Polityka prywatności</span>
                 </div>
-{#                <div id="main-info">#}
-{#                    <p>#}
-{#                        Devart sp. z o. o. <br>#}
-{#                        Tadeusza Kościuszki 35 <br>#}
-{#                        Kraków <br>#}
-{#                    </p>#}
-{#                    <p>#}
-{#                        NIP: 0000000000#}
-{#                    </p>#}
-{#                <div class="logo">#}
-{#                    <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo" width="200">#}
-{#                </div>#}
-{#                </div>#}
-{#                <div id="contact-info">#}
-{#                    <h3>Kontakt</h3>#}
-{#                    <p>#}
-{#                        Biuro: <br>#}
-{#                        biuro@devartists.com <br>#}
-{#                        Tadeusza Kościuszki 35, 32-100 Kraków <br>#}
-{#                    </p>#}
-{#                    <p>#}
-{#                        Pierwsza linia wsparcia: <br>#}
-{#                        support@devartists.com#}
-{#                    </p>#}
-{#                </div>#}
             </footer>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const burgerButton = document.querySelector('.burger-button');
+                const socialsNavbar = document.querySelector('.socials-navbar');
+                const mobileOverlay = document.querySelector('.mobile-overlay');
+
+                burgerButton.addEventListener('click', () => {
+                    const screenWidth = window.innerWidth;
+                    burgerButton.classList.toggle('active');
+
+                    if (screenWidth > 840) {
+                        if (socialsNavbar.classList.contains('active')) {
+                            socialsNavbar.classList.add('deactivating');
+                            setTimeout(() => {
+                                socialsNavbar.classList.remove('active');
+                                socialsNavbar.classList.remove('deactivating');
+                            }, 100);
+                        } else {
+                            socialsNavbar.classList.add('active');
+                        }
+                    } else {
+                        mobileOverlay.classList.toggle('active');
+                    }
+                });
+
+
+                mobileOverlay.addEventListener('click', (e) => {
+                    if (e.target === mobileOverlay) {
+                        mobileOverlay.classList.remove('active');
+                        burgerButton.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('.mobile-menu-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileOverlay.classList.remove('active');
+                        burgerButton.classList.remove('active');
+                    });
+                });
+
+            })
+        </script>
         {% block javascripts %}
 
 
         {% endblock %}
+
     </body>
 </html>

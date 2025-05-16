@@ -4,6 +4,7 @@
 
 html, body {
     /* overflow-x: hidden; */
+    scroll-behavior: smooth;
 }
 
 .background-wrap {
@@ -218,8 +219,7 @@ footer {
 }
 
 .nav-btn:last-child {
-    border-left: 1px solid white
-
+    /*border-left: 1px solid white*/
 }
 
 a {
@@ -284,15 +284,25 @@ a {
     line-height: 1.5;
 }
 
+
 .person-info {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-top: 150px;
 }
 
 .person-card {
-    width: 75vw;
+    width: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.person-card-no-photo {
+    width: 50vw;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -629,6 +639,109 @@ img {
     pointer-events: none;
 }
 
+.burger-button {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-button span {
+    z-index: 10;
+    display: block;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-button.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-button.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.mobile-overlay {
+    position: fixed;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-overlay-content a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+}
+
+.mobile-overlay-content a img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.socials-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+}
+
+.mobile-menu-link a {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+@keyframes fadeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 @media screen and (max-width: 840px) {

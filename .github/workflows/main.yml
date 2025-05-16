@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Add to known_hosts
         run: mkdir ~/.ssh && ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Copy ssh key
+        run: echo "${{ secrets.S70_MD_PRIVATE }}" >> ~/.ssh/id_rsa
       - name: Rsync
         run: rsync -avrz ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/2dev/domains/2dev.com.pl/devart/
       - name: Composer Install

@@ -103,9 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const bg2 = document.querySelector('.background-2.bg-clone');
 
     let lastScroll = 0;
-    window.addEventListener('scrollend', () => {
+    document.querySelector('body').addEventListener('touchmove', scrollAnim);
+    window.addEventListener('scrollend', scrollAnim);
+
+    function scrollAnim() {
         const windowTop = 0;
-        console.log(window.scrollY);
 
         const items = document.querySelectorAll('.portfolio-item');
 
@@ -128,8 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if(elementPosCalc < windowHeightCalc && rect.y + rect.height > 0) {
-                console.log(rect.y, window.scrollY);
-                console.log('visible',  one);
                 document.querySelectorAll('.bg-clone').forEach(elem => elem.style.setProperty('top', `${rect.y + window.scrollY}px`));
                 visibleCount++;
             }
@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         lastScroll = window.scrollY;
-    })
+
+    }
 })
 </script>
 {% endblock %}

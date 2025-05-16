@@ -284,7 +284,6 @@ a {
     line-height: 1.5;
 }
 
-
 .person-info {
     display: flex;
     justify-content: center;
@@ -742,7 +741,39 @@ img {
         opacity: 1;
     }
 }
+.cookie-consent {
+    min-height: 50px;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100vw - 3rem);
+    background-color: #000000F0;
+    display: flex;
+    position: fixed;
+    /* top: 50vh; */
+    z-index: 99;
+    gap: 2rem;
+    bottom: 0;
+}
 
+.accept-cookies, .decline-cookies {
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.accept-cookies {
+    background-color: #098EFF;
+    border: 0;
+}
+
+.decline-cookies {
+    background-color: transparent;
+    border: 1px solid white;
+}
 
 @media screen and (max-width: 840px) {
     :root {

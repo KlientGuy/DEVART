@@ -23,8 +23,27 @@
         </div>
         <div class="app">
             <header>
-                <div>
-                    {#<img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">#}
+                <div class="d-flex align-center" style="position: relative">
+                    <div class="burger-button" style="cursor: pointer">
+                        <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">
+                    </div>
+                    <div class="socials-navbar" style="justify-content: flex-start">
+                        <div>
+                            <a href="https://www.instagram.com/studio2dev" target="_blank">
+                                <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
+                                <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
+                                <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 {% if app.request.attributes.get('_route') in ['app_portfolio'] %}
                 <a href="{{ path('app_index') }}" class="nav-btn justify-center" style="flex: 0">
@@ -121,6 +140,8 @@
             </footer>
         </div>
         {% block javascripts %}
+
+
         {% endblock %}
     </body>
 </html>

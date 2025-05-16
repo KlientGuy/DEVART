@@ -173,6 +173,31 @@ document.addEventListener('DOMContentLoaded', () => {
             element.style.setProperty('--scroll', scroll);
         })
     })
+
+    const burgerButton = document.querySelector('.burger-button');
+    const socialsNavbar = document.querySelector('.socials-navbar');
+
+    // if (burgerButton && socialsNavbar) {
+    //     burgerButton.addEventListener('click', () => {
+    //         console.log('sdasd')
+    //         socialsNavbar.classList.toggle('inactive');
+    //     });
+    // }
+
+    if (burgerButton && socialsNavbar) {
+        burgerButton.addEventListener('click', () => {
+            if (socialsNavbar.classList.contains('active')) {
+                socialsNavbar.classList.add('deactivating');
+
+                setTimeout(() => {
+                    socialsNavbar.classList.remove('active');
+                    socialsNavbar.classList.remove('deactivating');
+                }, 100);
+            } else {
+                socialsNavbar.classList.add('active');
+            }
+        });
+    }
 })
 </script>
 {% endblock %}

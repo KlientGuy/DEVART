@@ -7,6 +7,11 @@ html, body {
     scroll-behavior: smooth;
 }
 
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .background-wrap {
     overflow: hidden;
     position: absolute;
@@ -819,7 +824,7 @@ img {
 
     .socials {
         justify-content: center;
-        grid-template-columns: repeat(4, 20%);
+        grid-template-columns: repeat(3, 20%);
     }
 
     .nav-mini > a {

@@ -89,13 +89,13 @@
                             <a href="{{ path('app_portfolio') }}">Portfolio</a>
                         </div>
                         <div class="mobile-menu-link">
-                            <a href="#offer-home">Oferta</a>
+                            <a href="{{ path('app_index') }}#offer-home">Oferta</a>
                         </div>
                         <div class="mobile-menu-link">
-                            <a href="#person-info">Kontakt</a>
+                            <a href="{{ path('app_index') }}#person-info">Kontakt</a>
                         </div>
                     </div>
-                    <div class="socials-mobile" style="position:absolute; bottom: 15vw">
+                    <div class="socials-mobile" style="position:absolute; bottom: 45vw">
                         <div>
                             <a href="https://www.instagram.com/studio2dev" target="_blank">
                                 <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
@@ -219,14 +219,20 @@
                         }
                     } else {
                         mobileOverlay.classList.toggle('active');
+
+                        if (mobileOverlay.classList.contains('active')) {
+                            document.body.classList.add('menu-open');
+                        } else {
+                            document.body.classList.remove('menu-open');
+                        }
                     }
                 });
-
 
                 mobileOverlay.addEventListener('click', (e) => {
                     if (e.target === mobileOverlay) {
                         mobileOverlay.classList.remove('active');
                         burgerButton.classList.remove('active');
+                        document.body.classList.remove('menu-open');
                     }
                 });
 
@@ -234,8 +240,10 @@
                     link.addEventListener('click', () => {
                         mobileOverlay.classList.remove('active');
                         burgerButton.classList.remove('active');
+                        document.body.classList.remove('menu-open');
                     });
                 });
+
 
             })
         </script>

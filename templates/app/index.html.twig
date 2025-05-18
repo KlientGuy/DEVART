@@ -170,10 +170,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bg1 = document.querySelector('.background.bg-clone');
     const bg2 = document.querySelector('.background-2.bg-clone');
-    const offerButton = document.querySelector('.offer-btn');
-    const contactButton = document.querySelector('.concact-btn');
-    const offerSection = document.querySelector('.offer-home');
-    const contactSection = document.querySelector('.person-info');
 
     const titlePos = document.querySelector('.offer-topics').getBoundingClientRect();
 
@@ -188,14 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.bg-clone').forEach((element) => {
         element.style.setProperty('--scroll', scroll);
     })
-
-
-    offerButton.addEventListener('click', () => {
-        offerSection.scrollIntoView({ behavior: 'smooth' });
-    });
-    contactButton.addEventListener('click', () => {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-    });
     
     window.addEventListener('scroll', () => {
         const windowTop = 0;

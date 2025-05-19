@@ -23,7 +23,7 @@
         if(consentCookie === 'true') {
             loadAnalytics();
         }
-        else if(!consentCookie) {
+        else if(consentCookie !== 'false') {
             document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.cookie-consent').classList.remove('d-none');
             })

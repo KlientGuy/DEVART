@@ -2,6 +2,6 @@ framework:
     default_locale: pl
     translator:
         default_path: '%kernel.project_dir%/translations'
-        # fallbacks:
-            # - pl
+        fallbacks:
+            - pl
         # providers:

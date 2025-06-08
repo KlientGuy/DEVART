@@ -5,8 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/')]
-#[Route('/{_locale}')]
+#[Route('/{_locale}', locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en'])]
 class AppController extends AbstractController
 {
     #[Route('/', name: 'app_index', methods: ['GET'])]

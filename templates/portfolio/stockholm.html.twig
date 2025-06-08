@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 <div class="row p-row" style="gap: 10%">
     <div class="d-flex align-center" style="flex: 1">
         <img src="{{ asset('assets/img/portfolio/stockholm_logo.svg') }}" alt="stockholm_logo" class="w-100">
@@ -8,7 +9,7 @@
         </div>
         <span class="p-title">GO Stockholm</span>
         <p class="p-desc">
-            Logotyp łączy nowoczesność i dynamikę. Prosta typografia w połączeniu z kontrastującą zielenią podkreśla energię i ekologiczną świadomość marki, tworząc świeży i nowoczesny wizerunek firmy transportowej.
+            {% trans %}Logotyp łączy nowoczesność i dynamikę. Prosta typografia w połączeniu z kontrastującą zielenią podkreśla energię i ekologiczną świadomość marki, tworząc świeży i nowoczesny wizerunek firmy transportowej.{% endtrans %}
         </p>
         <div class="d-flex flex-end">
             <img src="{{ asset('assets/img/portfolio/stockholm_logo_2.svg') }}" alt="stockholm_logo" style="width: 75%">

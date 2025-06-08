@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 <div class="row" style="gap: 1rem">
     <div class="col" style="flex: 1">
         <div>
@@ -5,7 +6,7 @@
         </div>
         <span class="p-name">GOPR</span>
         <p class="p-desc">
-            Projekt dla <a href="https://www.escsa.pl/" target="_blank" style="color: #0A84FF">ESC SA.</a> Strona internetowa GOPR (Górskie Ochotnicze Pogotowie Ratunkowe) została zaprojektowana jako nowoczesna, funkcjonalna i wizualnie atrakcyjna platforma, dostarczająca kluczowe informacje o bezpieczeństwie w górach, akcjach ratunkowych oraz aktualnych warunkach pogodowych.
+            {% trans %}Projekt dla <a href="https://www.escsa.pl/" target="_blank" style="color: #0A84FF">ESC SA.</a> Strona internetowa GOPR (Górskie Ochotnicze Pogotowie Ratunkowe) została zaprojektowana jako nowoczesna, funkcjonalna i wizualnie atrakcyjna platforma, dostarczająca kluczowe informacje o bezpieczeństwie w górach, akcjach ratunkowych oraz aktualnych warunkach pogodowych.{% endtrans %}
             <br>
             <a href="https://www.gopr.pl" target="_blank" style="color: #0A84FF">www.gopr.pl</a>
         </p>
@@ -28,12 +29,12 @@
         <div class="row mt-2">
             <div class="col flex-end w-100 align-end">
                 <div>
-                    <sub></sub><h1 class="p-header" style="display: inline-block">Fundacja GOPR</h1>
+                    <sub></sub><h1 class="p-header" style="display: inline-block">{% trans %}Fundacja GOPR{% endtrans %}</h1>
                 </div>
             </div>
         </div>
         <p class="p-desc">
-            Fundacja GOPR wraz ze sklepem internetowym została zaprojektowana w czystej, nowoczesnej i profesjonalnej estetyce, która współgra z misją wsparcia górskiego ratownictwa.
+            {% trans %}Fundacja GOPR wraz ze sklepem internetowym została zaprojektowana w czystej, nowoczesnej i profesjonalnej estetyce, która współgra z misją wsparcia górskiego ratownictwa.{% endtrans %}
         </p>
         <div class="mt-5">
             <img src="{{ asset('assets/img/portfolio/fundacja_gopr.png') }}" alt="fundacja_gopr" class="w-100" style="width: 75%">

@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 <div class="row p-row">
     <div class="col" style="flex: 1">
         <div>
@@ -5,7 +6,7 @@
         </div>
         <span class="p-name">TUKUPTU</span>
         <p class="p-desc">
-            Minimalizm, luksus i komfort – tak krótko opisałbym mój najnowszy projekt dla sklepu TUKUPTU. Stworzyłem przestrzeń, w której estetyka spotyka się z funkcjonalnością, a elegancja łączy się z nowoczesnością.
+            {% trans %}Minimalizm, luksus i komfort – tak krótko opisałbym mój najnowszy projekt dla sklepu TUKUPTU. Stworzyłem przestrzeń, w której estetyka spotyka się z funkcjonalnością, a elegancja łączy się z nowoczesnością.{% endtrans %}
         </p>
         <img src="{{ asset('assets/img/portfolio/sahur-scroll.png') }}" alt="tukuptu_scroll" style="width: 75%">
         <div style="position: relative; width: 100%; max-width: 100%;">
@@ -33,7 +34,7 @@
             </div>
         </div>
         <p class="p-desc">
-            Marka kosmetyczna premium, która łączy luksus, naturę i nowoczesną technologię. Każdy produkt jest stworzony dla najwyższego poziomu pielęgnacji – skuteczny, delikatny i doskonale zbalansowany.
+            {% trans %}Marka kosmetyczna premium, która łączy luksus, naturę i nowoczesną technologię. Każdy produkt jest stworzony dla najwyższego poziomu pielęgnacji – skuteczny, delikatny i doskonale zbalansowany.{% endtrans %}
         </p>
         <img src="{{ asset('assets/img/portfolio/pasja.svg') }}" alt="pasja" class="w-100" style="width: 115%; translate: -13%">
         <div class="row mt-5" style="gap: 0.5rem">

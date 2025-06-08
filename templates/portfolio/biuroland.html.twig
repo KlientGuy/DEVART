@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 <div class="row" style="gap: 1rem">
     <div class="col" style="flex: 1">
         <div class="mt-7">
@@ -14,9 +15,9 @@
             </div>
         </div>
         <p class="p-desc">
-            Projekt dla ESC SA. Strona internetowa BiuroLand skutecznie łączy atrakcyjny wygląd z funkcjonalnością, tworząc angażujące  informacyjne doświadczenie zakupowe dla kupujących meble biurowe. Doskonale przekazuje profesjonalizm, wiedzę i podejście zorientowane na klienta.
+            {% trans %}Projekt dla ESC SA. Strona internetowa BiuroLand skutecznie łączy atrakcyjny wygląd z funkcjonalnością, tworząc angażujące  informacyjne doświadczenie zakupowe dla kupujących meble biurowe. Doskonale przekazuje profesjonalizm, wiedzę i podejście zorientowane na klienta.{% endtrans %}
             <br>
-            www.serwisfoteli.pl
+            <a class="p-link" href="www.serwisfoteli.pl">www.serwisfoteli.pl</a>
         </p>
         <div>
             <img src="{{ asset('assets/img/portfolio/biuroland_mockup.png') }}" alt="biuroland_mockup" class="" style="width: 90%">

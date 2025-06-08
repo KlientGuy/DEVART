@@ -1,3 +1,4 @@
+{% trans_default_domain 'home' %}
 {% extends 'base.html.twig' %}
 
 {#{% block title %} {% endblock %}#}
@@ -11,7 +12,7 @@
         <div style="flex: 1"></div>
     </div>
     <div class="slogan-wrapper">
-        <div class="slogan-text">agencja brandingowa.</div>
+        <div class="slogan-text">{% trans %}agencja brandingowa.{% endtrans %}</div>
         <div class="slogan-subtext">thinking people</div>
     </div>
     <div class="carousel">
@@ -46,7 +47,7 @@
     </div>
     <div class="see-more-text" style="width: 100%; display: flex; justify-content: center">
         <div class="text-more" style="font-size: 20px; border-bottom: 1px solid white; cursor: pointer">
-            <a href="{{ path('app_portfolio') }}">Zobacz więcej</a>
+            <a href="{{ path('app_portfolio') }}">{% trans %}Zobacz więcej{% endtrans %}</a>
         </div>
     </div>
     <div id="offer-home" class="offer-home">
@@ -55,8 +56,9 @@
         </div>
         <div class="offer-topics">
             <div class="topic-item">
-                <div class="topic-header">Budowa marki</div>
+                <div class="topic-header">{% trans %}Budowa marki{% endtrans %}</div>
                 <div class="topic-list">
+                {% trans %}
                     Nazewnictwo
                     Barwa
                     Przekaz
@@ -64,33 +66,38 @@
                     Strategia
                     Komunikacja
                     Wizerunek
+                {% endtrans %}
                 </div>
             </div>
             <div class="topic-item">
-                <div class="topic-header">Strony internetowe</div>
+                <div class="topic-header">{% trans %}Strony internetowe{% endtrans %}</div>
                 <div class="topic-list">
-                    Aplikacje
+                {% trans %}
                     Sklepy internetowe
                     Web Design
                     Front-end
                     Back-end
                     Wdrożenie
+                {% endtrans %}
                 </div>
             </div>
             <div class="topic-item">
-                <div class="topic-header">Rebranding</div>
+                <div class="topic-header">{% trans %}Rebranding{% endtrans %}</div>
                 <div class="topic-list">
+                {% trans %}
                     Ścieżka rozwoju
                     Rozwój marketingowy
                     Nauczanie
                     Konsultacje
                     Ćwiczenia
                     Pobudzenie aktywności
+                {% endtrans %}
                 </div>
             </div>
             <div class="topic-item">
-                <div class="topic-header">Identyfikacja wizualna</div>
+                <div class="topic-header">{% trans %}Identyfikacja wizualna{% endtrans %}</div>
                 <div class="topic-list">
+                {% trans %}
                     Logo
                     Key-visual
                     Opakowania
@@ -98,15 +105,18 @@
                     Infografika
                     Wizytówki
                     Użytki reklamowe
+                {% endtrans %}
                 </div>
             </div>
             <div class="topic-item">
-                <div class="topic-header">Aplikacje</div>
+                <div class="topic-header">{% trans %}Aplikacje{% endtrans %}</div>
                 <div class="topic-list">
+                {% trans %}
                     Webowe
                     Mobilne
                     Konsolowe
                     Oprogramowanie serwerowe
+                {% endtrans %}
                 </div>
             </div>
         </div>
@@ -116,7 +126,7 @@
             <div class="person-card row">
                 <div class="person-text">
                     <span style="font-weight: 300">Gabriel Socha</span>
-                    <span style="font-weight: 100; margin-bottom: 40px">Dyrektor techniczny</span>
+                    <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span>
                 </div>
                 <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
             </div>
@@ -124,7 +134,7 @@
                 <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr">
                 <div class="person-text">
                     <span style="font-weight: 300">Piotr Sumara</span>
-                    <span style="font-weight: 100; margin-bottom: 1rem">Dyrektor artystyczny</span>
+                    <span style="font-weight: 100; margin-bottom: 1rem">{% trans %}Dyrektor artystyczny{% endtrans %}</span>
                     <span style="font-weight: 100">+48 510 730 071</span>
                     <span style="font-weight: 100">kontakt@2dev.com.pl</span>
                 </div>
@@ -133,7 +143,7 @@
                 <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
                 <div class="person-text">
                     <span style="font-weight: 300">Patryk Kubala</span>
-                    <span style="font-weight: 100; margin-bottom: 40px">Dyrektor techniczny</span>
+                    <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span>
                 </div>
             </div>
         </div>
@@ -160,7 +170,7 @@
                 <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo-card" style="width: 60%">
             </div>
             <div class="hashtags">
-                #2dev #branding #studio #komunikacja #wygląd #www #art
+            {% trans %}#2dev #branding #studio #komunikacja #wygląd #www #art{% endtrans %}
             </div>
         </div>
     </div>

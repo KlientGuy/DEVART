@@ -1,3 +1,4 @@
+{% trans_default_domain 'layout' %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,9 +71,9 @@
     </head>
     <body>
         <div class="cookie-consent d-none">
-            <div style="flex: 4">Klikając "Akceptuj wszystkie" zgadzasz się na przechowywanie ciastek na twoim urządzeniu by analizować użytkowanie strony</div>
-            <button type="button" class="accept-cookies" onclick="(() => acceptCookies())()">Akceptuj wszystkie</button>
-            <button type="button" class="decline-cookies" onclick="(() => declineCookies())()">Odrzuć</button>
+            <div style="flex: 4">{% trans %}Klikając "Akceptuj wszystkie" zgadzasz się na przechowywanie ciastek na twoim urządzeniu by analizować użytkowanie strony{% endtrans %}</div>
+            <button type="button" class="accept-cookies" onclick="(() => acceptCookies())()">{% trans %}Akceptuj wszystkie{% endtrans %}</button>
+            <button type="button" class="decline-cookies" onclick="(() => declineCookies())()">{% trans %}Odrzuć{% endtrans %}</button>
         </div>
         <div class="background-wrap">
             <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
@@ -147,12 +148,40 @@
                 {% endif %}
                 <nav class="nav-menu">
                     <a href="{{ path('app_portfolio') }}" class="nav-btn">Portfolio</a>
-                    <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn">Oferta</a>
-                    <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn">Kontakt</a>
-{#                    <a href="#" class="nav-btn d-flex flex-end" style="padding-left: 1rem">#}
-{#                        <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">#}
-{#                        <img src="{{ asset('assets/svg/chevron.svg') }}" alt="chevron" width="20" height="30">#}
-{#                    </a>#}
+                    <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn">
+                        {% trans %}
+                        Oferta
+                        {% endtrans %}
+                    </a>
+                    <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn">
+                        {% trans %}
+                        Kontakt
+                        {% endtrans %}
+                    </a>
+                    <div>
+                        {% set localeFlag = {pl: {path: 'assets/svg/polish_flag.svg', w: 60, h: 30}, en: {path: 'assets/img/uk.png', w: 30, h: 20}} %}
+                        {% set loc = localeFlag[app.request.getLocale()] ?? localeFlag['pl'] %}
+                        <a href="#" class="nav-btn d-flex flex-end language-selection" style="padding-bottom: 0">
+                            <div class="d-flex justify-center align-center" style="width: 60px; height: 30px">
+                            <img src="{{ asset(loc.path) }}" alt="polska" width="{{ loc.w }}" height="{{ loc.h }}">
+                            </div>
+                            <img src="{{ asset('assets/svg/chevron.svg') }}" class="chevron" alt="chevron" width="20" height="30">
+                        </a>
+                        <ul class="language-selection-list">
+                            <li>
+                                <a href="{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                    <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                    <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
+                                    <img src="{{ asset('assets/img/uk.png') }}" alt="polska" width="30" height="20">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             <main>
@@ -183,16 +212,15 @@
                                 <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
                             </a>
                         </div>
-{#                        <div style="padding-left: 1rem">#}
-{#                            <a href="">#}
-{#                                <img src="{{ asset('assets/svg/polish_chevron.svg') }}" alt="polska">#}
-{#                            </a>#}
-{#                        </div>#}
                     </div>
                 </div>
                 <div class="row">
                     <span class="credits">&copy; 2025 2Dev Polska</span>
-                    <span class="credits">Polityka prywatności</span>
+                    <span class="credits">
+                        {% trans %}
+                        Polityka prywatności
+                        {% endtrans %}
+                    </span>
                 </div>
             </footer>
         </div>
@@ -244,7 +272,22 @@
                     });
                 });
 
+                document.querySelectorAll('.language-selection').forEach(elem => {
+                    elem.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const list = document.querySelector('.language-selection-list');
+                        const isOpen = this.dataset.isOpen === 'true';
+                        if(isOpen) {
+                            list.classList.remove('open');
+                            this.dataset.isOpen = false;
+                        }
+                        else {
+                            list.classList.add('open');
+                            this.dataset.isOpen = true;
+                        }
+                    })
 
+                })
             })
         </script>
         {% block javascripts %}

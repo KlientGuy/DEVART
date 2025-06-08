@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 <style>
 @media screen and (max-width: 1000px) {
     .colors {
@@ -22,7 +23,7 @@
         </div>
         <span class="p-title">Prelitech</span>
         <p class="p-desc">
-            Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.
+            {% trans %}Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.{% endtrans %}
         </p>
         <div>
             <img src="{{ asset('assets/img/portfolio/prelitech_card.png') }}" alt="prelitech_card" class="p-card" style="width: 75%;">
@@ -33,7 +34,7 @@
             <img src="{{ asset('assets/img/portfolio/prelitech_book.png') }}" alt="prelitech_book" class="w-100 book" style="width: 75%;">
         </div>
         <p class="p-desc mt-5 desc-card">
-            Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.
+            {% trans %}Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.{% endtrans %}
         </p>
     </div>
 </div>

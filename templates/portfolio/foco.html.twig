@@ -1,11 +1,12 @@
+{% trans_default_domain 'portfolio' %}
 <div class="row" style="gap: 1rem">
     <div class="col" style="flex: 1">
         <div>
-            <h1 class="p-header" style="display: inline-block">Aplikacja</h1><sub> (01)</sub>
+            <h1 class="p-header" style="display: inline-block">{% trans %}Aplikacja{% endtrans %}</h1><sub> (01)</sub>
         </div>
         <span class="p-name">FOCO</span>
         <p class="p-desc">
-            Aplikacja, która ma na celu ograniczenie czasu poświęcanego na social-media, w ramach kamieni milowych użytkownik otrzymuje punkty, które wymienia na kupony do wykorzystania.
+            {% trans %}Aplikacja, która ma na celu ograniczenie czasu poświęcanego na social-media, w ramach kamieni milowych użytkownik otrzymuje punkty, które wymienia na kupony do wykorzystania.{% endtrans %}
         </p>
         <div class="col" style="align-items: flex-start; margin-top: 40px">
             <div class="w-100 d-flex justify-center"><img src="{{ asset('assets/svg/foco_icon.svg') }}" alt="foco_mockup" style="width: 50%"></div>
@@ -23,7 +24,7 @@
             </div>
         </div>
         <p class="p-desc">
-            Branding Foco, marki przyjemnej oraz miłej dla odbiorców. Misja marki polega na wpłynięciu na czas spędzony przed ekranem.
+            {% trans %}Branding Foco, marki przyjemnej oraz miłej dla odbiorców. Misja marki polega na wpłynięciu na czas spędzony przed ekranem.{% endtrans %}
         </p>
     </div>
 </div>

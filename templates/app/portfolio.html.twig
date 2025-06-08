@@ -1,3 +1,4 @@
+{% trans_default_domain 'portfolio' %}
 {% extends 'base.html.twig' %}
 
 {% block body %}
@@ -11,13 +12,13 @@
     </div>
     <div style="padding: 0 6vw">
         <div class="hashtags-categories">
-            <span class="p-link" data-cat="all">#Wszystkie</span>
-            <span data-cat="brand">#Branding</span>
-            <span data-cat="web">#Strony internetowe</span>
-            <span data-cat="app">#Aplikacje</span>
-            <span data-cat="pack">#Opakowania</span>
-            <span data-cat="social">#SocialMedia</span>
-            <span data-cat="fashion">#Fashion</span>
+            <span class="p-link" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span>
+            <span data-cat="brand">{% trans %}#Branding{% endtrans %}</span>
+            <span data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span>
+            <span data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span>
+            <span data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span>
+            <span data-cat="social">{% trans %}#Social media{% endtrans %}</span>
+            <span data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span>
         </div>
     </div>
 <div style="padding: 0 6vw">
@@ -55,7 +56,7 @@
         {{ include('portfolio/stockholm.html.twig') }}
     </div>
     <div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center">
-        <h1>Niestety nic tutaj jeszcze nie ma</h1>
+        <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1>
     </div>
 </div>
 {% endblock %}

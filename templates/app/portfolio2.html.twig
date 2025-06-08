@@ -1,0 +1,258 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio2.css') }}">
+    <div class="logo">
+        <div class="slogan-left">
+            <div class="slogan-left-text">thinking first</div>
+        </div>
+        <img src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="max-width: 50%;">
+        <div style="flex: 1"></div>
+    </div>
+    <div style="padding: 0 6vw">
+        <div class="hashtags-categories">
+            <span class="p-link" data-cat="all">#Wszystkie</span>
+            <span data-cat="brand">#Branding</span>
+            <span data-cat="web">#Strony internetowe</span>
+            <span data-cat="app">#Aplikacje</span>
+            <span data-cat="pack">#Opakowania</span>
+            <span data-cat="social">#SocialMedia</span>
+            <span data-cat="fashion">#Fashion</span>
+        </div>
+    </div>
+<div class="portfolio-wrap" style="padding: 0 6vw">
+    <div class="portfolio-item">
+        <div>
+            <h1 class="p-header">Webdesign</h1>
+            <p class="p-desc">
+                Tworzymy spersonalizowane strony www, promujące wartości twojej marki.
+            </p>
+            <p class="p-desc">
+                Przejrzyste i przyjazne dla oka potencjalnego klienta.
+            </p>
+            <hr>
+            <div class="row align-center" style="gap: 1rem">
+                <div>
+                    <img src="{{ asset('assets/img/portfolio/gopr_mockup.png') }}" class="w-100" alt="" style="border-radius: 10px">
+                </div>
+                <div><img src="{{ asset('assets/img/portfolio/sahur-main.png') }}" alt="" class="w-100" style="border-radius: 10px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <div>
+            <h1 class="p-header">Branding</h1>
+            <p class="p-desc">
+                Od podstaw stworzymy markę, nadamy jej unikalności oraz zachowamy twój oryginalny pomysł
+            </p>
+            <hr>
+            <div class="row align-center" style="gap: 1rem">
+                <div>
+                    <img src="{{ asset('assets/img/portfolio/prelitech_book.png') }}" class="w-100" alt="" style="border-radius: 10px">
+                </div>
+                <div>
+                    <img src="{{ asset('assets/svg/foco_icon.svg') }}" class="w-100" alt="" style="border-radius: 10px">
+                    <img src="{{ asset('assets/svg/foco_logo.svg') }}" class="w-100" alt="" style="border-radius: 10px">
+                </div>
+                <div>
+                    <img src="{{ asset('assets/img/portfolio/prelitech_card.png') }}" class="w-100" alt="" style="border-radius: 10px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <div>
+            <h1 class="p-header">Aplikacje</h1>
+            <p class="p-desc">
+                Firmowe aplikacje wewnętrzne od prostego panelu administracyjnego po system rezerwacji czy projekty typu WMS.
+            </p>
+            <p class="p-desc">
+                Mamy 3 lata doświadczenia w pisaniu aplikacji MVC opartych o PHP i framework Symfony, stawiamy na stabilność oraz łatwe utrzymanie w przyszłości
+            </p>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <h1 class="p-header">Aplikacje mobilne</h1>
+        <p class="p-desc">
+            Podejmiemy się też napisania aplikacji mobilnych w rozwijającym się środowisku fluttera, co pozwala na jednoczesną obsługę systemów IOS i Android, bez dodatkowych kosztów pisania aplikacji od zera
+        </p>
+        <hr>
+        <div class="row">
+            <div class="d-flex justify-center">
+                <img src="{{ asset('assets/img/portfolio/foco_mockup.png') }}" alt="" class="" style="width: 50%">
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <h1 class="p-header">Opakowania i merchandise</h1>
+        <p class="p-desc">
+            Powiedzmy, że chcesz sprzedać produkt, my zaprojektujemy dla ciebie opakowanie, które przykuje uwagę klienta.
+        </p>
+        <p class="p-desc">
+            Koszulki firmowe, bądź też krzykliwy desing sportowy. Zaufały nam takie firmy jak KrakSky i Skoczek Nowy Targ
+        </p>
+        <hr>
+        <div class="row">
+            <div>
+                <img src="{{ asset('assets/img/portfolio/good_drink.png') }}" alt="" class="w-100">
+            </div>
+            <div>
+                <img src="{{ asset('assets/img/portfolio/forest.png') }}" alt="" class="w-100">
+            </div>
+        </div>
+        <div class="row" style="gap: 1rem">
+            <div>
+                <img src="{{ asset('assets/img/portfolio/fashion_nowy_targ.png') }}" alt="fashion_main" class="w-100">
+            </div>
+            <div>
+                <img src="{{ asset('assets/img/portfolio/fashion_sky_krakow.png') }}" alt="fashion_sky_krakow" class="w-100">
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <h1 class="p-header">Social media</h1>
+        <p class="p-desc">
+            Przy okazji tworzenia marki warto też pomyśleć o social mediach, my wszystko ustawimy, wystarczy że zaczniesz wrzucać posty
+        </p>
+        <hr>
+        <div class="row social-media">
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/rw.png') }}" alt="race_week_pogo"></div>
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/p11.png') }}" alt="race_week_position_11"></div>
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/simf1.png') }}" alt="simdream_f1"></div>
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/euro24.png') }}" alt="simdream_euro24"></div>
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/sims.png') }}" alt="simdream"></div>
+            <div><img class="w-100" src="{{ asset('assets/img/portfolio/simpas.png') }}" alt="simdream_pasek"></div>
+        </div>
+    </div>
+    <div class="portfolio-item" data-cat="brand">
+        {{ include('portfolio/foco.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="web">
+        {{ include('portfolio/sahur.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="web">
+        {{ include('portfolio/gopr.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="social">
+        {{ include('portfolio/socialmedia.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="web">
+        {{ include('portfolio/merceria.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="pack">
+        {{ include('portfolio/prelitech.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="pack">
+        {{ include('portfolio/forest.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="web">
+        {{ include('portfolio/biuroland.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="brand">
+        {{ include('portfolio/prelitech_2.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="fashion">
+        {{ include('portfolio/fashion.html.twig') }}
+    </div>
+    <div class="portfolio-item" data-cat="fashion">
+        {{ include('portfolio/stockholm.html.twig') }}
+    </div>
+    <div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center">
+        <h1>Niestety nic tutaj jeszcze nie ma</h1>
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const spans = document.querySelectorAll('.hashtags-categories > span');
+
+    for(const one of spans) {
+        one.addEventListener('click', function() {
+            const cat = this.dataset.cat;
+
+            document.querySelector('.hashtags-categories > span.p-link').classList.remove('p-link');
+            this.classList.add('p-link');
+
+            if(cat === 'all') {
+                document.querySelectorAll(`.portfolio-item`).forEach(elem => elem.classList.remove('d-none'));
+                document.querySelector('.nothing').classList.add('d-none');
+                return;
+            }
+
+            const hide = document.querySelectorAll(`.portfolio-item:not([data-cat="${cat}"])`);
+            const items = document.querySelectorAll(`.portfolio-item[data-cat="${cat}"]`);
+
+            for(const one of hide) {
+                one.classList.add('d-none');
+            }
+
+            if(items.length == 0) {
+                document.querySelector('.nothing').classList.remove('d-none');
+                return;
+            }
+            document.querySelector('.nothing').classList.add('d-none');
+
+            document.querySelector('.nothing').classList.add('d-none');
+            for(const one of items) {
+                one.classList.remove('d-none');
+            }
+
+        })
+
+    }
+
+    const bg1 = document.querySelector('.background.bg-clone');
+    const bg2 = document.querySelector('.background-2.bg-clone');
+
+    let lastScroll = 0;
+    document.querySelector('body').addEventListener('touchmove', scrollAnim);
+    window.addEventListener('scrollend', scrollAnim);
+
+    function scrollAnim() {
+        const windowTop = 0;
+
+        const items = document.querySelectorAll('.portfolio-item');
+
+        let windowHeightCalc = (window.innerHeight / 4) * 3;
+        if(window.scrollY < lastScroll) {
+            windowHeightCalc = window.innerHeight / 4;
+        }
+
+        let visibleCount = 0;
+        for(const one of items) {
+            if(one.classList.contains('d-none')) {
+                continue;
+            }
+
+            const rect = one.getBoundingClientRect();
+            let elementPosCalc = rect.y + rect.height / 3;
+
+            if(window.scrollY < lastScroll) {
+                elementPosCalc = rect.y;
+            }
+
+            if(elementPosCalc < windowHeightCalc && rect.y + rect.height > 0) {
+                document.querySelectorAll('.bg-clone').forEach(elem => elem.style.setProperty('top', `${rect.y + window.scrollY}px`));
+                visibleCount++;
+            }
+        }
+
+        if(visibleCount == 0) {
+            document.querySelectorAll('.bg-clone').forEach(elem => {
+                elem.style.setProperty('opacity', '0');
+                elem.style.setProperty('top', '0');
+            });
+        } else {
+            document.querySelectorAll('.bg-clone').forEach(elem => {
+                elem.style.setProperty('opacity', '1');
+            });
+        }
+
+        lastScroll = window.scrollY;
+
+    }
+})
+</script>
+{% endblock %}

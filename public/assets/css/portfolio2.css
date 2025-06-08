@@ -1,0 +1,22 @@
+/* NEW TEST */
+
+.portfolio-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background-color: #3333333d;
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.social-media {
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(min(40%, 120px), 1fr)) !important; */
+    grid-template-columns: repeat(3, 1fr) !important;
+}

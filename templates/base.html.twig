@@ -80,10 +80,10 @@
             <button type="button" class="decline-cookies" onclick="(() => declineCookies())()">{% trans %}Odrzuć{% endtrans %}</button>
         </div>
         <div class="background-wrap">
-            <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
-            <div class="background {{ app.request.attributes.get('_route') in ['app_portfolio'] ? '' : 'bg-animated' }}"></div>
-            <div class="background-2 bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? 'no-anim' : '' }}"></div>
-            <div class="background bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio'] ? 'no-anim' : '' }}"></div>
+            <div class="background-2 {{ app.request.attributes.get('_route') in ['app_portfolio', 'app_portfolio_single'] ? '' : 'bg-animated' }}"></div>
+            <div class="background {{ app.request.attributes.get('_route') in ['app_portfolio', 'app_portfolio_single'] ? '' : 'bg-animated' }}"></div>
+            <div class="background-2 bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio', 'app_portfolio_single'] ? 'no-anim' : '' }}"></div>
+            <div class="background bg-clone {{ app.request.attributes.get('_route') in ['app_portfolio', 'app_portfolio_single'] ? 'no-anim' : '' }}"></div>
             <div class="bg-bottom"></div>
         </div>
         <div class="app">
@@ -173,12 +173,12 @@
                         </a>
                         <ul class="language-selection-list">
                             <li>
-                                <a href="{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
                                     <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
                                     <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
                                     <img src="{{ asset('assets/img/uk.png') }}" alt="polska" width="30" height="20">
                                     </div>

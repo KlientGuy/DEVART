@@ -2,13 +2,14 @@
 
 namespace App\TwigExtension;
 
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 class AbsolutePath extends AbstractExtension
 {
-    public function __construct(private readonly UrlGeneratorInterface $urlGenerator) {}
+    public function __construct(private readonly UrlGeneratorInterface $urlGenerator, private readonly RequestStack $stack) {}
 
     public function getFunctions()
     {
@@ -19,6 +20,9 @@ class AbsolutePath extends AbstractExtension
 
     public function absoluteUrl(string $path, array $params = [])
     {
-        return $this->urlGenerator->generate($path, $params, UrlGeneratorInterface::ABSOLUTE_URL);
+        $request = $this->stack->getMainRequest();
+        $attr = $request->attributes->all();
+        $merged = array_merge($params, $attr);
+        return $this->urlGenerator->generate($path, $merged, UrlGeneratorInterface::ABSOLUTE_URL);
     }
 }

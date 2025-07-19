@@ -3,102 +3,181 @@
 
 {% block body %}
 <link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
-    <div class="logo">
-        <div class="slogan-left">
-            <div class="slogan-left-text">thinking first</div>
-        </div>
-        <img src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="max-width: 50%;">
-        <div style="flex: 1"></div>
+<div class="logo">
+    <div class="slogan-left">
+        <div class="slogan-left-text">thinking first</div>
     </div>
-    <div style="padding: 0 6vw">
-        <div class="hashtags-categories">
-            <span class="p-link" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span>
-            <span data-cat="brand">{% trans %}#Branding{% endtrans %}</span>
-            <span data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span>
-            <span data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span>
-            <span data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span>
-            <span data-cat="social">{% trans %}#Social media{% endtrans %}</span>
-            <span data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span>
-        </div>
-    </div>
+    <img src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="max-width: 50%;">
+    <div style="flex: 1"></div>
+</div>
 <div style="padding: 0 6vw">
-    <div class="portfolio-item" data-cat="brand">
-        {{ include('portfolio/foco.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="web">
-        {{ include('portfolio/sahur.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="web">
-        {{ include('portfolio/gopr.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="social">
-        {{ include('portfolio/socialmedia.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="web">
-        {{ include('portfolio/merceria.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="pack">
-        {{ include('portfolio/prelitech.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="pack">
-        {{ include('portfolio/forest.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="web">
-        {{ include('portfolio/biuroland.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="brand">
-        {{ include('portfolio/prelitech_2.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="fashion">
-        {{ include('portfolio/fashion.html.twig') }}
-    </div>
-    <div class="portfolio-item" data-cat="fashion">
-        {{ include('portfolio/stockholm.html.twig') }}
-    </div>
-    <div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center">
-        <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1>
+    <div class="hashtags-categories">
+        <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span>
+        <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span>
+        <span class="{{ cat == 'web' ? 'p-link' : '' }}" data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span>
+        <span class="{{ cat == 'app' ? 'p-link' : '' }}" data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span>
+        <span class="{{ cat == 'pack' ? 'p-link' : '' }}" data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span>
+        <span class="{{ cat == 'social' ? 'p-link' : '' }}" data-cat="social">{% trans %}#Social media{% endtrans %}</span>
+        <span class="{{ cat == 'fashion' ? 'p-link' : '' }}" data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span>
     </div>
 </div>
+{% if site is defined %}
+<div class="portfolio-item" style="padding: 0 10vw">
+    {{ include('portfolio/' ~ site) }}
+</div>
+{% else %}
+<div class="portfolio-selection">
+    <a href="{{ path('app_portfolio_single', {site: 'foco'}) }}" class="portfolio-selection-item" data-cat="brand">
+        <img src="{{ asset('assets/img/home/m_04.webp') }}" alt="m1">
+        <div class="caption">FOCO</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'tukuptu'}) }}" class="portfolio-selection-item" data-cat="web">
+        <img src="{{ asset('assets/img/home/m_02.webp') }}" alt="m1">
+        <div class="caption">TUKUPTU</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'gopr'}) }}" class="portfolio-selection-item" data-cat="web">
+        <img src="{{ asset('assets/img/home/m_03.webp') }}" alt="m1">
+        <div class="caption">GOPR</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'socialmedia'}) }}" class="portfolio-selection-item" data-cat="social">
+        <img src="{{ asset('assets/img/portfolio/rw.png') }}" alt="m1">
+        <div class="caption">SOCIAL MEDIA</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'merceria'}) }}" class="portfolio-selection-item" data-cat="web">
+        <img src="{{ asset('assets/img/home/m_01.webp') }}" alt="m1">
+        <div class="caption">MERCERIA</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'prelitech'}) }}" class="portfolio-selection-item" data-cat="pack">
+        <img src="{{ asset('assets/img/portfolio/prelitech_cover.png') }}" alt="m1">
+        <div class="caption">PRELITECH</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'forest'}) }}" class="portfolio-selection-item" data-ca="pack">
+        <img src="{{ asset('assets/img/portfolio/forest_cover.png') }}" alt="m1">
+        <div class="caption">LEŚNE SKARBY</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'biuroland'}) }}" class="portfolio-selection-item" data-cat="web">
+        <img src="{{ asset('assets/img/home/m_05.webp') }}" alt="m1">
+        <div class="caption">BIUROLAND</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'skawina'}) }}" class="portfolio-selection-item" data-cat="brand">
+        <img src="{{ asset('assets/img/home/m_06.webp') }}" alt="m1">
+        <div class="caption">SKAWINA</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'stockholm'}) }}" class="portfolio-selection-item" data-cat="fashion">
+        <img src="{{ asset('assets/img/portfolio/stockholm_cover.png') }}" alt="m1">
+        <div class="caption">STOCKHOLM</div>
+    </a>
+    <a href="{{ path('app_portfolio_single', {site: 'fashion'}) }}" class="portfolio-selection-item" data-cat="brand">
+        <img src="{{ asset('assets/img/portfolio/fashion_sol.png') }}" alt="m1">
+        <div class="caption">FASHION</div>
+    </a>
+</div>
+<div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center">
+    <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1>
+</div>
+{% endif %}
+<!-- <div style="padding: 0 6vw"> -->
+<!--     <div class="portfolio-item" data-cat="brand"> -->
+<!--         {{ include('portfolio/foco.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="web"> -->
+<!--         {{ include('portfolio/sahur.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="web"> -->
+<!--         {{ include('portfolio/gopr.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="social"> -->
+<!--         {{ include('portfolio/socialmedia.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="web"> -->
+<!--         {{ include('portfolio/merceria.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="pack"> -->
+<!--         {{ include('portfolio/prelitech.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="pack"> -->
+<!--         {{ include('portfolio/forest.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="web"> -->
+<!--         {{ include('portfolio/biuroland.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="brand">
+<!--         {{ include('portfolio/prelitech_2.html.twig') }}
+<!--     </div>
+<!--     <div class="portfolio-item" data-cat="fashion"> -->
+<!--         {{ include('portfolio/fashion.html.twig') }} -->
+<!--     </div> -->
+<!--     <div class="portfolio-item" data-cat="fashion"> -->
+<!--         {{ include('portfolio/stockholm.html.twig') }} -->
+<!--     </div> -->
+<!--     <div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center"> -->
+<!--         <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1> -->
+<!--     </div> -->
+<!-- </div> -->
 {% endblock %}
 {% block javascripts %}
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
+    const catIn = "{{ cat }}";
+    const filter = parseInt("{{ filter ?? 0 }}");
+    const isMain = parseInt("{{ main }}")
+
     const spans = document.querySelectorAll('.hashtags-categories > span');
 
-    for(const one of spans) {
-        one.addEventListener('click', function() {
-            const cat = this.dataset.cat;
+    if(isMain) {
+        const queryParams = new URLSearchParams();
+        for(const one of spans) {
+            one.addEventListener('click', function() {
+                const cat = this.dataset.cat;
+                queryParams.set('filter', cat);
+                window.history.replaceState(null, '', window.location.origin + window.location.pathname + '?' + queryParams.toString());
 
-            document.querySelector('.hashtags-categories > span.p-link').classList.remove('p-link');
-            this.classList.add('p-link');
+                document.querySelector('.hashtags-categories > span.p-link').classList.remove('p-link');
+                this.classList.add('p-link');
 
-            if(cat === 'all') {
-                document.querySelectorAll(`.portfolio-item`).forEach(elem => elem.classList.remove('d-none'));
+                if(cat === 'all') {
+                    document.querySelectorAll(`.portfolio-selection-item`).forEach(elem => elem.classList.remove('d-none'));
+                    document.querySelector('.nothing').classList.add('d-none');
+                    return;
+                }
+
+                const hide = document.querySelectorAll(`.portfolio-selection-item:not([data-cat="${cat}"])`);
+                const items = document.querySelectorAll(`.portfolio-selection-item[data-cat="${cat}"]`);
+
+                for(const one of hide) {
+                    one.classList.add('d-none');
+                }
+
+                if(items.length == 0) {
+                    document.querySelector('.nothing').classList.remove('d-none');
+                    return;
+                }
                 document.querySelector('.nothing').classList.add('d-none');
-                return;
-            }
 
-            const hide = document.querySelectorAll(`.portfolio-item:not([data-cat="${cat}"])`);
-            const items = document.querySelectorAll(`.portfolio-item[data-cat="${cat}"]`);
+                document.querySelector('.nothing').classList.add('d-none');
+                for(const one of items) {
+                    one.classList.remove('d-none');
+                }
 
+            })
+        }
+        if(filter && catIn !== 'all') {
+            const hide = document.querySelectorAll(`.portfolio-selection-item:not([data-cat="${catIn}"])`);
             for(const one of hide) {
                 one.classList.add('d-none');
             }
-
-            if(items.length == 0) {
-                document.querySelector('.nothing').classList.remove('d-none');
-                return;
-            }
-            document.querySelector('.nothing').classList.add('d-none');
-
-            document.querySelector('.nothing').classList.add('d-none');
-            for(const one of items) {
-                one.classList.remove('d-none');
-            }
-
-        })
-
+        }
     }
+    else {
+        for(const span of spans) {
+            span.addEventListener('click', function() {
+                const cat = this.dataset.cat;
+                window.location.href = `{{ path('app_portfolio') }}?filter=${cat}`;
+            })
+        }
+    }
+
 
     const bg1 = document.querySelector('.background.bg-clone');
     const bg2 = document.querySelector('.background-2.bg-clone');

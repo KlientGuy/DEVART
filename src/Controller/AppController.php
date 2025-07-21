@@ -7,11 +7,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
 
-#[Route('/{_locale}', locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en'])]
+#[Route('/{_locale}', locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en|de'])]
 class AppController extends AbstractController
 {
 
-    private const array PORTFOLIO_MAP = [
+    private const PORTFOLIO_MAP = [
         'biuroland' => ['site' => 'biuroland.html.twig', 'cat' => 'web'],
         'fashion' => ['site' => 'fashion.html.twig', 'cat' => 'fashion'],
         'foco' => ['site' => 'foco.html.twig', 'cat' => 'brand'],
@@ -59,5 +59,11 @@ class AppController extends AbstractController
             'cat' => $template['cat'],
             'main' => false
         ]);
+    }
+
+    #[Route('/business-card', name: 'business_card')]
+    public function businessCard(): \Symfony\Component\HttpFoundation\Response
+    {
+        return $this->render('business_card/business_card.html.twig');
     }
 }

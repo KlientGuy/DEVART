@@ -91,13 +91,13 @@
                 <div class="mobile-overlay-content" style="height: 100%">
                     <div class="mobile-links">
                         <div class="mobile-menu-link">
-                            <a href="{{ path('app_portfolio') }}">Portfolio</a>
+                            <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
                         </div>
                         <div class="mobile-menu-link">
-                            <a href="{{ path('app_index') }}#offer-home">Oferta</a>
+                            <a href="{{ path('app_index') }}#offer-home">{% trans %}Oferta{% endtrans %}</a>
                         </div>
                         <div class="mobile-menu-link">
-                            <a href="{{ path('app_index') }}#person-info">Kontakt</a>
+                            <a href="{{ path('app_index') }}#person-info">{% trans %}Kontakt{% endtrans %}</a>
                         </div>
                     </div>
                     <div class="socials-mobile" style="position:absolute; bottom: 45vw">
@@ -151,13 +151,13 @@
                 </a>
                 {% endif %}
                 <nav class="nav-menu">
-                    <a href="{{ path('app_portfolio') }}" class="nav-btn">Portfolio</a>
-                    <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn">
+                    <a href="{{ path('app_portfolio') }}" class="nav-btn nav-hide">Portfolio</a>
+                    <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn nav-hide">
                         {% trans %}
                         Oferta
                         {% endtrans %}
                     </a>
-                    <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn">
+                    <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn nav-hide">
                         {% trans %}
                         Kontakt
                         {% endtrans %}

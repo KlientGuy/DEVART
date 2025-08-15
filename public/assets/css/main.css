@@ -847,7 +847,10 @@ img {
     }
 
     .nav-menu {
-        display: none;
+        /* display: none; */
+    }
+    .nav-hide {
+        display: none
     }
 
     footer {

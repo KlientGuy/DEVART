@@ -27,6 +27,10 @@
 </div>
 {% else %}
 <div class="portfolio-selection">
+    <a href="{{ path('app_portfolio_single', {site: 'optident'}) }}" class="portfolio-selection-item" data-cat="web">
+        <img src="{{ asset('assets/img/home/optident_cover.webp') }}" alt="m1">
+        <div class="caption">OPTIDENT</div>
+    </a>
     <a href="{{ path('app_portfolio_single', {site: 'foco'}) }}" class="portfolio-selection-item" data-cat="app">
         <img src="{{ asset('assets/img/home/m_04.webp') }}" alt="m1">
         <div class="caption">FOCO</div>
@@ -76,44 +80,6 @@
     <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1>
 </div>
 {% endif %}
-<!-- <div style="padding: 0 6vw"> -->
-<!--     <div class="portfolio-item" data-cat="brand"> -->
-<!--         {{ include('portfolio/foco.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="web"> -->
-<!--         {{ include('portfolio/sahur.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="web"> -->
-<!--         {{ include('portfolio/gopr.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="social"> -->
-<!--         {{ include('portfolio/socialmedia.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="web"> -->
-<!--         {{ include('portfolio/merceria.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="pack"> -->
-<!--         {{ include('portfolio/prelitech.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="pack"> -->
-<!--         {{ include('portfolio/forest.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="web"> -->
-<!--         {{ include('portfolio/biuroland.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="brand">
-<!--         {{ include('portfolio/prelitech_2.html.twig') }}
-<!--     </div>
-<!--     <div class="portfolio-item" data-cat="fashion"> -->
-<!--         {{ include('portfolio/fashion.html.twig') }} -->
-<!--     </div> -->
-<!--     <div class="portfolio-item" data-cat="fashion"> -->
-<!--         {{ include('portfolio/stockholm.html.twig') }} -->
-<!--     </div> -->
-<!--     <div data-cat="all" class="portfolio-item nothing d-none w-100 d-flex justify-center"> -->
-<!--         <h1>{% trans %}Niestety nic tutaj jeszcze nie ma{% endtrans %}</h1> -->
-<!--     </div> -->
-<!-- </div> -->
 {% endblock %}
 {% block javascripts %}
 <script>

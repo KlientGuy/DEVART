@@ -1,0 +1,50 @@
+{% trans_default_domain 'portfolio' %}
+<style>
+.main-row {
+    gap: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-row {
+        gap: 5rem;
+    }
+
+    .optident-logo {
+        width: 100%;
+    }
+}
+</style>
+<div class="row main-row">
+    <div class="col" style="flex: 1">
+        <div class="row mt-2">
+            <div class="col flex-end w-100">
+                <div>
+                    <h1 class="p-header" style="display: inline-block">Website</h1><sub> (01)</sub>
+                </div>
+                <span class="p-name">{% trans %}Optident{% endtrans %}</span>
+            </div>
+        </div>
+        <p class="p-desc">
+            {% trans %}Strona internetowa one-page powstała dla gabinetu stomatologicznego w Libiążu.{% endtrans %}
+            <br>
+            <a href="https://www.dentystalibiaz.pl" class="p-link">www.dentystalibiaz.pl</a>
+        </p>
+        <div>
+            <img src="{{ asset('assets/img/portfolio/optident_1.png') }}" alt="optident" class="w-100">
+        </div>
+    </div>
+    <div class="col" style="flex: 1">
+        <div>
+            <img src="{{ asset('assets/img/portfolio/optident_2.png') }}" alt="optident" class="w-100">
+        </div>
+        <p class="p-desc mt-5">
+            {% trans %}Dodatkowo stworzyliśmy Logotyp gabinetu, który idealnie wpasowuje się na stronę internetową.{% endtrans %}
+        </p>
+        <div class="mt-2 col" style="align-items: center">
+            <img src="{{ asset('assets/img/portfolio/optident_3.png') }}" alt="optident" class="optident-logo">
+        </div>
+        <div class="mt-2 col" style="align-items: center">
+            <img src="{{ asset('assets/img/portfolio/optident_4.png') }}" alt="optident" class="" style="width: 75%">
+        </div>
+    </div>
+</div>

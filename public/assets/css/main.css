@@ -810,6 +810,10 @@ img {
     transition-delay: 100ms;
 }
 
+.language-selection-list li:nth-child(3) {
+    transition-delay: 200ms;
+}
+
 #language-selection[data-is-open="false"] .chevron {
     transition: transform 300ms ease-in-out;
 }

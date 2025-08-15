@@ -22,7 +22,8 @@ class AppController extends AbstractController
         'skawina' => ['site' => 'skawina.html.twig', 'cat' => 'web'],
         'socialmedia' => ['site' => 'socialmedia.html.twig', 'cat' => 'social'],
         'stockholm' => ['site' => 'stockholm.html.twig', 'cat' => 'fashion'],
-        'gopr' => ['site' => 'gopr.html.twig', 'cat' => 'web']
+        'gopr' => ['site' => 'gopr.html.twig', 'cat' => 'web'],
+        'optident' => ['site' => 'optident.html.twig', 'cat' => 'web']
     ];
 
     public function __construct(private readonly RouterInterface $router) {}

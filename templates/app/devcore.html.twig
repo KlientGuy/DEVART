@@ -1,0 +1,249 @@
+{% trans_default_domain 'portfolio' %}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('assets/css/devcore.css') }}">
+
+        <div class="container-xl h-100">
+            <div class="devcore-panel position-relative full-width">
+
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 700px; top: 150px;">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 300px; top: 200px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 800px; top: 50px; scale: 0.5">
+                <img class="floating-decoration" id="floating-3" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 400px; top: 600px; scale: 0.8">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 450px; top: 540px; scale: 0.4">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 410px; top: 540px; scale: 0.3">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 450px; top: 590px; scale: 0.6">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 500px; top: 700px; scale: 1.2">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 550px; top: 780px; scale: 0.3">
+                <img class="floating-decoration" id="floating-1" src="{{ asset('assets/svg/homepage/icon_arrows.svg') }}" style="right: 200px; top: 250px; scale: 1">
+                <img class="floating-decoration" id="floating-2" src="{{ asset('assets/svg/homepage/icon_arrows.svg') }}" style="left: 100px; top: 600px; scale: 1">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 200px; top: 180px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 500px; top: 800px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 500px; top: 350px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 500px; top: 200px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 350px; top: 300px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 200px; top: 600px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 800px; top: 700px; scale: 0.5">
+                <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 830px; top: 750px; scale: 1">
+
+                <div class="row min-vh-100 justify-content-center align-items-center">
+                    <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
+                        <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
+                        <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-center">
+                <div class="col-lg-2 d-flex justify-center">
+                    <a href="#">Zobacz</a>
+                </div>
+            </div>
+
+            <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
+                <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
+            </div>
+
+            <div class="row scrolly-row">
+                <div class="col col-4 scrollytelling-element-left text-end fs-2">
+                    <p>1. Scrollytelling</p>
+                </div>
+                <div class="col col-5 scrollytelling-element-right">
+                    <h1 class="block-headline" lang="pl">
+                        Stwórz z nami stronę, która opowie
+                        <span class="blue-word no-break">TWOJĄ</span>
+                        <span class="blue-word no-break">HISTORIĘ</span>
+                        tak, że nikt nie przejdzie obok niej obojętnie
+                    </h1>
+                </div>
+            </div>
+
+            <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
+                {% for src in images %}
+                    <img src="{{ asset(src) }}" alt="" loading="lazy">
+                {% endfor %}
+            </div>
+
+            <div class="row scrolly-row-one-page one-page-element" style="height: 100vh">
+                <div class="col col-sm-2 fs-2 one-page-text">
+                    2. OnePage
+                </div>
+                <div class="col col-sm-4 d-flex justify-center">
+                    <img src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
+                </div>
+                <div class="col col-sm-6 one-page-desc">
+                    To elegancka wizytówka, która jednym spojrzeniem mówi,
+                    co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów:
+                    przejrzysta oferta i świetne dopasowanie do telefonów.
+                </div>
+            </div>
+            <div class="test"></div>
+
+            <div class="horizontal-section full-width" style="height: 100vh">
+                <div class="horizontal-track">
+                    <div class="panel panel-1 col-12 row align-center">
+                        <div class="col col-3 text-end fs-2">
+                            <p>3. Firmowe</p>
+                        </div>
+                        <div class="col col-4">
+                            <h1 class="block-headline" lang="pl">
+                                Wizerunek<br>
+                                Sprzedaż<br>
+                                Integracje<br>
+                                Przekaz
+                            </h1>
+                        </div>
+                        <div class="col col-3">
+                            <img src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                        </div>
+                    </div>
+                    <div class="panel panel-1 col-12 row align-center">
+                        <div class="col col-3 text-end fs-2">
+                            <p>4. E-commerce</p>
+                        </div>
+                        <div class="col col-6">
+                            <h1 class="block-headline" lang="pl">
+                                Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
+                            </h1>
+                        </div>
+                        <div class="col col-3">
+                            <img src="{{ asset('/assets/img/home/carousel/merceria.png') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row cities-section" style="height: 80vh">
+                <div class="col col-sm-2 fs-2 cities-text">
+                    5. Miasta, Gminy, Działaności publiczne
+                </div>
+                <div class="col col-sm-4 d-flex justify-center">
+                    <img src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
+                </div>
+                <div class="col col-sm-4 d-flex justify-center">
+                    <img src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
+                </div>
+            </div>
+
+
+            <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
+                <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
+            </div>
+
+            <div class="d-flex align-center justify-center fs-1 text-center mb-4">
+                <span style="font-weight: 200">Zaufali nam</span>
+            </div>
+
+            <div class="carousel-home full-width mb-5 mt-5">
+                <div class="carousel-inner-home">
+                    {% for src in trustedImages %}
+                        <div class="carousel-item-home">
+                            <img src="{{ asset(src) }}" alt="m1">
+                        </div>
+                    {% endfor %}
+
+                    {% for src in trustedImages %}
+                        <div class="carousel-item-home">
+                            <img src="{{ asset(src) }}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+{% endblock %}
+{% block javascripts %}
+<script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    // ScrollSmoother.create({
+    //     smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+    //     effects: true, // looks for data-speed and data-lag attributes on elements
+    //     smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+    // });
+
+    const panels = gsap.utils.toArray(".horizontal-track .panel");
+
+    gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal-section",
+            pin: true,
+            scrub: 1,
+            end: () => "+=" + window.innerWidth * (panels.length - 1)
+        }
+    });
+
+    const $owl = $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: false,
+        nav: false,
+        responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
+    });
+
+    const tlOne = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".scrolly-row",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            // markers: true,
+            invalidateOnRefresh: true
+        }
+    });
+
+    tlOne.to(".scrollytelling-element-right", {
+        yPercent: -50,
+        ease: "none"
+    }, 0);
+
+    tlOne.to(".scrollytelling-element-left", {
+        yPercent: 60,
+        ease: "none"
+    }, 0);
+
+    const tlTwo = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".one-page-element",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            // markers: true,
+            invalidateOnRefresh: true
+        }
+    });
+
+    tlTwo.to(".one-page-text", {
+        y: 750,
+        ease: "none"
+    }, 0);
+
+    tlTwo.to(".one-page-desc", {
+        y: 750,
+        ease: "none"
+    }, 0);
+
+    const tlThree = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".cities-section",
+            start: "top bottom",
+            end: "bottom",
+            scrub: true,
+        }
+    });
+
+    tlThree.to(".cities-text", {
+        y: 500,
+        ease: "none"
+    }, 0);
+
+
+</script>
+{% endblock %}

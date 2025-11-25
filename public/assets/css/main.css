@@ -3,7 +3,7 @@
 }
 
 html, body {
-    /* overflow-x: hidden; */
+     overflow-x: hidden !important;
     scroll-behavior: smooth;
 }
 
@@ -41,69 +41,39 @@ body {
     /* overflow-x: hidden; */
 }
 
-.carousel {
-    animation: slide-up 1s;
-    opacity: 0;
-    transform: translateY(15px);
-    animation-fill-mode: forwards;
-    animation-delay: 1.2s;
-    margin: 80px calc(var(--base-margin-x) * -1);
-    /* height: calc(25vw + 20px); */
-    /* width: calc(100% + 10rem); */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
+.full-width {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
 
-.carousel-inner {
-    display: grid;
-    /* grid-template-columns: repeat(12, calc(25vw * 335 / 521)); */
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-flow: column;
-    gap: 20px;
-    animation: slide 35s linear infinite;
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform-origin: center center;
+    transition: transform 320ms ease, filter 320ms ease;
+    will-change: transform;
 }
 
-.carousel-item {
-    /* height: 25vw; */
-    aspect-ratio: 335 / 521;
-    position: relative;
-    /* width: 100%; */
-    width: calc(20vw - 20px);
+.owl-carousel .owl-item:hover img {
+    transform: scale(1.1);
 }
 
-.carousel-item img {
+.owl-carousel.owl-grab .owl-item img {
+    transition-duration: 0ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .owl-carousel .owl-item img { transition: none; }
+}
+
+.carousel-item-home img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: filter 0.3s ease;
-}
-
-.carousel-item:hover img {
-    filter: brightness(50%);
-}
-
-.carousel-item .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    font-size: 16px;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-}
-
-.carousel-item:hover .caption {
-    opacity: 1;
 }
 
 @keyframes slide {
@@ -113,15 +83,6 @@ body {
     100% {
         transform: translateX(-50%);
     }
-}
-
-.carousel-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-.carousel-inner:hover {
-    animation-play-state: paused;
 }
 
 .logo{
@@ -826,7 +787,7 @@ img {
     :root {
         font-size: 14px;
     }
-    .carousel-item {
+    .carousel-item-home {
         width: calc(33vw - 20px);
     }
 
@@ -892,7 +853,89 @@ img {
         font-size: 10px;
     }
 
-    .carousel-item {
+    .carousel-item-home {
         width: calc(50vw - 20px);
     }
+}
+
+.floating-decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.carousel-home {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner-home {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 25s linear infinite;
+}
+
+.carousel-item-home {
+    flex: 0 0 auto;
+    padding: 0 2rem;
+}
+
+.carousel-item-home img {
+    display: block;
+    height: 60px;
+    width: auto;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #floating-1 {
+        display: none;
+    }
+    #floating-2 {
+        left: 250px !important;
+    }
+    #floating-3 {
+        left: 100px !important;
+        top: 700px !important;
+    }
+}
+
+.contact-form {
+    background: #000;
+    color: #fff;
+}
+.contact-form-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-input,
+.contact-textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #666;
+    border-radius: 0;
+    color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contact-input:focus,
+.contact-textarea:focus {
+    box-shadow: none;
+    border-bottom-color: #fff;
+    background-color: black;
+    color: white;
+}
+.btn-contact {
+    background: #d9d9d9;
+    border-radius: 999px;
+    padding: .75rem 2.5rem;
+    border: none;
 }

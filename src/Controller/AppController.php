@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
@@ -31,7 +32,37 @@ class AppController extends AbstractController
     #[Route('/', name: 'app_index', methods: ['GET'])]
     public function index()
     {
-        return $this->render('app/index.html.twig');
+        $projectDir = $this->getParameter('kernel.project_dir');
+        $publicGalleryPath = $projectDir . '/public/assets/img/home/carousel';
+        $trustedUspath = $projectDir . '/public/assets/img/home/trusted_us';
+
+        $finder = new Finder();
+        $finder
+            ->files()
+            ->in($publicGalleryPath)
+            ->name('/\.(jpe?g|png|gif|webp)$/i');
+
+        $trustedFinder = new Finder();
+        $trustedFinder
+            ->files()
+            ->in($trustedUspath)
+            ->name('/\.(jpe?g|png|gif|webp)$/i');
+
+        $trustedImages = [];
+        foreach ($trustedFinder as $file) {
+            $trustedImages[] = 'assets/img/home/trusted_us/' . $file->getFilename();
+        }
+
+        $images = [];
+        foreach ($finder as $file) {
+            $images[] = 'assets/img/home/carousel/' . $file->getFilename();
+        }
+
+
+        return $this->render('app/index.html.twig', [
+            'images' => $images,
+            'trustedImages' => $trustedImages
+        ]);
     }
 
     #[Route('/offer', name: 'app_offer', methods: ['GET'])]
@@ -66,5 +97,40 @@ class AppController extends AbstractController
     public function businessCard(): \Symfony\Component\HttpFoundation\Response
     {
         return $this->render('business_card/business_card.html.twig');
+    }
+
+    #[Route('/devcore', name: 'app_devcore')]
+    public function devcore(): \Symfony\Component\HttpFoundation\Response
+    {
+        $projectDir = $this->getParameter('kernel.project_dir');
+        $publicGalleryPath = $projectDir . '/public/assets/img/home/carousel';
+        $trustedUspath = $projectDir . '/public/assets/img/home/trusted_us';
+
+        $finder = new Finder();
+        $finder
+            ->files()
+            ->in($publicGalleryPath)
+            ->name('/\.(jpe?g|png|gif|webp)$/i');
+
+        $trustedFinder = new Finder();
+        $trustedFinder
+            ->files()
+            ->in($trustedUspath)
+            ->name('/\.(jpe?g|png|gif|webp)$/i');
+
+        $trustedImages = [];
+        foreach ($trustedFinder as $file) {
+            $trustedImages[] = 'assets/img/home/trusted_us/' . $file->getFilename();
+        }
+
+        $images = [];
+        foreach ($finder as $file) {
+            $images[] = 'assets/img/home/carousel/' . $file->getFilename();
+        }
+
+        return $this->render('app/devcore.html.twig', [
+            'images' => $images,
+            'trustedImages' => $trustedImages
+        ]);
     }
 }

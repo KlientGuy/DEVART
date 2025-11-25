@@ -1,0 +1,66 @@
+.main-section {
+    min-height: 80vh;
+}
+.devcore-small-text{
+    min-height: 40vh;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.big-text {
+    font-weight: 600;
+    font-size: 4rem;
+    max-width: 45vw;
+}
+.blue-word {
+    color: #0A84FF;
+}
+.test {
+    min-height: 20vh;
+}
+
+.block-headline{
+    width: clamp(18ch, 42vw, 24ch);
+    font-weight: 600;
+    line-height: 1.06;
+    font-size: clamp(28px, 6vw, 63px);
+    margin: 0;
+
+    text-wrap: balance;
+    hyphens: auto;
+    word-break: normal;
+    text-align: left;
+}
+.block-headline .blue-word{ color:#2b78ff; }
+.no-break{ white-space: nowrap; }
+
+@supports not (text-wrap: balance) {
+    .block-headline{ width: 24ch; hyphens: manual; }
+}
+
+.scrolly { will-change: transform; }
+.scrolly-row, .scrolly-row-one-page > .col { will-change: transform; }
+
+.horizontal-section {
+    position: relative;
+    overflow: hidden;       /* żeby nic nie wystawało na boki */
+}
+
+.horizontal-track {
+    display: flex !important;   /* wymuszamy flexa */
+    flex-wrap: nowrap;          /* NIE zawijaj w dół */
+    height: 100%;
+}
+
+.horizontal-track .panel {
+    flex: 0 0 100%;            /* każdy panel = szerokość okna */
+    height: 100vh;
+    padding: 4rem 2rem;
+}
+
+
+
+
+
+
+
+

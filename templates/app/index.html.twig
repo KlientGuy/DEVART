@@ -15,36 +15,12 @@
         <div class="slogan-text">{% trans %}agencja brandingowa.{% endtrans %}</div>
         <div class="slogan-subtext">thinking people</div>
     </div>
-    <div class="carousel">
-        <div class="carousel-inner">
-        {% for num in range(0, 1) %}
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_01.webp') }}" alt="m1">
-                <div class="caption">MERCERIA</div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_02.webp') }}" alt="m1">
-                <div class="caption">TUKUPTU</div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_03.webp') }}" alt="m1">
-                <div class="caption">GOPR</div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_04.webp') }}" alt="m1">
-                <div class="caption">FOCO</div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_05.webp') }}" alt="m1">
-                <div class="caption">BIUROLAND</div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/home/m_06.webp') }}" alt="m1">
-                <div class="caption">SKAWINA</div>
-            </div>
+    <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
+        {% for src in images %}
+            <img src="{{ asset(src) }}" alt="" loading="lazy">
         {% endfor %}
-        </div>
     </div>
+
     <div class="see-more-text" style="width: 100%; display: flex; justify-content: center">
         <div class="text-more" style="font-size: 20px; border-bottom: 1px solid white; cursor: pointer">
             <a href="{{ path('app_portfolio') }}">{% trans %}Zobacz więcej{% endtrans %}</a>
@@ -121,9 +97,38 @@
             </div>
         </div>
     </div>
+    <div class="devcore-panel position-relative">
+
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 700px; top: 150px;">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 300px; top: 200px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 800px; top: 50px; scale: 0.5">
+        <img class="floating-decoration" id="floating-3" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 400px; top: 600px; scale: 0.8">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 450px; top: 540px; scale: 0.4">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 410px; top: 540px; scale: 0.3">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 450px; top: 590px; scale: 0.6">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 500px; top: 700px; scale: 1.2">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="right: 550px; top: 780px; scale: 0.3">
+        <img class="floating-decoration" id="floating-1" src="{{ asset('assets/svg/homepage/icon_arrows.svg') }}" style="right: 200px; top: 250px; scale: 1">
+        <img class="floating-decoration" id="floating-2" src="{{ asset('assets/svg/homepage/icon_arrows.svg') }}" style="left: 100px; top: 600px; scale: 1">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 200px; top: 180px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 500px; top: 800px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="left: 500px; top: 350px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 500px; top: 200px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 350px; top: 300px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 200px; top: 600px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 800px; top: 700px; scale: 0.5">
+        <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 830px; top: 750px; scale: 1">
+
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
+                <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
+                <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
+            </div>
+        </div>
+    </div>
     <div id="person-info" class="person-info">
         <div class="row" style="flex-wrap: wrap; gap: 4rem">
-            <div class="person-card row">
+            <div class="person-card">
                 <div class="person-text">
                     <span style="font-weight: 300">Gabriel Socha</span>
                     <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span>
@@ -164,20 +169,75 @@
 {#            </div>#}
 {#        </div>#}
     </div>
-    <div class="content-card">
-        <div class="card">
-            <div class="photo-card">
-                <img src="{{ asset('assets/svg/logo.svg') }}" alt="logo-card" style="width: 60%">
+    <div class="contact-form">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="col-11 col-md-8 col-lg-6">
+                <form class="contact-form-inner">
+                    <h2 class="mb-5">Skontaktuj się z nami</h2>
+
+                    <div class="mb-4">
+                        <label class="form-label">Imię i nazwisko</label>
+                        <input type="text" class="form-control contact-input">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control contact-input">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Wiadomość</label>
+                        <textarea rows="4" class="form-control contact-textarea"></textarea>
+                    </div>
+
+                    <div class="mb-4 d-flex align-items-center gap-2">
+                        <input type="checkbox" id="not-robot">
+                        <label for="not-robot" class="mb-0 small">
+                            Potwierdź, że nie jesteś robotem
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-contact">
+                        Wyślij wiadomość
+                    </button>
+                </form>
             </div>
-            <div class="hashtags">
-            {% trans %}#2dev #branding #studio #komunikacja #wygląd #www #art{% endtrans %}
-            </div>
+        </div>
+    </div>
+    <div class="d-flex align-center justify-center fs-1 text-center mb-4">
+        <span style="font-weight: 200">Zaufali nam</span>
+    </div>
+    <div class="carousel-home full-width mb-5 mt-5">
+        <div class="carousel-inner-home">
+            {% for src in trustedImages %}
+                <div class="carousel-item-home">
+                    <img src="{{ asset(src) }}" alt="m1">
+                </div>
+            {% endfor %}
+
+            {% for src in trustedImages %}
+                <div class="carousel-item-home">
+                    <img src="{{ asset(src) }}" alt="">
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
 {% block javascripts %}
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    const $owl = $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: false,
+        nav: false,
+        responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
+    });
+
     const bg1 = document.querySelector('.background.bg-clone');
     const bg2 = document.querySelector('.background-2.bg-clone');
 

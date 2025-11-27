@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
+    {{ include('app/elements/_portfolio_fifsztoki.html.twig') }}
+<div class="logo" style="height: 50vw; max-height: 500px">
+    <div class="slogan-left d-none d-md-flex">
+        <div class="slogan-left-text">thinking first</div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-8 col-10">
+            <img class="w-100" src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="">
+        </div>
+    </div>
+    <div style="flex: 1"></div>
+</div>
+<div class="container">
+    <div>
+        <div class="hashtags-categories">
+            <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span>
+            <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span>
+            <span class="{{ cat == 'web' ? 'p-link' : '' }}" data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span>
+            <span class="{{ cat == 'app' ? 'p-link' : '' }}" data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span>
+            <span class="{{ cat == 'pack' ? 'p-link' : '' }}" data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span>
+            <span class="{{ cat == 'social' ? 'p-link' : '' }}" data-cat="social">{% trans %}#Social media{% endtrans %}</span>
+            <span class="{{ cat == 'fashion' ? 'p-link' : '' }}" data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span>
+        </div>
+    </div>
+    <div class="row">
+        {% for i in range(0, 5) %}
+            <a class="position-relative d-flex align-items-center flex-column col-6 col-md-4 col-lg-3 col-xl-3" href="{{ path('app_portfolio_post', {id: posts[0].id}) }}">
+                <div class="portfolio-block position-relative">
+                    <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: posts[0].id}) }}" alt="">
+                </div>
+                <span class="position-absolute mb-4" style="bottom: 0">Zobacz ></span>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

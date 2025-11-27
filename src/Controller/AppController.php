@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Devcore\BlogBundle\Entity\Post;
+use Devcore\BlogBundle\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
@@ -78,8 +80,16 @@ class AppController extends AbstractController
         return $this->render('app/portfolio.html.twig', ['main' => true, 'cat' => $cat ?? 'all', 'filter' => !empty($cat)]);
     }
 
+    #[Route('/portfolio/{id<\d+>}', name: 'app_portfolio_post')]
+    public function portfolioPost(Post $post)
+    {
+        return $this->render('blog/post.html.twig', [
+            'post' => $post
+        ]);
+    }
+
     #[Route('/portfolio/{site}', name: 'app_portfolio_single', methods: ['GET'])]
-    public function portfolioSingle(string $site) 
+    public function portfolioSingle(string $site)
     {
         $template = self::PORTFOLIO_MAP[$site] ?? null;
 
@@ -131,6 +141,17 @@ class AppController extends AbstractController
         return $this->render('app/devcore.html.twig', [
             'images' => $images,
             'trustedImages' => $trustedImages
+        ]);
+    }
+
+    #[Route('/portfolioNew', name: 'app_porftolio_new')]
+    public function portfolioNew(PostRepository $postRepository)
+    {
+        $posts = $postRepository->findBy(['active' => 1]);
+
+        return $this->render('app/portfolio_new.html.twig', [
+            'posts' => $posts,
+            'cat' => 'all'
         ]);
     }
 }

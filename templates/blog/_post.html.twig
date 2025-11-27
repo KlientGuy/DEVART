@@ -1,0 +1,33 @@
+<style>
+.block-container {
+    width: 100%;
+}
+</style>
+<div class="container p-5 blog-post">
+    <div class="row">
+        <div class="col-sm-12 small text-secondary">
+            {{ post.createdAt|date("Y M d") }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            {# <h2 class="post-title">{{ post_trans(post, 'title', locale) }}</h2> #}
+        </div>
+    </div>
+    {# <div class="row"> #}
+    {#     <div class="col-sm-12"> #}
+    {#         <img class="w-100 post-main-photo" src="{{ path('devcore_blog_get_main_photo', {id: post.id}) }}" alt=""> #}
+    {#     </div> #}
+    {# </div> #}
+    <div class="post-blocks d-flex flex-column align-items-center">
+        {% for block in post.postBlocks %}
+        {% if block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').TEXT %}
+            {{ include('blog/blocks/_text.html.twig', {block: block}) }}
+        {% elseif block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').IMAGE %}
+            {{ include('blog/blocks/_image.html.twig', {block: block}) }}
+        {% elseif block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').HEADER %}
+            {{ include('blog/blocks/_header.html.twig', {block: block}) }}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

@@ -2,11 +2,15 @@
 
 namespace App\Controller;
 
+use Devcore\BlogBundle\Entity\Category;
 use Devcore\BlogBundle\Entity\Post;
+use Devcore\BlogBundle\Repository\CategoryRepository;
 use Devcore\BlogBundle\Repository\PostRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -80,9 +84,12 @@ class AppController extends AbstractController
         return $this->render('app/portfolio.html.twig', ['main' => true, 'cat' => $cat ?? 'all', 'filter' => !empty($cat)]);
     }
 
-    #[Route('/portfolio/{id<\d+>}', name: 'app_portfolio_post')]
-    public function portfolioPost(Post $post)
+    #[Route('/portfolio/{slug}', name: 'app_portfolio_post')]
+    public function portfolioPost(PostRepository $postRepository, string|int $slug)
     {
+        $post = $postRepository->findBySlugOrId($slug);
+        if(empty($post))
+            throw new NotFoundHttpException();
         return $this->render('blog/post.html.twig', [
             'post' => $post
         ]);
@@ -144,14 +151,24 @@ class AppController extends AbstractController
         ]);
     }
 
-    #[Route('/portfolioNew', name: 'app_porftolio_new')]
-    public function portfolioNew(PostRepository $postRepository)
+    #[Route('/portfolioNew', name: 'app_portfolio_new')]
+    public function portfolioNew(PostRepository $postRepository, CategoryRepository $categoryRepository, Request $request)
     {
-        $posts = $postRepository->findBy(['active' => 1]);
+        $category = $request->query->get('category') ?? null;
+        $cat = null;
+        if(!empty($category)) {
+            $cat = $categoryRepository->findOneBy(['name' => $category]);
+            $posts = $postRepository->findByCategory($cat);
+        }
+        else {
+            $posts = $postRepository->findBy(['active' => 1]);
+        }
+        $locale = $request->attributes->get('_locale');
 
         return $this->render('app/portfolio_new.html.twig', [
             'posts' => $posts,
-            'cat' => 'all'
+            'categories' => $categoryRepository->findBy(['locale' => $locale]),
+            'category' => $cat
         ]);
     }
 }

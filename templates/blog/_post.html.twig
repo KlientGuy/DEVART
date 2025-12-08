@@ -3,7 +3,7 @@
     width: 100%;
 }
 </style>
-<div class="container p-5 blog-post">
+<div class="container p-0 p-md-5 blog-post">
     <div class="row">
         <div class="col-sm-12 small text-secondary">
             {{ post.createdAt|date("Y M d") }}
@@ -20,7 +20,7 @@
     {#     </div> #}
     {# </div> #}
     <div class="post-blocks d-flex flex-column align-items-center">
-        {% for block in post.postBlocks %}
+        {% for block in post.postBlocks|filter(b => b.mobile == is_mobile()) %}
         {% if block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').TEXT %}
             {{ include('blog/blocks/_text.html.twig', {block: block}) }}
         {% elseif block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').IMAGE %}

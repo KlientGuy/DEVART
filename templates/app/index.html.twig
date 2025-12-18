@@ -16,9 +16,14 @@
         <div class="slogan-subtext">thinking people</div>
     </div>
     <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
-        {% for src in images %}
-            <img src="{{ asset(src) }}" alt="" loading="lazy">
+        {% for post in posts %}
+            <div class="portfolio-block position-relative">
+                <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
+            </div>
         {% endfor %}
+        {# {% for src in images %} #}
+        {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
+        {# {% endfor %} #}
     </div>
 
     <div class="see-more-text" style="width: 100%; display: flex; justify-content: center">
@@ -230,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: true,
         margin: 30,
         autoplay: true,
-        autoplayTimeout: 2500,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true,
         smartSpeed: 800,
         dots: false,
@@ -254,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.bg-clone').forEach((element) => {
         element.style.setProperty('--scroll', scroll);
     })
-    
+
     window.addEventListener('scroll', () => {
         const windowTop = 0;
 

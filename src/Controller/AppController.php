@@ -10,11 +10,12 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
 
-#[Route('/{_locale}', locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en|de'])]
+#[Route(['/{_locale}', 'pl' => '/'], locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en|de'])]
 class AppController extends AbstractController
 {
 
@@ -36,7 +37,7 @@ class AppController extends AbstractController
     public function __construct(private readonly RouterInterface $router) {}
 
     #[Route('/', name: 'app_index', methods: ['GET'])]
-    public function index()
+    public function index(PostRepository $postRepository)
     {
         $projectDir = $this->getParameter('kernel.project_dir');
         $publicGalleryPath = $projectDir . '/public/assets/img/home/carousel';
@@ -66,6 +67,7 @@ class AppController extends AbstractController
 
 
         return $this->render('app/index.html.twig', [
+            'posts' => $postRepository->findBy(['active' => 1]),
             'images' => $images,
             'trustedImages' => $trustedImages
         ]);
@@ -77,7 +79,7 @@ class AppController extends AbstractController
         return $this->render('app/offer.html.twig');
     }
 
-    #[Route('/portfolio/', name: 'app_portfolio', methods: ['GET'])]
+    #[Route('/portfolioOld/', name: 'app_portfolio_old', methods: ['GET'])]
     public function portfolio(Request $request)
     {
         $cat = $request->query->get('filter');
@@ -117,7 +119,7 @@ class AppController extends AbstractController
     }
 
     #[Route('/devcore', name: 'app_devcore')]
-    public function devcore(): \Symfony\Component\HttpFoundation\Response
+    public function devcore(PostRepository $postRepository): Response
     {
         $projectDir = $this->getParameter('kernel.project_dir');
         $publicGalleryPath = $projectDir . '/public/assets/img/home/carousel';
@@ -146,12 +148,13 @@ class AppController extends AbstractController
         }
 
         return $this->render('app/devcore.html.twig', [
+            'posts' => $postRepository->findBy(['active' => 1]),
             'images' => $images,
             'trustedImages' => $trustedImages
         ]);
     }
 
-    #[Route('/portfolioNew', name: 'app_portfolio_new')]
+    #[Route('/portfolio', name: 'app_portfolio')]
     public function portfolioNew(PostRepository $postRepository, CategoryRepository $categoryRepository, Request $request)
     {
         $category = $request->query->get('category') ?? null;

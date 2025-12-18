@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
         <meta name="viewport" content="initial-scale=1, width=device-width">
-        <meta name="description" content="{{ 'W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania'|trans }}">
+        <meta name="description" content="{% block meta_desc %}{{ 'W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania'|trans }}{% endblock %}">
         <meta property="og:title" content="{{ '2dev - agencja brandingowa'|trans }}">
         <meta property="og:image" content="https://2dev.com.pl/assets/img/logo.webp">
         <meta property="og:url" content="https://2dev.com.pl">
@@ -185,23 +185,32 @@
                         </a>
                         <ul class="language-selection-list" style="position: absolute">
                             <li>
-                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                <a class="nav-btn d-flex flex-end" href="{{ path(
+                                    app.request.attributes.get('_route'),
+                                    app.request.attributes.get('_route_params')|merge({'_locale': 'pl'})
+                                ) }}">
                                     <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
+                                <a class="nav-btn d-flex flex-end" href="{{ path(
+                                    app.request.attributes.get('_route'),
+                                    app.request.attributes.get('_route_params')|merge({'_locale': 'en'})
+                                ) }}">
                                     <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
                                     <img src="{{ asset('assets/img/uk.png') }}" alt="anglia" width="30" height="20">
                                     </div>
                                 </a>
-                                <li>
-                                    <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'de'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
-                                        <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
-                                        <img src="{{ asset('assets/svg/de_flag.svg') }}" alt="niemcy" width="30" height="20">
-                                        </div>
-                                    </a>
-                                </li>
+                            </li>
+                            <li>
+                                <a class="nav-btn d-flex flex-end" href="{{ path(
+                                    app.request.attributes.get('_route'),
+                                    app.request.attributes.get('_route_params')|merge({'_locale': 'de'})
+                                ) }}">
+                                    <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
+                                    <img src="{{ asset('assets/svg/de_flag.svg') }}" alt="niemcy" width="30" height="20">
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>

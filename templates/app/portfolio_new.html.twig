@@ -1,6 +1,9 @@
 {% trans_default_domain 'portfolio' %}
 {% extends 'base.html.twig' %}
 
+{% block title %}
+Portfolio
+{% endblock %}
 {% block body %}
 <style>
     #p-menu-dialog {
@@ -69,9 +72,9 @@
     </div>
     <div class="h-100 d-flex align-items-center">
         <div class="p-5 d-flex flex-column justify-content-around align-items-center fw-bold fs-1 w-100" style="height: 80%">
-            <a href="{{ path('app_portfolio_new') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
+            <a href="{{ path('app_portfolio') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
             {% for cat in categories %}
-            <a href="{{ path('app_portfolio_new', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}" data-cat="all">{{ cat }}</a>
+            <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}" data-cat="all">{{ cat }}</a>
             {% endfor %}
             {# <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span> #}
             {# <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span> #}
@@ -98,9 +101,9 @@
 <div class="container">
     <div class="d-none d-md-block">
         <div class="hashtags-categories">
-            <a href="{{ path('app_portfolio_new') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
+            <a href="{{ path('app_portfolio') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
             {% for cat in categories %}
-            <a href="{{ path('app_portfolio_new', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}">{{ cat }}</a>
+            <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}">{{ cat }}</a>
             {% endfor %}
             {# <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span> #}
             {# <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span> #}

@@ -2,6 +2,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<style>
+.horizontal-section {
+    background-color: black;
+}
+
+.horizontal-track {
+    background: linear-gradient(-90deg, rgb(0, 0, 0, 1) 0%, rgb(0, 0, 0, 0) 25%, rgb(0,0,0,0) 75%, rgb(0,0,0,1) 100%);
+}
+.horizontal-section-pre {
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+    position: relative;
+    z-index: 99;
+}
+</style>
     <link rel="stylesheet" href="{{ asset('assets/css/devcore.css') }}">
 
         <div class="container-xl h-100">
@@ -45,89 +61,105 @@
                 <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
             </div>
 
-            <div class="row scrolly-row">
-                <div class="col col-4 scrollytelling-element-left text-end fs-2">
+            <div class="row scrolly-row" style="margin-bottom: 8rem">
+                <div class="col-12 col-md-6 scrollytelling-element-left text-md-end fs-2">
                     <p>1. Scrollytelling</p>
                 </div>
-                <div class="col col-5 scrollytelling-element-right">
-                    <h1 class="block-headline" lang="pl">
-                        Stwórz z nami stronę, która opowie
-                        <span class="blue-word no-break">TWOJĄ</span>
-                        <span class="blue-word no-break">HISTORIĘ</span>
-                        tak, że nikt nie przejdzie obok niej obojętnie
+                <div class="col-12 col-md-6 scrollytelling-element-right">
+                    <h1 class="block-headline w-100" lang="pl" style="font-size: 5rem;">
+                        Stwórz z nami stronę, która
+                        <span style="font-size: 0.9em">
+                            opowie
+                            <span class="blue-word">TWOJĄ</span>
+                            <span class="blue-word">HISTORIĘ</span>
+                        </span>
+                        tak, że <span style="font-size: 0.8em">nikt nie przejdzie obok niej obojętnie</span>
                     </h1>
                 </div>
             </div>
 
             <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
-                {% for src in images %}
-                    <img src="{{ asset(src) }}" alt="" loading="lazy">
+                {% for post in posts %}
+                <div class="portfolio-block position-relative">
+                    <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
+                </div>
                 {% endfor %}
+                {# {% for src in images %} #}
+                {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
+                {# {% endfor %} #}
             </div>
 
-            <div class="row scrolly-row-one-page one-page-element" style="height: 100vh">
-                <div class="col col-sm-2 fs-2 one-page-text">
+            <div class="row scrolly-row-one-page one-page-element" style="">
+                <div class="col-sm-4 fs-2 one-page-text text-end">
                     2. OnePage
                 </div>
-                <div class="col col-sm-4 d-flex justify-center">
-                    <img src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
+                <div class="col-sm-4 d-flex justify-center one-page-photo">
+                    <img class="w-100" src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
                 </div>
-                <div class="col col-sm-6 one-page-desc">
+                <div class="col-sm-4 one-page-desc">
                     To elegancka wizytówka, która jednym spojrzeniem mówi,
                     co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów:
                     przejrzysta oferta i świetne dopasowanie do telefonów.
                 </div>
             </div>
-            <div class="test"></div>
 
+            <div class="horizontal-section-pre"></div>
             <div class="horizontal-section full-width" style="height: 100vh">
                 <div class="horizontal-track">
-                    <div class="panel panel-1 col-12 row align-center">
-                        <div class="col col-3 text-end fs-2">
-                            <p>3. Firmowe</p>
-                        </div>
-                        <div class="col col-4">
-                            <h1 class="block-headline" lang="pl">
-                                Wizerunek<br>
-                                Sprzedaż<br>
-                                Integracje<br>
-                                Przekaz
-                            </h1>
-                        </div>
-                        <div class="col col-3">
-                            <img src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                    <div class="panel align-center d-flex" style=" z-index: -1; flex: 0 0 120vw">
+                        <div class="d-flex w-100" style="gap: 2rem;">
+                            <div class="text-end fs-2 d-flex justify-content-end align-items-start h-100" style="flex: 2">
+                                <p>3. Firmowe</p>
+                            </div>
+                            <div class="fw-bold" style="font-size: 10vmax; line-height: 10vmax; flex: 1">
+                                <div>Wizerunek</div>
+                                <div>Sprzedaż</div>
+                                <div>Integracje</div>
+                                <div>Przekaz</div>
+                            </div>
+                            <div class="" style="flex: 1">
+                                <img class="w-100" src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                            </div>
                         </div>
                     </div>
-                    <div class="panel panel-1 col-12 row align-center">
-                        <div class="col col-3 text-end fs-2">
-                            <p>4. E-commerce</p>
-                        </div>
-                        <div class="col col-6">
-                            <h1 class="block-headline" lang="pl">
-                                Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
-                            </h1>
-                        </div>
-                        <div class="col col-3">
-                            <img src="{{ asset('/assets/img/home/carousel/merceria.png') }}">
+                    <div class="panel panel-1 align-center d-flex" style="z-index: -1; flex: 0 0 120vw">
+                        <div class="d-flex w-100" style="gap: 2rem;">
+                            <div class="text-end fs-2" style="flex: 1">
+                                <p>4. E-commerce</p>
+                            </div>
+                            <div class="" style="flex: 1">
+                                {# <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}"> #}
+                                <img class="w-100" src="{{ asset('/assets/img/portfolio/merceria_main.png') }}" style="object-fit: cover">
+                            </div>
+                            <div class="" style="flex: 2">
+                                <div class="fw-bold" style="font-size: 4vmax; line-height: 5vmax">
+                                    Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row cities-section" style="height: 80vh">
-                <div class="col col-sm-2 fs-2 cities-text">
-                    5. Miasta, Gminy, Działaności publiczne
+            <div class="row cities-section p-0 p-md-5">
+                <div class="col-sm-5 fs-2 cities-text text-md-end h-auto">
+                    <span>
+                        5. Miasta, Gminy, <br> Działaności publiczne
+                    </span>
                 </div>
-                <div class="col col-sm-4 d-flex justify-center">
-                    <img src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
-                </div>
-                <div class="col col-sm-4 d-flex justify-center">
-                    <img src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
+                <div class="d-md-none fw-bold fs-5 mb-4">zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</div>
+                <div class="col-sm-6 row city-imgs">
+                    <div class="city-img col-6 d-flex justify-center">
+                        <img class="w-100" src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
+                    </div>
+                    <div class="city-img col-6 d-flex justify-center">
+                        <img class="w-100" src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
+                    </div>
                 </div>
             </div>
 
 
-            <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
+            <div class="devcore-small-text d-none d-md-flex align-center justify-center fs-4 text-center fw-bold">
                 <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
             </div>
 
@@ -165,16 +197,75 @@
 
     const panels = gsap.utils.toArray(".horizontal-track .panel");
 
-    gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".horizontal-section",
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + window.innerWidth * (panels.length - 1)
-        }
-    });
+    const desktop = gsap.matchMedia();
+
+    desktop.add('screen and (min-width: 768px)', () => {
+        const scrollyOffset = $('.scrollytelling-element-right')[0].offsetHeight - $('.scrollytelling-element-left p')[0].offsetHeight - 10;
+        const tlScrollytelling = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.scrolly-row',
+                start: 'top top+=200',
+                end: () => "+=" + scrollyOffset,
+                pin: '.scrollytelling-element-left',
+                scrub: true,
+                markers: true,
+                invalidateOnRefresh: true
+            }
+        });
+
+        // tlScrollytelling.to(".scrollytelling-element-right", {
+        //     yPercent: -93,
+        //     ease: "none"
+        // }, 0);
+
+        const tlOnepage = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".one-page-element",
+                start: "top top+=300",
+                end: "bottom top",
+                // pin: '.one-page-text, .one-page-desc',
+                pin: true,
+                scrub: true,
+                pinSpacing: false,
+                // markers: true,
+                invalidateOnRefresh: true
+            }
+        });
+
+        tlOnepage.to('.one-page-photo', {
+            yPercent: -100,
+            ease: 'none'
+        })
+
+        gsap.fromTo(panels, {
+            xPercent: 60
+        }, {
+            xPercent: -100 * (panels.length - 0.7),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".horizontal-section",
+                start: 'top top',
+                pin: true,
+                scrub: 1,
+                // markers: true,
+                end: () => "+=" + window.innerWidth * (panels.length)
+            }
+        });
+
+        const citiesOffset = $('.cities-section .city-img')[0].offsetHeight - $('.cities-text span')[0].offsetHeight
+        const tlCities = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".cities-section",
+                start: "top top+=200",
+                end: () => "+=" + citiesOffset,
+                pin: '.cities-text',
+                // pin: true,
+                scrub: true,
+                pinSpacing: false,
+                markers: true
+            }
+        });
+    })
 
     const $owl = $('.owl-carousel').owlCarousel({
         loop: true,
@@ -188,61 +279,35 @@
         responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
     });
 
-    const tlOne = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".scrolly-row",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-            // markers: true,
-            invalidateOnRefresh: true
-        }
-    });
+    // const section1 = $('.scrollytelling-element-right')[0];
+    //
+    // gsap.to(section1, {
+    //     yPercent: -100,
+    //     scrollTrigger: {
+    //         start: 'bottom+=50 bottom',
+    //         end: 'bottom top',
+    //         trigger: '.scrollytelling-element-right',
+    //         markers: true
+    //     }
+    // })
 
-    tlOne.to(".scrollytelling-element-right", {
-        yPercent: -50,
-        ease: "none"
-    }, 0);
 
-    tlOne.to(".scrollytelling-element-left", {
-        yPercent: 60,
-        ease: "none"
-    }, 0);
+    // tlOne.to(".scrollytelling-element-left", {
+    //     yPercent: 50,
+    //     ease: "none",
+    // }, 0);
 
-    const tlTwo = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".one-page-element",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-            // markers: true,
-            invalidateOnRefresh: true
-        }
-    });
 
-    tlTwo.to(".one-page-text", {
-        y: 750,
-        ease: "none"
-    }, 0);
+    // tlTwo.to(".one-page-text", {
+    //     y: 750,
+    //     ease: "none"
+    // }, 0);
+    //
+    // tlTwo.to(".one-page-desc", {
+    //     y: 750,
+    //     ease: "none"
+    // }, 0);
 
-    tlTwo.to(".one-page-desc", {
-        y: 750,
-        ease: "none"
-    }, 0);
-
-    const tlThree = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".cities-section",
-            start: "top bottom",
-            end: "bottom",
-            scrub: true,
-        }
-    });
-
-    tlThree.to(".cities-text", {
-        y: 500,
-        ease: "none"
-    }, 0);
 
 
 </script>

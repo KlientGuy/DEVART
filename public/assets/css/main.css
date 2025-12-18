@@ -47,17 +47,33 @@ body {
     margin-right: calc(50% - 50vw);
 }
 
-.owl-carousel .owl-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transform-origin: center center;
-    transition: transform 320ms ease, filter 320ms ease;
-    will-change: transform;
-}
+.owl-carousel {
+    min-height: 400px;
+    animation: slide-up 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    transform: translateY(50px);
+    .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform-origin: center center;
+        transition: transform 320ms ease, filter 320ms ease;
+        will-change: transform;
+    }
 
-.owl-carousel .owl-item:hover img {
-    transform: scale(1.1);
+    .owl-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-block::after {
+        transition: scale 320ms ease
+    }
+
+    .portfolio-block:hover::after {
+        scale: 1.1;
+    }
 }
 
 .owl-carousel.owl-grab .owl-item img {

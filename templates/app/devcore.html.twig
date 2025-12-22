@@ -17,12 +17,75 @@
     position: relative;
     z-index: 99;
 }
+
+@media screen and (max-width: 768px) {
+    .devcore-container::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-image: url("{{ asset('assets/svg/devcore/bg.svg') }}");
+    }
+}
+.second-closed {
+    transition: transform 1s ease-in-out;
+}
+
+.second-open {
+    transform: translateX(-45%);
+}
+
+.second-open-btn, .second-close-btn {
+    top: 50%;
+    z-index: 1;
+    width: 75vh;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background: linear-gradient(rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0, 0) 0%, rgb(0,0,0,.6) 50%, rgb(0,0,0,1) 100%); */
+    background: radial-gradient(ellipse at bottom, rgb(0,0,0, .7) 30%, transparent var(--gradient-p));
+    transition: transform 500ms linear;
+}
+.second-bg-gradient {
+    z-index: -1;
+    position: absolute;
+    aspect-ratio: 1;
+    top: 50%;
+    translate: -55% -50%;
+    width: 100vw;
+    background: radial-gradient(circle, #002284 0%, #00000000 var(--gradient-p));
+}
+.second-open-btn.btn-closed {
+    transform: translateY(50%);
+}
+.second-close-btn.btn-closed {
+    transform: translateY(50%);
+}
+.second-open-btn {
+    right: 0;
+    translate: 50% -50%;
+    rotate: -90deg;
+}
+.second-close-btn {
+    left: 0;
+    translate: -50% -50%;
+    rotate: 90deg;
+}
 </style>
     <link rel="stylesheet" href="{{ asset('assets/css/devcore.css') }}">
+    {# {{ include('app/elements/_devcore_bg.html.twig') }} #}
 
-        <div class="container-xl h-100">
-            <div class="devcore-panel position-relative full-width">
+    <div class="container-xl h-100 devcore-container" style="">
+        <div class="devcore-panel position-relative full-width">
 
+            <div class="d-md-block d-none">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 700px; top: 150px;">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 300px; top: 200px; scale: 0.5">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 800px; top: 50px; scale: 0.5">
@@ -42,54 +105,59 @@
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 200px; top: 600px; scale: 0.5">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 800px; top: 700px; scale: 0.5">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 830px; top: 750px; scale: 1">
-
-                <div class="row min-vh-100 justify-content-center align-items-center">
-                    <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
-                        <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
-                        <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
-                    </div>
-                </div>
             </div>
 
-            <div class="row justify-center">
-                <div class="col-lg-2 d-flex justify-center">
-                    <a href="#">Zobacz</a>
+            <div class="row min-vh-100 justify-content-center align-items-center">
+                <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
+                    <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
+                    <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
                 </div>
             </div>
+        </div>
 
-            <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
-                <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
+        <div class="row justify-center">
+            <div class="col-lg-2 d-flex justify-center">
+                <a href="#">Zobacz</a>
             </div>
+        </div>
 
-            <div class="row scrolly-row" style="margin-bottom: 8rem">
-                <div class="col-12 col-md-6 scrollytelling-element-left text-md-end fs-2">
-                    <p>1. Scrollytelling</p>
-                </div>
-                <div class="col-12 col-md-6 scrollytelling-element-right">
-                    <h1 class="block-headline w-100" lang="pl" style="font-size: 5rem;">
-                        Stwórz z nami stronę, która
-                        <span style="font-size: 0.9em">
-                            opowie
-                            <span class="blue-word">TWOJĄ</span>
-                            <span class="blue-word">HISTORIĘ</span>
-                        </span>
-                        tak, że <span style="font-size: 0.8em">nikt nie przejdzie obok niej obojętnie</span>
-                    </h1>
-                </div>
+        <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
+            <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
+        </div>
+
+        <div class="row scrolly-row" style="margin-bottom: 8rem">
+            <div class="col-12 col-md-6 scrollytelling-element-left text-md-end fs-2">
+                <p>1. Scrollytelling</p>
             </div>
-
-            <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
-                {% for post in posts %}
-                <div class="portfolio-block position-relative">
-                    <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
-                </div>
-                {% endfor %}
-                {# {% for src in images %} #}
-                {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
-                {# {% endfor %} #}
+            <div class="col-12 col-md-6 scrollytelling-element-right">
+                <h1 class="block-headline w-100" lang="pl" style="font-size: 5rem;">
+                    Stwórz z nami stronę, która
+                    <span style="font-size: 0.9em">
+                        opowie
+                        <span class="blue-word">TWOJĄ</span>
+                        <span class="blue-word">HISTORIĘ</span>
+                    </span>
+                    tak, że <span style="font-size: 0.8em">nikt nie przejdzie obok niej obojętnie</span>
+                </h1>
             </div>
+        </div>
 
-            <div class="row scrolly-row-one-page one-page-element" style="">
+        <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
+            {% for post in posts %}
+            <div class="portfolio-block position-relative">
+                <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
+            </div>
+            {% endfor %}
+            {# {% for src in images %} #}
+            {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
+            {# {% endfor %} #}
+        </div>
+
+        <div class="second-section section position-relative">
+            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
+            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
+            <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
+            <div class="row scrolly-row-one-page one-page-element d-md-flex d-none" style="">
                 <div class="col-sm-4 fs-2 one-page-text text-end">
                     2. OnePage
                 </div>
@@ -102,9 +170,24 @@
                     przejrzysta oferta i świetne dopasowanie do telefonów.
                 </div>
             </div>
+            <div class="d-md-none d-flex second-closed py-3 position-relative" style="width: 150vw;">
+                <div class="col-6 fs-2 d-flex flex-column justify-content-center position-relative">
+                    <div>2. OnePage</div>
+                    <div class="one-page-desc">
+                        To elegancka wizytówka, która jednym spojrzeniem mówi,
+                        co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów:
+                        przejrzysta oferta i świetne dopasowanie do telefonów.
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                    <img class="h-75" src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
+                </div>
+            </div>
+        </div>
 
-            <div class="horizontal-section-pre"></div>
-            <div class="horizontal-section full-width" style="height: 100vh">
+        <div class="third-section">
+            <div class="horizontal-section-pre d-md-block d-none"></div>
+            <div class="horizontal-section full-width d-none d-md-block" style="height: 100vh">
                 <div class="horizontal-track">
                     <div class="panel align-center d-flex" style=" z-index: -1; flex: 0 0 120vw">
                         <div class="d-flex w-100" style="gap: 2rem;">
@@ -140,50 +223,81 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row cities-section p-0 p-md-5">
-                <div class="col-sm-5 fs-2 cities-text text-md-end h-auto">
-                    <span>
-                        5. Miasta, Gminy, <br> Działaności publiczne
-                    </span>
+            <div class="d-block d-md-none mt-5">
+                <div class="fs-2">
+                    <p>3. Firmowe</p>
                 </div>
-                <div class="d-md-none fw-bold fs-5 mb-4">zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</div>
-                <div class="col-sm-6 row city-imgs">
-                    <div class="city-img col-6 d-flex justify-center">
-                        <img class="w-100" src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
-                    </div>
-                    <div class="city-img col-6 d-flex justify-center">
-                        <img class="w-100" src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
-                    </div>
+                <div>
+                    <img class="w-100" src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                </div>
+                <div class="fw-bold" style="font-size: 15vmin; line-height: 17vmin; margin-top: 1em">
+                    <div style="font-size: 1.09em">Wizerunek</div>
+                    <div style="font-size: 1.27em">Sprzedaż</div>
+                    <div style="font-size: 1.13em">Integracje</div>
+                    <div style="font-size: 1.5em">Przekaz</div>
                 </div>
             </div>
-
-
-            <div class="devcore-small-text d-none d-md-flex align-center justify-center fs-4 text-center fw-bold">
-                <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
-            </div>
-
-            <div class="d-flex align-center justify-center fs-1 text-center mb-4">
-                <span style="font-weight: 200">Zaufali nam</span>
-            </div>
-
-            <div class="carousel-home full-width mb-5 mt-5">
-                <div class="carousel-inner-home">
-                    {% for src in trustedImages %}
-                        <div class="carousel-item-home">
-                            <img src="{{ asset(src) }}" alt="m1">
-                        </div>
-                    {% endfor %}
-
-                    {% for src in trustedImages %}
-                        <div class="carousel-item-home">
-                            <img src="{{ asset(src) }}" alt="">
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-
         </div>
+        <div class="fourth-section section position-relative d-md-none">
+            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
+            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
+            <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
+            <div class="d-flex second-closed py-3 position-relative" style="width: 150vw;">
+                <div class="col-6 fs-2 d-flex flex-column justify-content-center position-relative">
+                    <div>4. E-commerce</div>
+                    <div class="">
+                        Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-center">
+                    <img class="h-75" src="{{ asset('/assets/img/home/carousel/merceria.png') }}">
+                </div>
+            </div>
+        </div>
+
+        <div class="row cities-section p-0 p-md-5 mt-5">
+            <div class="col-sm-5 fs-2 cities-text text-md-end h-auto">
+                <span>
+                    5. Miasta, Gminy, <br> Działaności publiczne
+                </span>
+            </div>
+            <div class="d-md-none fw-bold fs-5 mb-4">zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</div>
+            <div class="col-sm-6 row city-imgs">
+                <div class="city-img col-6 d-flex justify-center">
+                    <img class="w-100" src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
+                </div>
+                <div class="city-img col-6 d-flex justify-center">
+                    <img class="w-100" src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="devcore-small-text d-none d-md-flex align-center justify-center fs-4 text-center fw-bold">
+            <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
+        </div>
+
+        <div class="d-flex align-center justify-center fs-1 text-center mb-4">
+            <span style="font-weight: 200">Zaufali nam</span>
+        </div>
+
+        <div class="carousel-home full-width mb-5 mt-5">
+            <div class="carousel-inner-home">
+                {% for src in trustedImages %}
+                <div class="carousel-item-home">
+                    <img src="{{ asset(src) }}" alt="m1">
+                </div>
+                {% endfor %}
+
+                {% for src in trustedImages %}
+                <div class="carousel-item-home">
+                    <img src="{{ asset(src) }}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
 {% endblock %}
 {% block javascripts %}
 <script>
@@ -278,6 +392,13 @@
         nav: false,
         responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
     });
+
+    $('.second-open-btn, .second-close-btn').on('click', function() {
+        const section = $(this).closest('.section');
+        section.find('.second-closed').toggleClass('second-open');
+        section.find('.second-close-btn').toggleClass('btn-closed');
+        section.find('.second-open-btn').toggleClass('btn-closed');
+    })
 
     // const section1 = $('.scrollytelling-element-right')[0];
     //

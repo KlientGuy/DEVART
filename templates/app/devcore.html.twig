@@ -78,6 +78,25 @@
     translate: -50% -50%;
     rotate: 90deg;
 }
+
+.owl-stage {
+    margin-bottom: 5rem;
+}
+
+.carousel-see-more {
+    position: relative;
+    width: fit-content;
+    ::after {
+        display: block;
+        content: '';
+        left: 12.5%;
+        top: 2px;
+        position: absolute;
+        height: 100%;
+        width: 75%;
+        border-bottom: 1px solid white;
+    }
+}
 </style>
     <link rel="stylesheet" href="{{ asset('assets/css/devcore.css') }}">
     {# {{ include('app/elements/_devcore_bg.html.twig') }} #}
@@ -142,15 +161,17 @@
             </div>
         </div>
 
-        <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
+        <div class="owl-carousel owl-theme full-width" id="marquee" style="animation: unset; opacity: 1; min-height: 500px">
             {% for post in posts %}
             <div class="portfolio-block position-relative">
                 <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
             </div>
             {% endfor %}
-            {# {% for src in images %} #}
-            {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
-            {# {% endfor %} #}
+        </div>
+        <div class="mb-5 d-flex justify-content-center">
+            <div class="carousel-see-more">
+                <a href="{{ path('app_portfolio') }}" class="fw-bold">Zobacz więcej</a>
+            </div>
         </div>
 
         <div class="second-section section position-relative">
@@ -200,7 +221,7 @@
                                 <div>Integracje</div>
                                 <div>Przekaz</div>
                             </div>
-                            <div class="" style="flex: 1">
+                            <div class="" style="flex: 2">
                                 <img class="w-100" src="{{ '/assets/img/home/carousel/ctg.png' }}">
                             </div>
                         </div>
@@ -212,7 +233,7 @@
                             </div>
                             <div class="" style="flex: 1">
                                 {# <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}"> #}
-                                <img class="w-100" src="{{ asset('/assets/img/portfolio/merceria_main.png') }}" style="object-fit: cover">
+                                <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}">
                             </div>
                             <div class="" style="flex: 2">
                                 <div class="fw-bold" style="font-size: 4vmax; line-height: 5vmax">
@@ -297,6 +318,10 @@
             </div>
         </div>
 
+        <div class="w-100 d-flex justify-content-center" style="margin-top: 15rem; margin-bottom: 10rem">
+            <img class="w-75" src="{{ asset('assets/svg/devcore/bottom_text.svg') }}" alt="">
+        </div>
+
     </div>
 {% endblock %}
 {% block javascripts %}
@@ -366,19 +391,28 @@
             }
         });
 
-        const citiesOffset = $('.cities-section .city-img')[0].offsetHeight - $('.cities-text span')[0].offsetHeight
-        const tlCities = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".cities-section",
-                start: "top top+=200",
-                end: () => "+=" + citiesOffset,
-                pin: '.cities-text',
-                // pin: true,
-                scrub: true,
-                pinSpacing: false,
-                markers: true
-            }
-        });
+        let loaded = 0;
+        const maxImg = $('.cities-section img').length;
+        $('.cities-section img').on('load', function() {
+            loaded++;
+
+            if(loaded !== maxImg)
+                return;
+
+            const citiesOffset = $('.cities-section .city-img')[0].offsetHeight - $('.cities-text span')[0].offsetHeight
+            const tlCities = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".cities-section",
+                    start: "top top+=200",
+                    end: () => "+=" + citiesOffset,
+                    pin: '.cities-text',
+                    // pin: true,
+                    scrub: true,
+                    pinSpacing: false,
+                    markers: true
+                }
+            });
+        })
     })
 
     const $owl = $('.owl-carousel').owlCarousel({

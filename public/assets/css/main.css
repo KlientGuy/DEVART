@@ -183,7 +183,7 @@ header {
 header > .anv-btn {
     flex: 1 0;
 }
-header > div, header > .nav-menu {
+header > div:not(.mobile), header > .nav-menu {
     flex: 3;
 }
 
@@ -467,7 +467,7 @@ a {
 
 .socials {
     display: grid;
-    grid-template-columns: repeat(4, 10%);
+    grid-template-columns: repeat(4, 20%);
     flex: 1;
     justify-content: flex-end;
     align-items: stretch;
@@ -476,8 +476,7 @@ a {
 .nav-mini {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     justify-content: flex-start;
 }
 
@@ -489,23 +488,18 @@ img {
     display: block;
 }
 
-.socials > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.socials > div > a {
-    display: inline;
-}
-
-.socials > div:not(:first-child) {
-    border-left: 1px solid white;
-}
-
-
-.w-100 {
-    width: 100%;
+.socials {
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > a {
+            display: inline;
+        }
+    }
+    > div:not(:nth-child(-n + 2)) {
+        border-left: 1px solid white;
+    }
 }
 
 .credits {
@@ -516,7 +510,7 @@ img {
 
 .foot-head {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr 1fr;
 }
 
 .d-flex {
@@ -742,6 +736,7 @@ img {
 }
 
 .language-selection-list {
+    z-index: 2;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -824,7 +819,7 @@ img {
     .foot-head, .nav-mini {
         row-gap: 1em;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         justify-content: center;
     }
 

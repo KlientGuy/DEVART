@@ -1,0 +1,86 @@
+{% trans_default_domain 'layout' %}
+<header>
+    <div class="d-flex align-center" style="position: relative">
+        <div class="burger-button" style="cursor: pointer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="socials-navbar" style="justify-content: flex-start">
+            <div>
+                <a href="https://www.instagram.com/studio2dev" target="_blank">
+                    <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
+                    <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
+                    <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    {% if app.request.attributes.get('_route') != 'app_index' %}
+    <a href="{{ path('app_index') }}" class="nav-btn justify-center" style="flex: 0">
+        <img src="{{ asset('assets/svg/logo.svg') }}" alt="polska" width="80">
+    </a>
+    {% endif %}
+    <nav class="nav-menu">
+        <a href="{{ path('app_devcore') }}" class="nav-btn nav-hide">DevCore</a>
+        <a href="{{ path('app_portfolio') }}" class="nav-btn nav-hide">Portfolio</a>
+        <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn nav-hide">
+            {% trans %}
+            Oferta
+            {% endtrans %}
+        </a>
+        <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn nav-hide">
+            {% trans %}
+            Kontakt
+            {% endtrans %}
+        </a>
+        <div>
+            {% set localeFlag = {pl: {path: 'assets/svg/polish_flag.svg', w: 60, h: 30}, en: {path: 'assets/img/uk.png', w: 30, h: 20}, de: {path: 'assets/svg/de_flag.svg', w: 30, h:30}} %}
+            {% set loc = localeFlag[app.request.getLocale()] ?? localeFlag['pl'] %}
+            <a href="#" class="nav-btn d-flex flex-end language-selection" style="padding-bottom: 0">
+                <div class="d-flex justify-center align-center" style="width: 60px; height: 30px">
+                <img src="{{ asset(loc.path) }}" alt="polska" width="{{ loc.w }}" height="{{ loc.h }}">
+                </div>
+                <img src="{{ asset('assets/svg/chevron.svg') }}" class="chevron" alt="chevron" width="20" height="30">
+            </a>
+            <ul class="language-selection-list" style="position: absolute">
+                <li>
+                    <a class="nav-btn d-flex flex-end" href="{{ path(
+                        app.request.attributes.get('_route'),
+                        app.request.attributes.get('_route_params')|merge({'_locale': 'pl'})
+                    ) }}">
+                        <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-btn d-flex flex-end" href="{{ path(
+                        app.request.attributes.get('_route'),
+                        app.request.attributes.get('_route_params')|merge({'_locale': 'en'})
+                    ) }}">
+                        <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
+                        <img src="{{ asset('assets/img/uk.png') }}" alt="anglia" width="30" height="20">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-btn d-flex flex-end" href="{{ path(
+                        app.request.attributes.get('_route'),
+                        app.request.attributes.get('_route_params')|merge({'_locale': 'de'})
+                    ) }}">
+                        <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
+                        <img src="{{ asset('assets/svg/de_flag.svg') }}" alt="niemcy" width="30" height="20">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

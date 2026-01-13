@@ -184,7 +184,7 @@
                     2. OnePage
                 </div>
                 <div class="col-sm-4 d-flex justify-center one-page-photo">
-                    <img class="w-100" src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
+                    <img class="w-100" src="{{ asset('assets/img/devcore/optident.png') }}" alt="frame_127" style="">
                 </div>
                 <div class="col-sm-4 one-page-desc">
                     To elegancka wizytówka, która jednym spojrzeniem mówi,
@@ -202,7 +202,7 @@
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-center">
-                    <img class="h-75" src="{{ asset('assets/img/devcore/frame_127.png') }}" alt="frame_127" style="">
+                    <img class="h-75" src="{{ asset('assets/img/devcore/optident.png') }}" alt="frame_127" style="">
                 </div>
             </div>
         </div>
@@ -223,7 +223,7 @@
                                 <div>Przekaz</div>
                             </div>
                             <div class="" style="flex: 2">
-                                <img class="w-100" src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                                <img class="h-100" src="{{ '/assets/img/devcore/ctg_square.png' }}">
                             </div>
                         </div>
                     </div>
@@ -234,7 +234,7 @@
                             </div>
                             <div class="" style="flex: 1">
                                 {# <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}"> #}
-                                <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}">
+                                <img class="w-100" src="{{ asset('/assets/img/devcore/merceria.png') }}">
                             </div>
                             <div class="" style="flex: 2">
                                 <div class="fw-bold" style="font-size: 4vmax; line-height: 5vmax">
@@ -303,21 +303,7 @@
             <span style="font-weight: 200">Zaufali nam</span>
         </div>
 
-        <div class="carousel-home full-width mb-5 mt-5">
-            <div class="carousel-inner-home">
-                {% for src in trustedImages %}
-                <div class="carousel-item-home">
-                    <img src="{{ asset(src) }}" alt="m1">
-                </div>
-                {% endfor %}
-
-                {% for src in trustedImages %}
-                <div class="carousel-item-home">
-                    <img src="{{ asset(src) }}" alt="">
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+        {{ include('app/elements/_logo_carousel.html.twig') }}
 
         <div class="w-100 d-flex justify-content-center" style="margin-top: 15rem; margin-bottom: 10rem">
             <img class="w-75" src="{{ asset('assets/svg/devcore/bottom_text.svg') }}" alt="">
@@ -348,7 +334,7 @@
                 end: () => "+=" + scrollyOffset,
                 pin: '.scrollytelling-element-left',
                 scrub: true,
-                markers: true,
+                // markers: true,
                 invalidateOnRefresh: true
             }
         });
@@ -410,7 +396,7 @@
                     // pin: true,
                     scrub: true,
                     pinSpacing: false,
-                    markers: true
+                    // markers: true
                 }
             });
         })

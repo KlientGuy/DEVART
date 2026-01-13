@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\CustomerMessage;
+use App\Form\ContactType;
+use App\Repository\CustomerMessageRepository;
 use Devcore\BlogBundle\Entity\Category;
 use Devcore\BlogBundle\Entity\Post;
 use Devcore\BlogBundle\Repository\CategoryRepository;
@@ -13,6 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Router;
 use Symfony\Component\Routing\RouterInterface;
 
 #[Route(['/{_locale}', 'pl' => '/'], locale: 'pl', defaults: ['_locale' => 'pl'], requirements: ['_locale' => '|pl|en|de'])]
@@ -36,19 +40,12 @@ class AppController extends AbstractController
 
     public function __construct(private readonly RouterInterface $router) {}
 
-    #[Route('/', name: 'app_index', methods: ['GET'])]
-    public function index(PostRepository $postRepository)
+    #[Route('/', name: 'app_index', methods: ['GET', 'POST'])]
+    public function index(Request $request, PostRepository $postRepository, RouterInterface $router, EntityManagerInterface $em)
     {
         $projectDir = $this->getParameter('kernel.project_dir');
-        $publicGalleryPath = $projectDir . '/public/assets/img/home/carousel';
+
         $trustedUspath = $projectDir . '/public/assets/img/home/trusted_us';
-
-        $finder = new Finder();
-        $finder
-            ->files()
-            ->in($publicGalleryPath)
-            ->name('/\.(jpe?g|png|gif|webp)$/i');
-
         $trustedFinder = new Finder();
         $trustedFinder
             ->files()
@@ -60,16 +57,21 @@ class AppController extends AbstractController
             $trustedImages[] = 'assets/img/home/trusted_us/' . $file->getFilename();
         }
 
-        $images = [];
-        foreach ($finder as $file) {
-            $images[] = 'assets/img/home/carousel/' . $file->getFilename();
-        }
+        $message = new CustomerMessage();
+        $form = $this->createForm(ContactType::class, $message, ['withMessage' => true]);
 
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            try {
+                $em->wrapInTransaction(fn(EntityManagerInterface $em) => $em->persist($message));
+            }
+            catch(\Exception $e) {}
+        }
 
         return $this->render('app/index.html.twig', [
             'posts' => $postRepository->findBy(['active' => 1]),
-            'images' => $images,
-            'trustedImages' => $trustedImages
+            'trustedImages' => $trustedImages,
+            'form' => $form->createView()
         ]);
     }
 
@@ -172,6 +174,14 @@ class AppController extends AbstractController
             'posts' => $posts,
             'categories' => $categoryRepository->findBy(['locale' => $locale]),
             'category' => $cat
+        ]);
+    }
+
+    #[Route('/admin/customerMessage', name: 'app_admin_customer_message')]
+    public function customerMessage(CustomerMessageRepository $customerMessageRepository)
+    {
+        return $this->render('admin/customer_message.html.twig', [
+            'messages' => $customerMessageRepository->findAll()
         ]);
     }
 }

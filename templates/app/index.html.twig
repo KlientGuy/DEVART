@@ -133,13 +133,13 @@
     </div>
     <div id="person-info" class="person-info">
         <div class="row" style="flex-wrap: wrap; gap: 4rem">
-            <div class="person-card">
-                <div class="person-text">
-                    <span style="font-weight: 300">Gabriel Socha</span>
-                    <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span>
-                </div>
-                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
-            </div>
+            {# <div class="person-card"> #}
+            {#     <div class="person-text"> #}
+            {#         <span style="font-weight: 300">Gabriel Socha</span> #}
+            {#         <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span> #}
+            {#     </div> #}
+            {#     <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden"> #}
+            {# </div> #}
             <div class="person-card">
                 <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr">
                 <div class="person-text">
@@ -149,13 +149,13 @@
                     <span style="font-weight: 100">kontakt@2dev.com.pl</span>
                 </div>
             </div>
-            <div class="person-card">
-                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden">
-                <div class="person-text">
-                    <span style="font-weight: 300">Patryk Kubala</span>
-                    <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span>
-                </div>
-            </div>
+            {# <div class="person-card"> #}
+            {#     <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden"> #}
+            {#     <div class="person-text"> #}
+            {#         <span style="font-weight: 300">Patryk Kubala</span> #}
+            {#         <span style="font-weight: 100; margin-bottom: 40px">{% trans %}Dyrektor techniczny{% endtrans %}</span> #}
+            {#     </div> #}
+            {# </div> #}
         </div>
 {#        <div class="row" style="margin-top: 3rem">#}
 {#            <div class="person-card-no-photo row" style="justify-content: flex-end">#}
@@ -177,56 +177,42 @@
     <div class="contact-form">
         <div class="row min-vh-100 justify-content-center align-items-center">
             <div class="col-11 col-md-8 col-lg-6">
-                <form class="contact-form-inner">
+                {{ form_start(form) }}
                     <h2 class="mb-5">Skontaktuj się z nami</h2>
 
                     <div class="mb-4">
-                        <label class="form-label">Imię i nazwisko</label>
-                        <input type="text" class="form-control contact-input">
+                        {{ form_label(form.name) }}
+                        {{ form_widget(form.name) }}
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control contact-input">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label">Wiadomość</label>
-                        <textarea rows="4" class="form-control contact-textarea"></textarea>
+                        {{ form_label(form.message) }}
+                        {{ form_widget(form.message) }}
                     </div>
 
-                    <div class="mb-4 d-flex align-items-center gap-2">
-                        <input type="checkbox" id="not-robot">
-                        <label for="not-robot" class="mb-0 small">
-                            Potwierdź, że nie jesteś robotem
-                        </label>
-                    </div>
+                    <!-- <div class="mb-4 d-flex align-items-center gap-2"> -->
+                    <!--     <input type="checkbox" id="not-robot"> -->
+                    <!--     <label for="not-robot" class="mb-0 small"> -->
+                    <!--         Potwierdź, że nie jesteś robotem -->
+                    <!--     </label> -->
+                    <!-- </div> -->
 
                     <button type="submit" class="btn-contact">
                         Wyślij wiadomość
                     </button>
-                </form>
+                {{ form_end(form) }}
             </div>
         </div>
     </div>
     <div class="d-flex align-center justify-center fs-1 text-center mb-4">
         <span style="font-weight: 200">Zaufali nam</span>
     </div>
-    <div class="carousel-home full-width mb-5 mt-5">
-        <div class="carousel-inner-home">
-            {% for src in trustedImages %}
-                <div class="carousel-item-home">
-                    <img src="{{ asset(src) }}" alt="m1">
-                </div>
-            {% endfor %}
-
-            {% for src in trustedImages %}
-                <div class="carousel-item-home">
-                    <img src="{{ asset(src) }}" alt="">
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+    {{ include('app/elements/_logo_carousel.html.twig') }}
 {% endblock %}
 {% block javascripts %}
 <script>

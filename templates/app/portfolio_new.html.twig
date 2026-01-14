@@ -76,13 +76,6 @@ Portfolio
             {% for cat in categories %}
             <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}" data-cat="all">{{ cat }}</a>
             {% endfor %}
-            {# <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'web' ? 'p-link' : '' }}" data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'app' ? 'p-link' : '' }}" data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'pack' ? 'p-link' : '' }}" data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'social' ? 'p-link' : '' }}" data-cat="social">{% trans %}#Social media{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'fashion' ? 'p-link' : '' }}" data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span> #}
         </div>
     </div>
 </dialog>
@@ -105,13 +98,6 @@ Portfolio
             {% for cat in categories %}
             <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}">{{ cat }}</a>
             {% endfor %}
-            {# <span class="{{ cat == 'all' ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'brand' ? 'p-link' : '' }}" data-cat="brand">{% trans %}#Branding{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'web' ? 'p-link' : '' }}" data-cat="web">{% trans %}#Strony internetowe{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'app' ? 'p-link' : '' }}" data-cat="app">{% trans %}#Aplikacje{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'pack' ? 'p-link' : '' }}" data-cat="pack">{% trans %}#Opakowania{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'social' ? 'p-link' : '' }}" data-cat="social">{% trans %}#Social media{% endtrans %}</span> #}
-            {# <span class="{{ cat == 'fashion' ? 'p-link' : '' }}" data-cat="fashion">{% trans %}#Fashion{% endtrans %}</span> #}
         </div>
     </div>
     <div class="d-block d-md-none">

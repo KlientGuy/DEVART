@@ -1,6 +1,7 @@
 {% trans_default_domain 'layout' %}
 <header class="d-flex justify-content-between">
-    <a href="{{ path('app_index') }}" class="nav-btn justify-center" style="flex: 0">
+
+    <a href="{{ path('app_index') }}" class="nav-btn justify-center {{ app.request.get('_route') != 'app_index' ? '' : 'invisible'}}" style="flex: 0">
         <img src="{{ asset('assets/svg/logo.svg') }}" alt="polska" width="80">
     </a>
     <div class="burger-button mobile">

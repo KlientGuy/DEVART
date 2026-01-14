@@ -18,21 +18,10 @@
     z-index: 99;
 }
 
-@media screen and (max-width: 768px) {
-    .devcore-container::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100vw;
-        background-size: cover;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        z-index: -1;
-        background-image: url("{{ asset('assets/svg/devcore/bg.svg') }}");
-    }
+.devcore-logo-wrap {
+    min-height: 100vh;
 }
+
 .second-closed {
     transition: transform 1s ease-in-out;
 }
@@ -100,11 +89,8 @@
 }
 </style>
     <link rel="stylesheet" href="{{ asset('assets/css/devcore.css') }}">
-    {# {{ include('app/elements/_devcore_bg.html.twig') }} #}
-
     <div class="container-xl h-100 devcore-container" style="">
         <div class="devcore-panel position-relative full-width">
-
             <div class="d-md-block d-none">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 700px; top: 150px;">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_times.svg') }}" style="left: 300px; top: 200px; scale: 0.5">
@@ -126,25 +112,21 @@
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 800px; top: 700px; scale: 0.5">
                 <img class="floating-decoration" src="{{ asset('assets/svg/homepage/icon_circle.svg') }}" style="right: 830px; top: 750px; scale: 1">
             </div>
-
-            <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center devcore-logo-wrap">
                 <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
                     <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
                     <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
                 </div>
             </div>
         </div>
-
         <div class="row justify-center">
             <div class="col-lg-2 d-flex justify-center">
                 <a href="#">Zobacz</a>
             </div>
         </div>
-
         <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
             <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
         </div>
-
         <div class="row scrolly-row" style="margin-bottom: 8rem">
             <div class="col-12 col-md-6 scrollytelling-element-left text-md-end fs-2">
                 <p>1. Scrollytelling</p>
@@ -161,12 +143,14 @@
                 </h1>
             </div>
         </div>
-
-        <div class="owl-carousel owl-theme full-width" id="marquee" style="animation: unset; opacity: 1; min-height: 500px">
+        <div class="owl-carousel owl-theme full-width d-flex align-items-center" id="marquee" style="animation: unset; opacity: 1; min-height: 500px;">
             {% for post in posts %}
-            <div class="portfolio-block position-relative">
-                <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
-            </div>
+            <a class="position-relative d-flex align-items-center flex-column" href="{{ path('app_portfolio_post', {slug: post.slug ?? post.id}) }}">
+                <div class="portfolio-block position-relative">
+                    <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="">
+                </div>
+                <span class="position-absolute mb-4" style="bottom: 0">Zobacz ></span>
+            </a>
             {% endfor %}
         </div>
         <div class="mb-5 d-flex justify-content-center">
@@ -174,8 +158,7 @@
                 <a href="{{ path('app_portfolio') }}" class="fw-bold">Zobacz więcej</a>
             </div>
         </div>
-
-        <div class="second-section section position-relative">
+        <div class="second-section section position-relative onepage-mobile">
             <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
             <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
             <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
@@ -183,7 +166,7 @@
                 <div class="col-sm-4 fs-2 one-page-text text-end">
                     2. OnePage
                 </div>
-                <div class="col-sm-4 d-flex justify-center one-page-photo">
+                <div class="col-sm-4 d-flex justify-center one-page-photo portfolio-block position-relative">
                     <img class="w-100" src="{{ asset('assets/img/devcore/optident.png') }}" alt="frame_127" style="">
                 </div>
                 <div class="col-sm-4 one-page-desc">
@@ -206,35 +189,34 @@
                 </div>
             </div>
         </div>
-
         <div class="third-section">
             <div class="horizontal-section-pre d-md-block d-none"></div>
             <div class="horizontal-section full-width d-none d-md-block" style="height: 100vh">
                 <div class="horizontal-track">
                     <div class="panel align-center d-flex" style=" z-index: -1; flex: 0 0 120vw">
-                        <div class="d-flex w-100" style="gap: 2rem;">
+                        <div class="d-flex w-100 align-items-start" style="gap: 2rem;">
                             <div class="text-end fs-2 d-flex justify-content-end align-items-start h-100" style="flex: 2">
                                 <p>3. Firmowe</p>
                             </div>
-                            <div class="fw-bold" style="font-size: 10vmax; line-height: 10vmax; flex: 1">
+                            <div class="fw-bold" style="font-size: 7vmax; line-height: 8vmax; flex: 1">
                                 <div>Wizerunek</div>
                                 <div>Sprzedaż</div>
                                 <div>Integracje</div>
                                 <div>Przekaz</div>
                             </div>
-                            <div class="" style="flex: 2">
+                            <div class="d-flex justify-content-center portfolio-block position-relative" style="flex: 2; align-self: stretch">
                                 <img class="h-100" src="{{ '/assets/img/devcore/ctg_square.png' }}">
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-1 align-center d-flex" style="z-index: -1; flex: 0 0 120vw">
                         <div class="d-flex w-100" style="gap: 2rem;">
-                            <div class="text-end fs-2" style="flex: 1">
+                            <div class="text-end fs-2 d-flex justify-content-end align-items-start h-100" style="flex: 1">
                                 <p>4. E-commerce</p>
                             </div>
-                            <div class="" style="flex: 1">
+                            <div class="d-flex justify-content-center  portfolio-block position-relative" style="flex: 2">
                                 {# <img class="w-100" src="{{ asset('/assets/img/home/carousel/merceria.png') }}"> #}
-                                <img class="w-100" src="{{ asset('/assets/img/devcore/merceria.png') }}">
+                                <img class="h-100" src="{{ asset('/assets/img/devcore/merceria.png') }}">
                             </div>
                             <div class="" style="flex: 2">
                                 <div class="fw-bold" style="font-size: 4vmax; line-height: 5vmax">
@@ -250,7 +232,10 @@
                     <p>3. Firmowe</p>
                 </div>
                 <div>
-                    <img class="w-100" src="{{ '/assets/img/home/carousel/ctg.png' }}">
+                    <img class="w-100" src="{{ '/assets/img/devcore/ctg_mobile.png' }}">
+                </div>
+                <div class="d-block d-md-none">
+                    <img class="w-100" src="{{ '/assets/svg/devcore/bg_5.svg' }}">
                 </div>
                 <div class="fw-bold" style="font-size: 15vmin; line-height: 17vmin; margin-top: 1em">
                     <div style="font-size: 1.09em">Wizerunek</div>
@@ -258,13 +243,16 @@
                     <div style="font-size: 1.13em">Integracje</div>
                     <div style="font-size: 1.5em">Przekaz</div>
                 </div>
+                <div class="mt-5 d-block d-md-none">
+                    <img class="w-100" src="{{ '/assets/svg/devcore/bg_6.svg' }}">
+                </div>
             </div>
         </div>
         <div class="fourth-section section position-relative d-md-none">
             <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
             <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
             <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
-            <div class="d-flex second-closed py-3 position-relative" style="width: 150vw;">
+            <div class="d-flex second-closed pb-3 position-relative" style="width: 150vw;">
                 <div class="col-6 fs-2 d-flex flex-column justify-content-center position-relative">
                     <div>4. E-commerce</div>
                     <div class="">
@@ -276,8 +264,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="row cities-section p-0 p-md-5 mt-5">
+        <div class="row cities-section p-0 p-md-5 mt-5 mb-5">
             <div class="col-sm-5 fs-2 cities-text text-md-end h-auto">
                 <span>
                     5. Miasta, Gminy, <br> Działaności publiczne
@@ -292,165 +279,130 @@
                     <img class="w-100" src="{{ asset('/assets/img/home/carousel/skawina.png') }}" alt="frame_127" style="">
                 </div>
             </div>
+            <div class="d-block d-md-none">
+                <img class="w-100" src="{{ '/assets/svg/devcore/bg_7.svg' }}">
+            </div>
         </div>
-
-
         <div class="devcore-small-text d-none d-md-flex align-center justify-center fs-4 text-center fw-bold">
             <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
         </div>
-
         <div class="d-flex align-center justify-center fs-1 text-center mb-4">
             <span style="font-weight: 200">Zaufali nam</span>
         </div>
-
         {{ include('app/elements/_logo_carousel.html.twig') }}
-
-        <div class="w-100 d-flex justify-content-center" style="margin-top: 15rem; margin-bottom: 10rem">
+        <div class="w-100 justify-content-center d-none d-md-flex" style="margin-top: 15rem; margin-bottom: 10rem">
             <img class="w-75" src="{{ asset('assets/svg/devcore/bottom_text.svg') }}" alt="">
         </div>
-
     </div>
 {% endblock %}
 {% block javascripts %}
 <script>
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    $(async function() {
+        await document.fonts.ready;
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    // ScrollSmoother.create({
-    //     smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-    //     effects: true, // looks for data-speed and data-lag attributes on elements
-    //     smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-    // });
-
-    const panels = gsap.utils.toArray(".horizontal-track .panel");
-
-    const desktop = gsap.matchMedia();
-
-    desktop.add('screen and (min-width: 768px)', () => {
-        const scrollyOffset = $('.scrollytelling-element-right')[0].offsetHeight - $('.scrollytelling-element-left p')[0].offsetHeight - 10;
-        const tlScrollytelling = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.scrolly-row',
-                start: 'top top+=200',
-                end: () => "+=" + scrollyOffset,
-                pin: '.scrollytelling-element-left',
-                scrub: true,
-                // markers: true,
-                invalidateOnRefresh: true
-            }
+        const $owl = $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            dots: false,
+            nav: false,
+            responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
         });
 
-        // tlScrollytelling.to(".scrollytelling-element-right", {
-        //     yPercent: -93,
-        //     ease: "none"
-        // }, 0);
+        const panels = gsap.utils.toArray(".horizontal-track .panel");
 
-        const tlOnepage = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".one-page-element",
-                start: "top top+=300",
-                end: "bottom top",
-                // pin: '.one-page-text, .one-page-desc',
-                pin: true,
-                scrub: true,
-                pinSpacing: false,
-                // markers: true,
-                invalidateOnRefresh: true
-            }
-        });
+        const desktop = gsap.matchMedia();
 
-        tlOnepage.to('.one-page-photo', {
-            yPercent: -100,
-            ease: 'none'
-        })
-
-        gsap.fromTo(panels, {
-            xPercent: 60
-        }, {
-            xPercent: -100 * (panels.length - 0.7),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".horizontal-section",
-                start: 'top top',
-                pin: true,
-                scrub: 1,
-                // markers: true,
-                end: () => "+=" + window.innerWidth * (panels.length)
-            }
-        });
-
-        let loaded = 0;
-        const maxImg = $('.cities-section img').length;
-        $('.cities-section img').on('load', function() {
-            loaded++;
-
-            if(loaded !== maxImg)
-                return;
-
-            const citiesOffset = $('.cities-section .city-img')[0].offsetHeight - $('.cities-text span')[0].offsetHeight
-            const tlCities = gsap.timeline({
+        desktop.add('screen and (min-width: 768px)', () => {
+            console.log($('.scrollytelling-element-right')[0].offsetHeight);
+            console.log($('.scrollytelling-element-left p')[0].offsetHeight - 10);
+            const scrollyOffset = $('.scrollytelling-element-right')[0].offsetHeight - $('.scrollytelling-element-left p')[0].offsetHeight - 10;
+            console.log(scrollyOffset);
+            const tlScrollytelling = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".cities-section",
-                    start: "top top+=200",
-                    end: () => "+=" + citiesOffset,
-                    pin: '.cities-text',
-                    // pin: true,
+                    trigger: '.scrolly-row',
+                    start: 'top top+=200',
+                    end: () => "+=" + scrollyOffset,
+                    pin: '.scrollytelling-element-left',
                     scrub: true,
-                    pinSpacing: false,
-                    // markers: true
+                    // markers: true,
+                    invalidateOnRefresh: true
                 }
             });
+
+            // tlScrollytelling.to(".scrollytelling-element-right", {
+                //     yPercent: -93,
+                //     ease: "none"
+                // }, 0);
+
+            const tlOnepage = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".one-page-element",
+                    start: "top top+=300",
+                    end: "bottom top",
+                    // pin: '.one-page-text, .one-page-desc',
+                    pin: true,
+                    scrub: true,
+                    pinSpacing: false,
+                    // markers: true,
+                    invalidateOnRefresh: true
+                }
+            });
+
+            tlOnepage.to('.one-page-photo', {
+                yPercent: -100,
+                ease: 'none'
+            })
+
+            gsap.fromTo(panels, {
+                xPercent: 60
+            }, {
+                xPercent: -100 * (panels.length - 0.7),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".horizontal-section",
+                    start: 'top top',
+                    pin: true,
+                    scrub: 1,
+                    // markers: true,
+                    end: () => "+=" + window.innerWidth * (panels.length)
+                }
+            });
+
+            let loaded = 0;
+            const maxImg = $('.cities-section img').length;
+            $('.cities-section img').on('load', function() {
+                loaded++;
+
+                if(loaded !== maxImg)
+                    return;
+
+                const citiesOffset = $('.cities-section .city-img')[0].offsetHeight - $('.cities-text span')[0].offsetHeight
+                const tlCities = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".cities-section",
+                        start: "top top+=200",
+                        end: () => "+=" + citiesOffset,
+                        pin: '.cities-text',
+                        // pin: true,
+                        scrub: true,
+                        pinSpacing: false,
+                        // markers: true
+                    }
+                });
+            })
+        })
+
+        $('.second-open-btn, .second-close-btn').on('click', function() {
+            const section = $(this).closest('.section');
+            section.find('.second-closed').toggleClass('second-open');
+            section.find('.second-close-btn').toggleClass('btn-closed');
+            section.find('.second-open-btn').toggleClass('btn-closed');
         })
     })
-
-    const $owl = $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 30,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        dots: false,
-        nav: false,
-        responsive: { 0:{items:2}, 600:{items:3}, 900:{items:5} }
-    });
-
-    $('.second-open-btn, .second-close-btn').on('click', function() {
-        const section = $(this).closest('.section');
-        section.find('.second-closed').toggleClass('second-open');
-        section.find('.second-close-btn').toggleClass('btn-closed');
-        section.find('.second-open-btn').toggleClass('btn-closed');
-    })
-
-    // const section1 = $('.scrollytelling-element-right')[0];
-    //
-    // gsap.to(section1, {
-    //     yPercent: -100,
-    //     scrollTrigger: {
-    //         start: 'bottom+=50 bottom',
-    //         end: 'bottom top',
-    //         trigger: '.scrollytelling-element-right',
-    //         markers: true
-    //     }
-    // })
-
-
-    // tlOne.to(".scrollytelling-element-left", {
-    //     yPercent: 50,
-    //     ease: "none",
-    // }, 0);
-
-
-    // tlTwo.to(".one-page-text", {
-    //     y: 750,
-    //     ease: "none"
-    // }, 0);
-    //
-    // tlTwo.to(".one-page-desc", {
-    //     y: 750,
-    //     ease: "none"
-    // }, 0);
-
-
-
 </script>
 {% endblock %}

@@ -58,10 +58,36 @@
     padding: 4rem 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    .devcore-logo-wrap {
+        min-height: 150vw;
+    }
 
+    .devcore-panel,
+    .devcore-small-text,
+    .owl-carousel,
+    .onepage-mobile {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
+    .devcore-panel {
+        background-image: url('/assets/svg/devcore/bg_1.svg');
+    }
 
+    .devcore-small-text {
+        margin-top: 0;
+        margin-bottom: 5rem;
+        background-position: bottom;
+        background-image: url('/assets/svg/devcore/bg_2.svg');
+    }
 
+    .owl-carousel {
+        background-image: url('/assets/svg/devcore/bg_3.svg');
+    }
 
-
-
+    .onepage-mobile {
+        background-position: left bottom;
+        background-image: url('/assets/svg/devcore/bg_4.svg');
+    }
+}

@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-md-none">
+            <div class="d-md-none navbar-mobile">
                 {{ include('app/elements/_navbar_mobile.html.twig') }}
             </div>
             <div class="d-none d-md-block">
@@ -199,14 +199,14 @@
                 const list = $('.language-selection-list');
                 $('.language-selection').on('click', function(e) {
                     e.preventDefault();
-                    const isOpen = $(this).data('isOpen') === 'true';
+                    const isOpen = $(this).data('isOpen');
                     if(isOpen) {
                         list.removeClass('open');
-                        this.dataset.isOpen = false;
+                        $(this).data('isOpen', false);
                     }
                     else {
                         list.addClass('open');
-                        this.dataset.isOpen = true;
+                        $(this).data('isOpen', true);
                     }
                 })
 

@@ -184,4 +184,10 @@ class AppController extends AbstractController
             'messages' => $customerMessageRepository->findAll()
         ]);
     }
+
+    #[Route('/privacy', name: 'app_privacy', methods: ['GET'])]
+    public function privacyPolicy()
+    {
+        return $this->render('app/privacy.html.twig');
+    }
 }

@@ -1,5 +1,13 @@
-{% trans_default_domain 'portfolio' %}
+{% trans_default_domain 'devcore' %}
 {% extends 'base.html.twig' %}
+{% block title %}
+DevCore
+{% endblock %}
+{% block meta_desc %}
+{% trans %}
+Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.
+{% endtrans %}
+{% endblock %}
 
 {% block body %}
 <style>
@@ -119,11 +127,11 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-center">
-            <div class="col-lg-2 d-flex justify-center">
-                <a href="#">Zobacz</a>
-            </div>
-        </div>
+        <!-- <div class="row justify-center"> -->
+        <!--     <div class="col-lg-2 d-flex justify-center"> -->
+        <!--         <a href="#">Zobacz</a> -->
+        <!--     </div> -->
+        <!-- </div> -->
         <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
             <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
         </div>
@@ -145,7 +153,7 @@
         </div>
         <div class="owl-carousel owl-theme full-width d-flex align-items-center" id="marquee" style="animation: unset; opacity: 1; min-height: 500px;">
             {% for post in posts %}
-            <a class="position-relative d-flex align-items-center flex-column" href="{{ path('app_portfolio_post', {slug: post.slug ?? post.id}) }}">
+            <a class="portfolio-link position-relative d-flex align-items-center flex-column" href="{{ path('app_portfolio_post', {slug: post.slug ?? post.id}) }}">
                 <div class="portfolio-block position-relative">
                     <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="">
                 </div>

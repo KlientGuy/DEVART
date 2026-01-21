@@ -5,20 +5,13 @@
 </style>
 <div class="container p-0 p-md-5 blog-post">
     <div class="row">
-        <div class="col-sm-12 small text-secondary">
-            {{ post.createdAt|date("Y M d") }}
+        <div class="col-sm-12 small">
+            <a class="d-flex align-items-center" href="{{ path('app_portfolio') }}">
+                <img class="me-2" src="{{ asset('/assets/svg/chevron_left.svg') }}" alt="">
+                Powrót
+            </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-8">
-            {# <h2 class="post-title">{{ post_trans(post, 'title', locale) }}</h2> #}
-        </div>
-    </div>
-    {# <div class="row"> #}
-    {#     <div class="col-sm-12"> #}
-    {#         <img class="w-100 post-main-photo" src="{{ path('devcore_blog_get_main_photo', {id: post.id}) }}" alt=""> #}
-    {#     </div> #}
-    {# </div> #}
     <div class="post-blocks d-flex flex-column align-items-center">
         {% for block in post.postBlocks|filter(b => b.mobile == is_mobile()) %}
         {% if block.type == enum('Devcore\\BlogBundle\\Enum\\PostBlockTypeEnum').TEXT %}

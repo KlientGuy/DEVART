@@ -1,7 +1,6 @@
 {% trans_default_domain 'home' %}
 {% extends 'base.html.twig' %}
 
-{#{% block title %} {% endblock %}#}
 
 {% block body %}
     <div class="logo">
@@ -17,9 +16,12 @@
     </div>
     <div class="owl-carousel owl-theme mb-5 mt-5 full-width" id="marquee">
         {% for post in posts %}
-            <div class="portfolio-block position-relative">
-                <img class="" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="" loading="lazy">
-            </div>
+            <a class="portfolio-link position-relative d-flex align-items-center flex-column" href="{{ path('app_portfolio_post', {slug: post.slug ?? post.id}) }}">
+                <div class="portfolio-block position-relative">
+                    <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="">
+                </div>
+                <span class="position-absolute mb-4" style="bottom: 0">Zobacz ></span>
+            </a>
         {% endfor %}
         {# {% for src in images %} #}
         {#     <img src="{{ asset(src) }}" alt="" loading="lazy"> #}
@@ -141,7 +143,7 @@
             {#     <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr" style="visibility: hidden"> #}
             {# </div> #}
             <div class="person-card">
-                <img src="{{ asset('assets/img/home/piotrek.webp') }}" alt="piotr">
+                <img src="{{ asset('assets/img/home/piotr.png') }}" alt="piotr">
                 <div class="person-text">
                     <span style="font-weight: 300">Piotr Sumara</span>
                     <span style="font-weight: 100; margin-bottom: 1rem">{% trans %}Dyrektor artystyczny{% endtrans %}</span>

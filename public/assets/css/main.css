@@ -964,3 +964,57 @@ img {
         width: fit-content;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .offer-home {
+        margin-top: 0;
+    }
+    .offer-title,
+    .offer-topics,
+    .devcore-panel,
+    .contact-form {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .offer-title {
+        padding-top: 80px;
+        background-size: cover;
+        background-image: url('/assets/svg/homepage/bg_1.svg');
+    }
+
+    .offer-topics {
+        background-image: url('/assets/svg/homepage/bg_2.svg');
+    }
+
+    .devcore-panel {
+        background-position: bottom;
+        background-image: url('/assets/svg/homepage/bg_3.svg');
+    }
+
+    .person-text {
+        font-size: 2em;
+    }
+
+    .footer-contact {
+        div {
+            font-size: 0.7em !important;
+        }
+    }
+
+    .contact-form {
+        font-size: 1.5em;
+        background-position: center;
+        background-image: url('/assets/svg/homepage/bg_4.svg');
+        h2 {
+            font-size: 1.5em;
+        }
+        input, textarea {
+            font-size: 1.2em;
+        }
+    }
+
+    .privacy-back {
+        font-size: 1.8em;
+    }
+}

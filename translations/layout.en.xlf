@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="ZlAv5ti" resname="Kontakt">
+        <source>Kontakt</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="rbTWeQW" resname="Oferta">
+        <source>Oferta</source>
+        <target>Offer</target>
+      </trans-unit>
+      <trans-unit id="oLFCGzO" resname="Polityka prywatności">
+        <source>Polityka prywatności</source>
+        <target>Privacy policy</target>
+      </trans-unit>
+      <trans-unit id="iSj3hDz" resname="Klikając &quot;Akceptuj wszystkie&quot; zgadzasz się na przechowywanie ciastek na twoim urządzeniu by analizować użytkowanie strony">
+        <source>Klikając "Akceptuj wszystkie" zgadzasz się na przechowywanie ciastek na twoim urządzeniu by analizować użytkowanie strony</source>
+        <target>By clicking "Accept all" you agree to storing cookies on your device for analytic purposes</target>
+      </trans-unit>
+      <trans-unit id="fZNqzwG" resname="Akceptuj wszystkie">
+        <source>Akceptuj wszystkie</source>
+        <target>Accept all</target>
+      </trans-unit>
+      <trans-unit id="5B5Gp53" resname="Odrzuć">
+        <source>Odrzuć</source>
+        <target>Decline</target>
+      </trans-unit>
+      <trans-unit id="uN4IVV." resname="W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania">
+        <source>W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania</source>
+        <target>At 2dev we will build your brand from the groud up, as well as design and create a website for it. We also offer interal web apps and many more things related to software development</target>
+      </trans-unit>
+      <trans-unit id="jDdaRh." resname="2dev - agencja brandingowa">
+        <source>2dev - agencja brandingowa</source>
+        <target>2dev - branding agency</target>
+      </trans-unit>
+      <trans-unit id="fA3cyNe" resname="DevCore">
+        <source>DevCore</source>
+        <target>DevCore</target>
+      </trans-unit>
+      <trans-unit id=".OG8QSb" resname="Portfolio">
+        <source>Portfolio</source>
+        <target>Portfolio</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

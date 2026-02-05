@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="pl" target-language="de" datatype="plaintext" original="file.ext">
+  <file source-language="pl" target-language="en" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
       <trans-unit id="NZPpcdi" resname="agencja brandingowa.">
         <source>agencja brandingowa.</source>
-        <target>Branding-Agentur.</target>
+        <target>branding agency.</target>
       </trans-unit>
       <trans-unit id="RbKZlsl" resname="Budowa marki">
         <source>Budowa marki</source>
-        <target>Markenaufbau</target>
+        <target>Brand building</target>
       </trans-unit>
       <trans-unit id="mqVrfYY" resname="Nazewnictwo&#10;                    Barwa&#10;                    Przekaz&#10;                    Wygląd&#10;                    Strategia&#10;                    Komunikacja&#10;                    Wizerunek">
         <source>Nazewnictwo
@@ -21,13 +21,13 @@
                     Strategia
                     Komunikacja
                     Wizerunek</source>
-        <target>Benennung
-                    Farbe
-                    Botschaft
-                    Aussehen
-                    Strategie
-                    Kommunikation
-                    Unternehmensimage</target>
+        <target>Naming
+                    Colors
+                    Message
+                    Look
+                    Strategy
+                    Communication
+                    Image</target>
       </trans-unit>
       <trans-unit id="77h7V6y" resname="Strony internetowe">
         <source>Strony internetowe</source>
@@ -43,7 +43,7 @@
                     Web Design
                     Front-end
                     Back-end
-                    Implementierung</target>
+                    Deployment</target>
       </trans-unit>
       <trans-unit id="6mptjas" resname="Rebranding">
         <source>Rebranding</source>
@@ -56,16 +56,16 @@
                     Konsultacje
                     Ćwiczenia
                     Pobudzenie aktywności</source>
-        <target>Entwicklungspfad
-                    Marketingentwicklung
-                    Lehre
-                    Beratung
-                    Übungen
-                    Aktivitätsförderung</target>
+        <target>Growth path
+                    Marketing growth
+                    Teaching
+                    Consultations
+                    Excercises
+                    Activity stimulation</target>
       </trans-unit>
       <trans-unit id="FkOQfGK" resname="Identyfikacja wizualna">
         <source>Identyfikacja wizualna</source>
-        <target>Visuelle Identifizierung</target>
+        <target>Visual identification</target>
       </trans-unit>
       <trans-unit id="cI81n1Z" resname="Logo&#10;                    Key-visual&#10;                    Opakowania&#10;                    Submarki&#10;                    Infografika&#10;                    Wizytówki&#10;                    Użytki reklamowe">
         <source>Logo
@@ -77,11 +77,11 @@
                     Użytki reklamowe</source>
         <target>Logo
                     Key-visual
-                    Verpackungen
-                    Submarken
-                    Infografik
-                    Visitenkarten
-                    Werbemittel</target>
+                    Packaging
+                    Sub-brands
+                    Infographics
+                    Business cards
+                    Ads</target>
       </trans-unit>
       <trans-unit id="0bIpbu9" resname="Aplikacje">
         <source>Aplikacje</source>
@@ -95,15 +95,15 @@
         <target>Web
                     Mobile
                     Terminal
-                    Serversoftware</target>
+                    Server software</target>
       </trans-unit>
       <trans-unit id="oomTIq3" resname="Dyrektor techniczny">
         <source>Dyrektor techniczny</source>
-        <target>Technischer Direktor</target>
+        <target>CTO</target>
       </trans-unit>
       <trans-unit id="31Xl5pT" resname="Dyrektor artystyczny">
         <source>Dyrektor artystyczny</source>
-        <target>Kreativdirektor</target>
+        <target>Art director</target>
       </trans-unit>
       <trans-unit id="kXPpuJm" resname="#2dev #branding #studio #komunikacja #wygląd #www #art">
         <source>#2dev #branding #studio #komunikacja #wygląd #www #art</source>
@@ -111,15 +111,11 @@
       </trans-unit>
       <trans-unit id="PIvHKhz" resname="Zobacz więcej">
         <source>Zobacz więcej</source>
-        <target>Mehr sehen</target>
+        <target>See more</target>
       </trans-unit>
       <trans-unit id="khU9GgF" resname="oferta">
         <source>oferta</source>
-        <target>Angebot</target>
-      </trans-unit>
-      <trans-unit id="x3cAsjL" resname="cms">
-        <source>cms</source>
-        <target>CMS</target>
+        <target>offer</target>
       </trans-unit>
     </body>
   </file>

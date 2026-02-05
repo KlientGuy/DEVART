@@ -122,7 +122,7 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
             </div>
             <div class="row justify-content-center align-items-center devcore-logo-wrap">
                 <div class="col-12 col-sm-6 text-center d-flex flex-column align-center">
-                    <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">system CMS</span>
+                    {# <span class="d-block mb-5" style="font-weight: 200; font-size: 3rem">{{ 'cms'|trans({}, 'home') }}</span> #}
                     <img src="{{ asset('assets/svg/devcore/devcore_logo.svg') }}" alt="logo" class="img-fluid" style="max-width: 40%;">
                 </div>
             </div>
@@ -133,21 +133,21 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
         <!--     </div> -->
         <!-- </div> -->
         <div class="devcore-small-text d-flex align-center justify-center fs-4 text-center">
-            <span>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym<br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</span>
+            <span>{{ 'title'|trans|raw }}</span>
         </div>
         <div class="row scrolly-row" style="margin-bottom: 8rem">
             <div class="col-12 col-md-6 scrollytelling-element-left text-md-end fs-2">
                 <p>1. Scrollytelling</p>
             </div>
             <div class="col-12 col-md-6 scrollytelling-element-right">
-                <h1 class="block-headline w-100" lang="pl" style="font-size: 5rem;">
-                    Stwórz z nami stronę, która
+                <h1 class="block-headline w-100" lang="pl" style="font-size: 5rem; word-wrap: break-word">
+                    {{ 'scrolly.create'|trans }}
                     <span style="font-size: 0.9em">
-                        opowie
-                        <span class="blue-word">TWOJĄ</span>
-                        <span class="blue-word">HISTORIĘ</span>
+                        {{ 'scrolly.tells'|trans }}
+                        <span class="blue-word">{{ 'scrolly.your'|trans }}</span>
+                        <span class="blue-word">{{ 'scrolly.history'|trans }}</span>
                     </span>
-                    tak, że <span style="font-size: 0.8em">nikt nie przejdzie obok niej obojętnie</span>
+                    {{ 'tak, że'|trans }} <span style="font-size: 0.8em">{{ 'scrolly.noignore'|trans }}</span>
                 </h1>
             </div>
         </div>
@@ -157,18 +157,18 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
                 <div class="portfolio-block position-relative">
                     <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="">
                 </div>
-                <span class="position-absolute mb-4" style="bottom: 0">Zobacz ></span>
+                <span class="position-absolute mb-4" style="bottom: 0">{{ 'see'|trans }} ></span>
             </a>
             {% endfor %}
         </div>
         <div class="mb-5 d-flex justify-content-center">
             <div class="carousel-see-more">
-                <a href="{{ path('app_portfolio') }}" class="fw-bold">Zobacz więcej</a>
+                <a href="{{ path('app_portfolio') }}" class="fw-bold">{{ 'seemore'|trans }}</a>
             </div>
         </div>
         <div class="second-section section position-relative onepage-mobile">
-            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
-            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
+            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">{{ 'expand'|trans }}</div>
+            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">{{ 'close'|trans }}</div>
             <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
             <div class="row scrolly-row-one-page one-page-element d-md-flex d-none" style="">
                 <div class="col-sm-4 fs-2 one-page-text text-end">
@@ -178,18 +178,14 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
                     <img class="w-100" src="{{ asset('assets/img/devcore/optident.png') }}" alt="frame_127" style="">
                 </div>
                 <div class="col-sm-4 one-page-desc">
-                    To elegancka wizytówka, która jednym spojrzeniem mówi,
-                    co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów:
-                    przejrzysta oferta i świetne dopasowanie do telefonów.
+                    {{ 'onepage.desc'|trans }}
                 </div>
             </div>
             <div class="d-md-none d-flex second-closed py-3 position-relative" style="width: 150vw;">
                 <div class="col-6 fs-2 d-flex flex-column justify-content-center position-relative">
                     <div>2. OnePage</div>
                     <div class="one-page-desc">
-                        To elegancka wizytówka, która jednym spojrzeniem mówi,
-                        co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów:
-                        przejrzysta oferta i świetne dopasowanie do telefonów.
+                        {{ 'onepage.desc'|trans }}
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-center">
@@ -204,13 +200,13 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
                     <div class="panel align-center d-flex" style=" z-index: -1; flex: 0 0 120vw">
                         <div class="d-flex w-100 align-items-start" style="gap: 2rem;">
                             <div class="text-end fs-2 d-flex justify-content-end align-items-start h-100" style="flex: 2">
-                                <p>3. Firmowe</p>
+                                <p>{{ 'companies'|trans }}</p>
                             </div>
                             <div class="fw-bold" style="font-size: 7vmax; line-height: 8vmax; flex: 1">
-                                <div>Wizerunek</div>
-                                <div>Sprzedaż</div>
-                                <div>Integracje</div>
-                                <div>Przekaz</div>
+                                <div>{{ 'companies.image'|trans }}</div>
+                                <div>{{ 'companies.sales'|trans }}</div>
+                                <div>{{ 'companies.integrations'|trans }}</div>
+                                <div>{{ 'companies.message'|trans }}</div>
                             </div>
                             <div class="d-flex justify-content-center portfolio-block position-relative" style="flex: 2; align-self: stretch">
                                 <img class="h-100" src="{{ '/assets/img/devcore/ctg_square.png' }}">
@@ -228,7 +224,7 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
                             </div>
                             <div class="" style="flex: 2">
                                 <div class="fw-bold" style="font-size: 4vmax; line-height: 5vmax">
-                                    Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
+                                    {{ 'ecommerce.desc'|trans }}
                                 </div>
                             </div>
                         </div>
@@ -237,7 +233,7 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
             </div>
             <div class="d-block d-md-none mt-5">
                 <div class="fs-2">
-                    <p>3. Firmowe</p>
+                    <p>{{ 'companies'|trans }}</p>
                 </div>
                 <div>
                     <img class="w-100" src="{{ '/assets/img/devcore/ctg_mobile.png' }}">
@@ -245,11 +241,16 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
                 <div class="d-block d-md-none">
                     <img class="w-100" src="{{ '/assets/svg/devcore/bg_5.svg' }}">
                 </div>
-                <div class="fw-bold" style="font-size: 15vmin; line-height: 17vmin; margin-top: 1em">
-                    <div style="font-size: 1.09em">Wizerunek</div>
-                    <div style="font-size: 1.27em">Sprzedaż</div>
-                    <div style="font-size: 1.13em">Integracje</div>
-                    <div style="font-size: 1.5em">Przekaz</div>
+                {% set fsmap = {
+                    'pl': ['1.09em', '1.27em', '1.13em', '1.5em'],
+                    'en': ['1.85em; line-height: 0.9em', '2.2em; line-height: 0.8em', '0.95em', '1.3em'],
+                    'de': ['3.1em; line-height: 0.9em', '1.45em; line-height: 0.8em', '0.85em', '1.17em'],
+                } %}
+                <div class="fw-bold mobile-company" style="font-size: 15vmin; line-height: 17vmin; margin-top: 1em">
+                    <div style="font-size: {{ fsmap[app.request.get('_locale')][0] ?? '1em' }}">{{ 'companies.image'|trans }}</div>
+                    <div style="font-size: {{ fsmap[app.request.get('_locale')][1] ?? '1em' }}">{{ 'companies.sales'|trans }}</div>
+                    <div style="font-size: {{ fsmap[app.request.get('_locale')][2] ?? '1em' }}">{{ 'companies.integrations'|trans }}</div>
+                    <div style="font-size: {{ fsmap[app.request.get('_locale')][3] ?? '1em' }}">{{ 'companies.message'|trans }}</div>
                 </div>
                 <div class="mt-5 d-block d-md-none">
                     <img class="w-100" src="{{ '/assets/svg/devcore/bg_6.svg' }}">
@@ -257,14 +258,14 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
             </div>
         </div>
         <div class="fourth-section section position-relative d-md-none">
-            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">Rozwiń</div>
-            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">Zwiń</div>
+            <div class="fs-2 position-absolute second-open-btn d-md-none" style="">{{ 'expand'|trans }}</div>
+            <div class="fs-2 position-absolute second-close-btn btn-closed d-md-none" style="">{{ 'close'|trans }}</div>
             <div class="position-absolute second-bg-gradient d-md-none" style=""></div>
             <div class="d-flex second-closed pb-3 position-relative" style="width: 150vw;">
                 <div class="col-6 fs-2 d-flex flex-column justify-content-center position-relative">
                     <div>4. E-commerce</div>
                     <div class="">
-                        Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy
+                        {{ 'ecommerce.desc'|trans }}
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center justify-content-center">
@@ -275,10 +276,10 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
         <div class="row cities-section p-0 p-md-5 mt-5 mb-5">
             <div class="col-sm-5 fs-2 cities-text text-md-end h-auto">
                 <span>
-                    5. Miasta, Gminy, <br> Działaności publiczne
+                    {{ 'cities.title'|trans|raw }}
                 </span>
             </div>
-            <div class="d-md-none fw-bold fs-5 mb-4">zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</div>
+            <div class="d-md-none fw-bold fs-5 mb-4">{{ 'cities.desc'|trans|raw }}</div>
             <div class="col-sm-6 row city-imgs">
                 <div class="city-img col-6 d-flex justify-center">
                     <img class="w-100" src="{{ asset('/assets/img/home/carousel/gopr.png') }}" alt="frame_127" style="">
@@ -292,15 +293,17 @@ Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecz
             </div>
         </div>
         <div class="devcore-small-text d-none d-md-flex align-center justify-center fs-4 text-center fw-bold">
-            <span>zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania</span>
+            <span>{{ 'cities.desc'|trans|raw }}</span>
         </div>
         <div class="d-flex align-center justify-center fs-1 text-center mb-4">
-            <span style="font-weight: 200">Zaufali nam</span>
+            <span style="font-weight: 200">{{ 'trusted'|trans }}</span>
         </div>
         {{ include('app/elements/_logo_carousel.html.twig') }}
-        <div class="w-100 justify-content-center d-none d-md-flex" style="margin-top: 15rem; margin-bottom: 10rem">
-            <img class="w-75" src="{{ asset('assets/svg/devcore/bottom_text.svg') }}" alt="">
-        </div>
+        {% if app.request.get("_locale") == 'pl' %}
+            <div class="w-100 justify-content-center d-none d-md-flex" style="margin-top: 15rem; margin-bottom: 10rem">
+                <img class="w-75" src="{{ asset('assets/svg/devcore/bottom_text.svg') }}" alt="">
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
 {% block javascripts %}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="de" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="__IdK0d" resname="Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.">
+        <source>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</source>
+        <target>Einzigartige Websites, individuell gestaltet, basierend auf dem sicheren und intuitiven DevCore CMS. Klarheit für die Nutzer.</target>
+      </trans-unit>
+      <trans-unit id="ERVpiB0" resname="title">
+        <source>title</source>
+        <target>Einzigartige Websites, individuell gestaltet, basierend auf dem sicheren und intuitiven DevCore CMS. Klarheit für die Nutzer.</target>
+      </trans-unit>
+      <trans-unit id="mbi0b1_" resname="scrolly.create">
+        <source>scrolly.create</source>
+        <target>Erstellen Sie mit uns eine Website, die</target>
+      </trans-unit>
+      <trans-unit id="KuDDASY" resname="scrolly.tells">
+        <source>scrolly.tells</source>
+        <target>Ihre Geschichte</target>
+      </trans-unit>
+      <trans-unit id="v8KZZHF" resname="scrolly.your">
+        <source>scrolly.your</source>
+        <target>Ihre Geschichte</target>
+      </trans-unit>
+      <trans-unit id="knx.lHh" resname="scrolly.history">
+        <source>scrolly.history</source>
+        <target>auf eine Weise erzählt</target>
+      </trans-unit>
+      <trans-unit id="mXN9pZ6" resname="tak, że">
+        <source>tak, że</source>
+        <target>die</target>
+      </trans-unit>
+      <trans-unit id="GAzvdhL" resname="scrolly.noignore">
+        <source>scrolly.noignore</source>
+        <target>niemand ignorieren kann.</target>
+      </trans-unit>
+      <trans-unit id="Yy.tRg6" resname="seemore">
+        <source>seemore</source>
+        <target>Mehr sehen</target>
+      </trans-unit>
+      <trans-unit id="quOaMiP" resname="onepage.desc">
+        <source>onepage.desc</source>
+        <target>Dies ist eine elegante Visitenkarte, die auf den ersten Blick kommuniziert, was Sie tun, für wen und wie man Sie kontaktieren kann. Es ist der effektivste Weg, um Kunden zu gewinnen: ein klares Angebot und eine hervorragende Kompatibilität mit Smartphones.</target>
+      </trans-unit>
+      <trans-unit id="Y9exAe." resname="companies">
+        <source>companies</source>
+        <target>3. Für Unternehmen</target>
+      </trans-unit>
+      <trans-unit id="t4CaOM8" resname="companies.image">
+        <source>companies.image</source>
+        <target>Bild</target>
+      </trans-unit>
+      <trans-unit id="qMIUZKc" resname="companies.sales">
+        <source>companies.sales</source>
+        <target>Verkauf</target>
+      </trans-unit>
+      <trans-unit id="pa1yQ1O" resname="companies.integrations">
+        <source>companies.integrations</source>
+        <target>Integrationen</target>
+      </trans-unit>
+      <trans-unit id="znvAgmW" resname="companies.message">
+        <source>companies.message</source>
+        <target>Nachricht</target>
+      </trans-unit>
+      <trans-unit id="z2ONJug" resname="ecommerce.desc">
+        <source>ecommerce.desc</source>
+        <target>Wir unterstützen das Wachstum Ihres Unternehmens, indem wir eine starke Markenpräsenz online aufbauen. Wir passen jedes Projekt an die Ziele des Unternehmens an.</target>
+      </trans-unit>
+      <trans-unit id="DBSCaqQ" resname="cities.title">
+        <source>cities.title</source>
+        <target>5. Städte, Gemeinden, öffentliche Aktivitäten</target>
+      </trans-unit>
+      <trans-unit id="vwrlueA" resname="cities.desc">
+        <source>cities.desc</source>
+        <target>gestaltet mit Blick auf Barrierefreiheit, Sicherheit und einfache Verwaltung</target>
+      </trans-unit>
+      <trans-unit id="UU58HUJ" resname="trusted">
+        <source>trusted</source>
+        <target>Sie haben uns vertraut</target>
+      </trans-unit>
+      <trans-unit id="PE9tWJj" resname="see">
+        <source>see</source>
+        <target>Siehe</target>
+      </trans-unit>
+      <trans-unit id="ZEoG5mj" resname="expand">
+        <source>expand</source>
+        <target>Expandieren</target>
+      </trans-unit>
+      <trans-unit id="CAiOZVb" resname="close">
+        <source>close</source>
+        <target>Zusammenbruch</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

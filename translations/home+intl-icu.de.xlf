@@ -117,6 +117,10 @@
         <source>oferta</source>
         <target>Angebot</target>
       </trans-unit>
+      <trans-unit id="x3cAsjL" resname="cms">
+        <source>cms</source>
+        <target>CMS</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -1,0 +1,116 @@
+{% trans_default_domain 'privacy' %}
+{% extends 'base.html.twig' %}
+{% block title %}
+{% trans %}Polityka prywatności{% endtrans %}
+{% endblock %}
+
+{% block meta_desc %}
+{% trans %}
+Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.
+{% endtrans %}
+{% endblock %}
+
+{% block body %}
+<style>
+    ol > li {
+        margin: 5px 0;
+    }
+    .background-wrap > div:not(.bg-bottom) {
+        display: none;
+    }
+</style>
+<div class="container p-0 p-md-5 mt-5">
+    <div class="row mb-5">
+        <div class="col-sm-12 small">
+            <a class="d-flex align-items-center privacy-back" href="{{ path('app_index') }}">
+                <img class="me-2" src="{{ asset('/assets/svg/chevron_left.svg') }}" alt="">
+                {% trans %}Powrót{% endtrans %}
+            </a>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-sm-12 text-center">
+            <h1>{% trans %}Polityka prywatności{% endtrans %}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}I. Postanowienia ogólne{% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą	elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.{% endtrans %}</li>
+            <li>{% trans %}Serwis zbiera wyłącznie dane osobowe niezbędne do świadczenia i rozwoju usług w nim oferowanych.{% endtrans %}</li>
+            <li>{% trans %}Dane osobowe zbierane za pośrednictwem Serwisu są przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób	fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia 	dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej RODO) oraz ustawą o ochronie danych osobowych z dnia 10 maja 2018 r.{% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}II. Administrator danych{% endtrans %}</h3>
+        <p class="ms-4">{% trans %}Administratorem danych osobowych zbieranych poprzez Serwis jest 2DEV, adres: Bochnia, ul. Brzeska 37, 32-700, adres poczty elektronicznej: kontakt@2dev.com.pl.{% endtrans %}</p>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}III. Cel zbierania danych osobowych{% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>
+                {% trans %}Dane osobowe wykorzystywane są w celu:{% endtrans %}
+                <ul>
+                    <li>{% trans %}weryfikacji tożsamości Użytkownika,{% endtrans %}</li>
+                    <li>{% trans %}realizacji umowy dotyczącej usług i e-usług,{% endtrans %}</li>
+                    <li>{% trans %}komunikacji z	Użytkownikiem (formularz kontaktowy){% endtrans %}</li>
+                    <li>{% trans %}działań analitycznych i statystycznych, {% endtrans %}</li>
+                </ul>
+            </li>
+            <li>{% trans %}Podanie danych jest dobrowolne, ale niezbędne do zawarcia umowy albo skorzystania z innych funkcjonalności Serwisu. {% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}IV. Rodzaj przetwarzanych danych osobowych{% endtrans %}</h3>
+        <p class="ms-4">{% trans %}Administrator może przetwarzać dane osobowe Użytkownika: imię i nazwisko, adres e-mail, numer telefonu, NIP.{% endtrans %}</p>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}V. Okres przetwarzania danych osobowych{% endtrans %}</h3>
+        <p class="ms-4">{% trans %}Dane osobowe Użytkowników będą przetwarzane przez okres:{% endtrans %}</p>
+        <ul class="ms-5">
+            <li>{% trans %}gdy podstawą przetwarzania danych jest wykonanie umowy – do momentu przedawnienia roszczeń po jej wykonaniu,{% endtrans %}</li>
+            <li>{% trans %}gdy podstawą przetwarzania danych jest zgoda – do momentu jej odwołania, a po odwołaniu zgody do przedawnienia roszczeń.{% endtrans %}</li>
+        </ul>
+        <p class="ms-4">{% trans %}W obu przypadkach termin przedawnienia wynosi 6 lat, a dla roszczeń o świadczenia okresowe i roszczeń dotyczących prowadzenia działalności gospodarczej – 3 lata (jeśli przepis szczególny nie stanowi inaczej).{% endtrans %}</p>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}VI. Udostępnianie danych osobowych {% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Dane osobowe Użytkowników mogą być przekazywane: podmiotom powiązanym z Administratorem, jego podwykonawcom, podmiotom współpracującym z	Administratorem np. firmom obsługującym e-płatności, firmom 	świadczącym usługi kurierskie/pocztowe, kancelariom prawnym.{% endtrans %}</li>
+            <li>{% trans %}Dane osobowe Użytkowników nie będą/będą przekazywane poza teren Europejskiego Obszaru Gospodarczego (EOG).{% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}VII. Prawa Użytkowników{% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Użytkownik Serwisu	ma prawo do: dostępu do treści swoich danych osobowych, ich 	sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, wniesienia sprzeciwu wobec przetwarzania, cofnięcia zgody w każdej 	chwili (co nie ma wpływu na zgodność z prawem przetwarzania 	dokonanego w oparciu o zgodę przed jej cofnięciem).{% endtrans %}</li>
+            <li>{% trans %}Zgłoszenie o 	wystąpieniu przez Użytkownika z uprawnieniem wynikającym 	z wymienionych praw należy przesłać na adres kontakt@2dev.com.pl{% endtrans %}</li>
+            <li>{% trans %}Administrator 	spełnia lub odmawia spełnienia żądania niezwłocznie – 	maksymalnie w ciągu miesiąca od jego otrzymania.{% endtrans %}</li>
+            <li>{% trans %}Użytkownik ma 	prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych, 	jeśli uzna, że przetwarzanie narusza jego prawa i wolności 	(RODO). {% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}VIII. Pliki cookies{% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Serwis zbiera	informacje za pomocą plików cookies – sesyjnych, stałych i podmiotów zewnętrznych.{% endtrans %}</li>
+            <li>{% trans %}Zbieranie plików cookies wspiera poprawne świadczenie usług w Serwisie i służy celom statystycznym.{% endtrans %}</li>
+            <li>{% trans %}Użytkownik może określić zakres dostępu plików cookies do swojego urządzenia w ustawieniach przeglądarki.{% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}IX. Zautomatyzowane podejmowanie decyzji i profilowanie {% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Dane Użytkowników	nie mogą być przetwarzane w zautomatyzowany sposób tak, że na skutek tego mogłyby zapaść wobec nich jakiekolwiek decyzje.{% endtrans %}</li>
+            <li>{% trans %}Dane Użytkowników 	mogą być profilowane celem dostosowania treści i personalizacji	oferty po wyrażeniu przez nich zgody. {% endtrans %}</li>
+        </ol>
+    </div>
+    <div class="row">
+        <h3 class="my-3">{% trans %}X. Postanowienia końcowe{% endtrans %}</h3>
+        <ol class="ms-4">
+            <li>{% trans %}Administrator ma prawo do wprowadzenia zmian w Polityce prywatności, przy czym prawa 	Użytkowników nie zostaną ograniczone.{% endtrans %}</li>
+            <li>{% trans %}Informacja o	wprowadzonych zmianach pojawi się w formie komunikatu dostępnego w	Serwisie.{% endtrans %}</li>
+            <li>{% trans %}W sprawach nieuregulowanych w niniejszej Polityce prywatności obowiązują	przepisy RODO i przepisy prawa polskiego.{% endtrans %}</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}

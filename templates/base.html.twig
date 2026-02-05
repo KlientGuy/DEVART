@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
         <meta name="viewport" content="initial-scale=1, width=device-width">
-        <meta name="description" content="{{ 'W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania'|trans }}">
+        <meta name="description" content="{% block meta_desc %}{{ 'W 2dev zbudujemy twoją markę od podstaw, jak również zaprojektujemy i napiszemy stronę internetową. Poza tym w naszej ofercie znajdziesz też aplikacje wewnętrzne dla firm i wiele innych rzeczy związanych z rozwojem oprogramowania'|trans }}{% endblock %}">
         <meta property="og:title" content="{{ '2dev - agencja brandingowa'|trans }}">
         <meta property="og:image" content="https://2dev.com.pl/assets/img/logo.webp">
         <meta property="og:url" content="https://2dev.com.pl">
@@ -19,6 +19,18 @@
         <link rel="alternate" hreflang="pl" href="{{ absolute_path(app.request.attributes.get('_route'), {_locale: 'pl'}) }}">
         <link rel="alternate" hreflang="en" href="{{ absolute_path(app.request.attributes.get('_route'), {_locale: 'en'}) }}">
         <link rel="alternate" hreflang="x-default" href="{{ absolute_path(app.request.attributes.get('_route'), {_locale: 'en'}) }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        {#CAROUSEL#}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2/dist/assets/owl.theme.default.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2/dist/owl.carousel.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <!-- ScrollSmoother requires ScrollTrigger -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
         <script>
         let consentCookie = getCookie('consent');
         window.dataLayer = window.dataLayer || [];
@@ -91,6 +103,9 @@
                 <div class="mobile-overlay-content" style="height: 100%">
                     <div class="mobile-links">
                         <div class="mobile-menu-link">
+                            <a href="{{ path('app_devcore') }}">{% trans %}DevCore{% endtrans %}</a>
+                        </div>
+                        <div class="mobile-menu-link">
                             <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
                         </div>
                         <div class="mobile-menu-link">
@@ -119,186 +134,98 @@
                     </div>
                 </div>
             </div>
-            <header>
-                <div class="d-flex align-center" style="position: relative">
-                    <div class="burger-button" style="cursor: pointer">
-{#                        <img src="{{ asset('assets/svg/burger.svg') }}" alt="logo" width="25">#}
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="socials-navbar" style="justify-content: flex-start">
-                        <div>
-                            <a href="https://www.instagram.com/studio2dev" target="_blank">
-                                <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
-                                <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
-                                <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% if app.request.attributes.get('_route') in ['app_portfolio', 'app_portfolio_single'] %}
-                <a href="{{ path('app_index') }}" class="nav-btn justify-center" style="flex: 0">
-                    <img src="{{ asset('assets/svg/logo.svg') }}" alt="polska" width="80">
-                </a>
-                {% endif %}
-                <nav class="nav-menu">
-                    <a href="{{ path('app_portfolio') }}" class="nav-btn nav-hide">Portfolio</a>
-                    <a href="{{ path('app_index') }}#offer-home" class="nav-btn offer-btn nav-hide">
-                        {% trans %}
-                        Oferta
-                        {% endtrans %}
-                    </a>
-                    <a href="{{ path('app_index') }}#person-info" class="nav-btn concact-btn nav-hide">
-                        {% trans %}
-                        Kontakt
-                        {% endtrans %}
-                    </a>
-                    <div>
-                        {% set localeFlag = {pl: {path: 'assets/svg/polish_flag.svg', w: 60, h: 30}, en: {path: 'assets/img/uk.png', w: 30, h: 20}, de: {path: 'assets/svg/de_flag.svg', w: 30, h:30}} %}
-                        {% set loc = localeFlag[app.request.getLocale()] ?? localeFlag['pl'] %}
-                        <a href="#" class="nav-btn d-flex flex-end language-selection" style="padding-bottom: 0">
-                            <div class="d-flex justify-center align-center" style="width: 60px; height: 30px">
-                            <img src="{{ asset(loc.path) }}" alt="polska" width="{{ loc.w }}" height="{{ loc.h }}">
-                            </div>
-                            <img src="{{ asset('assets/svg/chevron.svg') }}" class="chevron" alt="chevron" width="20" height="30">
-                        </a>
-                        <ul class="language-selection-list" style="position: absolute">
-                            <li>
-                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
-                                    <img src="{{ asset('assets/svg/polish_flag.svg') }}" alt="polska" width="60" height="30">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
-                                    <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
-                                    <img src="{{ asset('assets/img/uk.png') }}" alt="anglia" width="30" height="20">
-                                    </div>
-                                </a>
-                                <li>
-                                    <a href="{{ absolute_path(app.request.attributes.get('_route'), {'_locale': 'de'}) }}" class="nav-btn d-flex flex-end" id="language-selection">
-                                        <div style="width: 60px; height: 30px; display: flex; justify-content: center;">
-                                        <img src="{{ asset('assets/svg/de_flag.svg') }}" alt="niemcy" width="30" height="20">
-                                        </div>
-                                    </a>
-                                </li>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+            <div class="d-md-none navbar-mobile">
+                {{ include('app/elements/_navbar_mobile.html.twig') }}
+            </div>
+            <div class="d-none d-md-block">
+                {{ include('app/elements/_navbar.html.twig') }}
+            </div>
             <main>
                 {% block body %}
 
                 {% endblock %}
             </main>
-            <footer>
-                <div class="w-100 flex-start foot-head">
-                    <div class="nav-mini-i nav-mini">
-                        <a href="{{ path('app_portfolio') }}">Portfolio</a>
-                        <!-- <a href="" class="">Oferta</a> -->
-                    </div>
-                    <!-- <div style="flex: 3"></div> -->
-                    <div class="socials">
-                        <div>
-                            <a href="https://www.instagram.com/studio2dev" target="_blank">
-                                <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
-                                <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
-                                <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="credits">&copy; 2025 2Dev Polska</span>
-                    <span class="credits">
-                        {% trans %}
-                        Polityka prywatności
-                        {% endtrans %}
-                    </span>
-                </div>
-            </footer>
+            {{ include('app/elements/_footer.html.twig') }}
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
 
-                const burgerButton = document.querySelector('.burger-button');
-                const socialsNavbar = document.querySelector('.socials-navbar');
-                const mobileOverlay = document.querySelector('.mobile-overlay');
+                const burgerButton = $('.burger-button');
 
-                burgerButton.addEventListener('click', () => {
+                const socialsNavbar = $('.socials-navbar');
+                const mobileOverlay = $('.mobile-overlay');
+
+                burgerButton.on('click', function() {
                     const screenWidth = window.innerWidth;
-                    burgerButton.classList.toggle('active');
+                    burgerButton.toggleClass('active');
 
                     if (screenWidth > 840) {
-                        if (socialsNavbar.classList.contains('active')) {
-                            socialsNavbar.classList.add('deactivating');
+                        if (socialsNavbar.hasClass('active')) {
+                            socialsNavbar.addClass('deactivating');
                             setTimeout(() => {
-                                socialsNavbar.classList.remove('active');
-                                socialsNavbar.classList.remove('deactivating');
+                                socialsNavbar.removeClass('active');
+                                socialsNavbar.removeClass('deactivating');
                             }, 100);
                         } else {
-                            socialsNavbar.classList.add('active');
+                            socialsNavbar.addClass('active');
                         }
                     } else {
-                        mobileOverlay.classList.toggle('active');
+                        mobileOverlay.toggleClass('active');
 
-                        if (mobileOverlay.classList.contains('active')) {
+                        if (mobileOverlay.hasClass('active')) {
                             document.body.classList.add('menu-open');
                         } else {
                             document.body.classList.remove('menu-open');
                         }
                     }
-                });
+                })
 
-                mobileOverlay.addEventListener('click', (e) => {
-                    if (e.target === mobileOverlay) {
-                        mobileOverlay.classList.remove('active');
-                        burgerButton.classList.remove('active');
-                        document.body.classList.remove('menu-open');
-                    }
+                mobileOverlay.on('click', (e) => {
+                    if (e.target !== mobileOverlay[0]) return
+
+                    mobileOverlay.removeClass('active');
+                    burgerButton.removeClass('active');
+                    document.body.classList.remove('menu-open');
                 });
 
                 document.querySelectorAll('.mobile-menu-link').forEach(link => {
                     link.addEventListener('click', () => {
-                        mobileOverlay.classList.remove('active');
-                        burgerButton.classList.remove('active');
+                        mobileOverlay.removeClass('active');
+                        burgerButton.removeClass('active');
                         document.body.classList.remove('menu-open');
                     });
                 });
 
-                document.querySelectorAll('.language-selection').forEach(elem => {
-                    elem.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const list = document.querySelector('.language-selection-list');
-                        const isOpen = this.dataset.isOpen === 'true';
-                        if(isOpen) {
-                            list.classList.remove('open');
-                            this.dataset.isOpen = false;
-                        }
-                        else {
-                            list.classList.add('open');
-                            this.dataset.isOpen = true;
-                        }
-                    })
-
+                const list = $('.language-selection-list');
+                $('.language-selection').on('click', function(e) {
+                    e.preventDefault();
+                    const isOpen = $(this).data('isOpen');
+                    if(isOpen) {
+                        list.removeClass('open');
+                        $(this).data('isOpen', false);
+                    }
+                    else {
+                        list.addClass('open');
+                        $(this).data('isOpen', true);
+                    }
                 })
+
+                // document.querySelectorAll('.language-selection').forEach(elem => {
+                //     elem.addEventListener('click', function(e) {
+                //         e.preventDefault();
+                //         const list = document.querySelector('.language-selection-list');
+                //         const isOpen = this.dataset.isOpen === 'true';
+                //         if(isOpen) {
+                //             list.classList.remove('open');
+                //             this.dataset.isOpen = false;
+                //         }
+                //         else {
+                //             list.classList.add('open');
+                //             this.dataset.isOpen = true;
+                //         }
+                //     })
+                //
+                // })
             })
         </script>
         {% block javascripts %}

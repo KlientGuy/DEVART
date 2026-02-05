@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="ERVpiB0" resname="title">
+        <source>title</source>
+        <target><![CDATA[Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym <br> i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.]]></target>
+      </trans-unit>
+      <trans-unit id="mbi0b1_" resname="scrolly.create">
+        <source>scrolly.create</source>
+        <target>Stwórz z nami stronę, która</target>
+      </trans-unit>
+      <trans-unit id="KuDDASY" resname="scrolly.tells">
+        <source>scrolly.tells</source>
+        <target>opowie</target>
+      </trans-unit>
+      <trans-unit id="v8KZZHF" resname="scrolly.your">
+        <source>scrolly.your</source>
+        <target>TWOJĄ</target>
+      </trans-unit>
+      <trans-unit id="knx.lHh" resname="scrolly.history">
+        <source>scrolly.history</source>
+        <target>HISTORIĘ</target>
+      </trans-unit>
+      <trans-unit id="mXN9pZ6" resname="tak, że">
+        <source>tak, że</source>
+        <target>tak, że</target>
+      </trans-unit>
+      <trans-unit id="GAzvdhL" resname="scrolly.noignore">
+        <source>scrolly.noignore</source>
+        <target>nikt nie przejdzie obok niej obojętnie</target>
+      </trans-unit>
+      <trans-unit id="Yy.tRg6" resname="seemore">
+        <source>seemore</source>
+        <target>Zobacz więcej</target>
+      </trans-unit>
+      <trans-unit id="quOaMiP" resname="onepage.desc">
+        <source>onepage.desc</source>
+        <target>To elegancka wizytówka, która jednym spojrzeniem mówi, co robisz, dla kogo i jak się z Tobą skontaktować. To najbardziej efektywny sposób na zdobycie klientów: przejrzysta oferta i świetne dopasowanie do telefonów.</target>
+      </trans-unit>
+      <trans-unit id="Y9exAe." resname="companies">
+        <source>companies</source>
+        <target>3. Firmowe</target>
+      </trans-unit>
+      <trans-unit id="t4CaOM8" resname="companies.image">
+        <source>companies.image</source>
+        <target>Wizerunek</target>
+      </trans-unit>
+      <trans-unit id="qMIUZKc" resname="companies.sales">
+        <source>companies.sales</source>
+        <target>Sprzedaż</target>
+      </trans-unit>
+      <trans-unit id="pa1yQ1O" resname="companies.integrations">
+        <source>companies.integrations</source>
+        <target>Integracje</target>
+      </trans-unit>
+      <trans-unit id="znvAgmW" resname="companies.message">
+        <source>companies.message</source>
+        <target>Przekaz</target>
+      </trans-unit>
+      <trans-unit id="z2ONJug" resname="ecommerce.desc">
+        <source>ecommerce.desc</source>
+        <target>Wspieramy rozwój Twojego biznesu, budujemy silną pozycję marki w sieci. Każdy projekt dopasowujemy do celów firmy</target>
+      </trans-unit>
+      <trans-unit id="DBSCaqQ" resname="cities.title">
+        <source>cities.title</source>
+        <target><![CDATA[5. Miasta, Gminy, <br> Działaności publiczne]]></target>
+      </trans-unit>
+      <trans-unit id="vwrlueA" resname="cities.desc">
+        <source>cities.desc</source>
+        <target><![CDATA[zaprojektowane z myślą o dostępności,<br> bezpieczeństwie i łatwości zarządzania]]></target>
+      </trans-unit>
+      <trans-unit id="UU58HUJ" resname="trusted">
+        <source>trusted</source>
+        <target>Zaufali nam</target>
+      </trans-unit>
+      <trans-unit id="__IdK0d" resname="Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.">
+        <source>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</source>
+        <target>Unikalne strony internetowe, zaprojektowane indywidualnie, zbudowane na bezpiecznym i intuicyjnym CMS DevCore. Przejrzystość dla użytkowników.</target>
+      </trans-unit>
+      <trans-unit id="PE9tWJj" resname="see">
+        <source>see</source>
+        <target>Zobacz</target>
+      </trans-unit>
+      <trans-unit id="ZEoG5mj" resname="expand">
+        <source>expand</source>
+        <target>Rozwiń</target>
+      </trans-unit>
+      <trans-unit id="CAiOZVb" resname="close">
+        <source>close</source>
+        <target>Zwiń</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

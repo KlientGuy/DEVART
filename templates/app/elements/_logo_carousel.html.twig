@@ -1,0 +1,16 @@
+<div class="carousel-home position-relative full-width mb-5 mt-5">
+    <div class="carousel-inner-home position-absolute" style="left: 0; top: 0">
+        {% for src in trustedImages %}
+            <div class="carousel-item-home">
+                <img src="{{ asset(src) }}" alt="m1">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="carousel-inner-home position-relative">
+        {% for src in trustedImages %}
+            <div class="carousel-item-home">
+                <img src="{{ asset(src) }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+</div>

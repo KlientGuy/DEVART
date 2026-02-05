@@ -1,0 +1,137 @@
+{% trans_default_domain 'portfolio' %}
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Portfolio
+{% endblock %}
+{% block meta_desc %}
+{% endblock %}
+{% block body %}
+<style>
+    #p-menu-dialog {
+        transition:
+            display 1s allow-discrete,
+            opacity 250ms;
+        opacity: 0;
+
+        &[open] {
+            opacity: 1;
+            @starting-style {
+                opacity: 0;
+            }
+
+            a {
+                transform: translateX(-50px);
+                opacity: 0;
+                animation: slide-right 1s;
+                animation-fill-mode: forwards;
+            }
+            a:nth-child(1) {
+                animation-delay: 50ms;
+            }
+            a:nth-child(2) {
+                animation-delay: 100ms;
+            }
+            a:nth-child(3) {
+                animation-delay: 150ms;
+            }
+            a:nth-child(4) {
+                animation-delay: 200ms;
+            }
+            a:nth-child(5) {
+                animation-delay: 250ms;
+            }
+            a:nth-child(6) {
+                animation-delay: 300ms;
+            }
+            a:nth-child(7) {
+                animation-delay: 350ms;
+            }
+        }
+
+    }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: unset;
+            opacity: 1;
+        }
+    }
+</style>
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
+{{ include('app/elements/_portfolio_fifsztoki.html.twig') }}
+<dialog id="p-menu-dialog" class="border-0 text-white vw-100 vh-100 position-fixed top-0 left-0 p-5" style="background-color: rgba(0,0,0,0.9); z-index: 99;">
+    <div class="row">
+        <div class="col-sm-12 d-flex justify-content-end">
+            <button type="button" id="close-p-menu" class="bg-transparent border-0">
+                <img src="{{ asset('assets/svg/times.svg') }}" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="h-100 d-flex align-items-center">
+        <div class="p-5 d-flex flex-column justify-content-around align-items-center fw-bold fs-1 w-100" style="height: 80%">
+            <a href="{{ path('app_portfolio') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
+            {% for cat in categories %}
+            <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}" data-cat="all">{{ cat }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</dialog>
+
+<div class="logo" style="height: 50vw; max-height: 500px">
+    <div class="slogan-left d-none d-md-flex">
+        <div class="slogan-left-text">thinking first</div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-8 col-10">
+            <img class="w-100" src="{{ asset('assets/svg/portfolio.svg') }}" alt="logo" style="">
+        </div>
+    </div>
+    <div style="flex: 1"></div>
+</div>
+<div class="container">
+    <div class="d-none d-md-block">
+        <div class="hashtags-categories">
+            <a href="{{ path('app_portfolio') }}" class="{{ category is empty ? 'p-link' : '' }}" data-cat="all">{% trans %}#Wszystkie{% endtrans %}</a>
+            {% for cat in categories %}
+            <a href="{{ path('app_portfolio', {category: cat}) }}" class="{{ cat.id == (category.id ?? 0) ? 'p-link' : '' }}">{{ cat }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="d-block d-md-none">
+        <div class="row">
+            <div class="col-sm-12 text-end">
+                <button id="show-cat-menu" class="fs-4 fw-light bg-transparent text-light border-0" type="button">
+                    {% trans %}Kategorie{% endtrans %}
+                    <img class="d-inline" src="{{ asset('/assets/svg/filter.svg') }}" alt="" style="width: 15px">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        {% for post in posts %}
+        <a class="position-relative d-flex align-items-center flex-column col-6 col-md-4 col-lg-3 col-xl-3" href="{{ path('app_portfolio_post', {slug: post.slug ?? post.id}) }}">
+            <div class="portfolio-block position-relative">
+                <img class="w-100" src="{{ path('devcore_blog_thumbnail', {id: post.id}) }}" alt="">
+            </div>
+            <span class="position-absolute mb-4" style="bottom: 0">Zobacz ></span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+<script>
+    $(function() {
+        /** @type {HTMLDialogElement} */
+        const dialog = document.querySelector('#p-menu-dialog');
+
+        $('#show-cat-menu').on('click', () => dialog.show());
+        $('#close-p-menu').on('click', () => dialog.close());
+    })
+</script>
+{% endblock %}

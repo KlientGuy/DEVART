@@ -1,0 +1,45 @@
+{% trans_default_domain 'layout' %}
+<footer>
+    <div class="w-100 flex-start foot-head">
+        <div class="nav-mini-i nav-mini fw-bold">
+            <a href="{{ path('app_portfolio') }}">Portfolio</a>
+            <a href="{{ path('app_index') }}#offer-home" class="">
+                {% trans %}
+                Oferta
+                {% endtrans %}
+            </a>
+            <a href="{{ path('app_devcore') }}" class="">DevCore</a>
+        </div>
+        <div class="d-flex d-md-block align-items-center flex-column footer-contact">
+            {% trans %}Kontakt{% endtrans %}
+            <div class="fw-light fs-6">+48 510 730 071</div>
+            <div class="fw-light fs-6">kontakt@2dev.com.pl</div>
+        </div>
+        <div class="socials">
+            <div class="d-none d-md-block"></div>
+            <div>
+                <a href="https://www.instagram.com/studio2dev" target="_blank">
+                    <img src="{{ asset('assets/svg/instagram.svg') }}" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/company/2devstudi0" target="_blank">
+                    <img src="{{ asset('assets/svg/linkedin.svg') }}" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=61576242897056" target="_blank">
+                    <img src="{{ asset('assets/svg/facebook.svg') }}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <a href="{{ path('app_privacy') }}" class="credits mt-2 mb-2 text-start w-auto">
+            {% trans %}
+            Polityka prywatności
+            {% endtrans %}
+        </a>
+        <span class="credits">&copy; 2025 2Dev Polska</span>
+    </div>
+</footer>

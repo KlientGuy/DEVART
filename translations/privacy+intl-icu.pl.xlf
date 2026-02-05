@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="oLFCGzO" resname="Polityka prywatności">
+        <source>Polityka prywatności</source>
+        <target>Polityka prywatności</target>
+      </trans-unit>
+      <trans-unit id="VZdbC8k" resname="Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.">
+        <source>Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.</source>
+        <target>Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.</target>
+      </trans-unit>
+      <trans-unit id="xxbsNv6" resname="Powrót">
+        <source>Powrót</source>
+        <target>Powrót</target>
+      </trans-unit>
+      <trans-unit id="xpEiShm" resname="I. Postanowienia ogólne">
+        <source>I. Postanowienia ogólne</source>
+        <target>I. Postanowienia ogólne</target>
+      </trans-unit>
+      <trans-unit id="Up2R2Qh" resname="Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą&#9;elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.">
+        <source>Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą	elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.</source>
+        <target>Polityka prywatności określa, jak zbierane, przetwarzane i przechowywane są dane osobowe Użytkowników niezbędne do świadczenia usług drogą	elektroniczną za pośrednictwem serwisu internetowego www.2dev.com.pl.</target>
+      </trans-unit>
+      <trans-unit id="9Dtdqii" resname="Serwis zbiera wyłącznie dane osobowe niezbędne do świadczenia i rozwoju usług w nim oferowanych.">
+        <source>Serwis zbiera wyłącznie dane osobowe niezbędne do świadczenia i rozwoju usług w nim oferowanych.</source>
+        <target>Serwis zbiera wyłącznie dane osobowe niezbędne do świadczenia i rozwoju usług w nim oferowanych.</target>
+      </trans-unit>
+      <trans-unit id="EZaxxKI" resname="Dane osobowe zbierane za pośrednictwem Serwisu są przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób&#9;fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia &#9;dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej RODO) oraz ustawą o ochronie danych osobowych z dnia 10 maja 2018 r.">
+        <source>Dane osobowe zbierane za pośrednictwem Serwisu są przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób	fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia 	dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej RODO) oraz ustawą o ochronie danych osobowych z dnia 10 maja 2018 r.</source>
+        <target>Dane osobowe zbierane za pośrednictwem Serwisu są przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób	fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia 	dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych, dalej RODO) oraz ustawą o ochronie danych osobowych z dnia 10 maja 2018 r.</target>
+      </trans-unit>
+      <trans-unit id="nhZPBBA" resname="II. Administrator danych">
+        <source>II. Administrator danych</source>
+        <target>II. Administrator danych</target>
+      </trans-unit>
+      <trans-unit id="4pmJ8mc" resname="Administratorem danych osobowych zbieranych poprzez Serwis jest 2DEV, adres: Bochnia, ul. Brzeska 37, 32-700, adres poczty elektronicznej: kontakt@2dev.com.pl.">
+        <source>Administratorem danych osobowych zbieranych poprzez Serwis jest 2DEV, adres: Bochnia, ul. Brzeska 37, 32-700, adres poczty elektronicznej: kontakt@2dev.com.pl.</source>
+        <target>Administratorem danych osobowych zbieranych poprzez Serwis jest 2DEV, adres: Bochnia, ul. Brzeska 37, 32-700, adres poczty elektronicznej: kontakt@2dev.com.pl.</target>
+      </trans-unit>
+      <trans-unit id="EP9KAzD" resname="III. Cel zbierania danych osobowych">
+        <source>III. Cel zbierania danych osobowych</source>
+        <target>III. Cel zbierania danych osobowych</target>
+      </trans-unit>
+      <trans-unit id="FdXA0ho" resname="Dane osobowe wykorzystywane są w celu:">
+        <source>Dane osobowe wykorzystywane są w celu:</source>
+        <target>Dane osobowe wykorzystywane są w celu:</target>
+      </trans-unit>
+      <trans-unit id="g0dL9Tx" resname="weryfikacji tożsamości Użytkownika,">
+        <source>weryfikacji tożsamości Użytkownika,</source>
+        <target>weryfikacji tożsamości Użytkownika,</target>
+      </trans-unit>
+      <trans-unit id="wfOPh.V" resname="realizacji umowy dotyczącej usług i e-usług,">
+        <source>realizacji umowy dotyczącej usług i e-usług,</source>
+        <target>realizacji umowy dotyczącej usług i e-usług,</target>
+      </trans-unit>
+      <trans-unit id="FMjim4n" resname="komunikacji z&#9;Użytkownikiem (formularz kontaktowy)">
+        <source>komunikacji z	Użytkownikiem (formularz kontaktowy)</source>
+        <target>komunikacji z	Użytkownikiem (formularz kontaktowy)</target>
+      </trans-unit>
+      <trans-unit id="tPBMZCb" resname="działań analitycznych i statystycznych, ">
+        <source>działań analitycznych i statystycznych, </source>
+        <target>działań analitycznych i statystycznych, </target>
+      </trans-unit>
+      <trans-unit id="WUFlI25" resname="Podanie danych jest dobrowolne, ale niezbędne do zawarcia umowy albo skorzystania z innych funkcjonalności Serwisu. ">
+        <source>Podanie danych jest dobrowolne, ale niezbędne do zawarcia umowy albo skorzystania z innych funkcjonalności Serwisu. </source>
+        <target>Podanie danych jest dobrowolne, ale niezbędne do zawarcia umowy albo skorzystania z innych funkcjonalności Serwisu. </target>
+      </trans-unit>
+      <trans-unit id="z51n6nm" resname="IV. Rodzaj przetwarzanych danych osobowych">
+        <source>IV. Rodzaj przetwarzanych danych osobowych</source>
+        <target>IV. Rodzaj przetwarzanych danych osobowych</target>
+      </trans-unit>
+      <trans-unit id="XzgTXub" resname="Administrator może przetwarzać dane osobowe Użytkownika: imię i nazwisko, adres e-mail, numer telefonu, NIP.">
+        <source>Administrator może przetwarzać dane osobowe Użytkownika: imię i nazwisko, adres e-mail, numer telefonu, NIP.</source>
+        <target>Administrator może przetwarzać dane osobowe Użytkownika: imię i nazwisko, adres e-mail, numer telefonu, NIP.</target>
+      </trans-unit>
+      <trans-unit id="FJcPTfo" resname="V. Okres przetwarzania danych osobowych">
+        <source>V. Okres przetwarzania danych osobowych</source>
+        <target>V. Okres przetwarzania danych osobowych</target>
+      </trans-unit>
+      <trans-unit id="vF09J.l" resname="Dane osobowe Użytkowników będą przetwarzane przez okres:">
+        <source>Dane osobowe Użytkowników będą przetwarzane przez okres:</source>
+        <target>Dane osobowe Użytkowników będą przetwarzane przez okres:</target>
+      </trans-unit>
+      <trans-unit id="hQq2aSs" resname="gdy podstawą przetwarzania danych jest wykonanie umowy – do momentu przedawnienia roszczeń po jej wykonaniu,">
+        <source>gdy podstawą przetwarzania danych jest wykonanie umowy – do momentu przedawnienia roszczeń po jej wykonaniu,</source>
+        <target>gdy podstawą przetwarzania danych jest wykonanie umowy – do momentu przedawnienia roszczeń po jej wykonaniu,</target>
+      </trans-unit>
+      <trans-unit id="gj5LQrs" resname="gdy podstawą przetwarzania danych jest zgoda – do momentu jej odwołania, a po odwołaniu zgody do przedawnienia roszczeń.">
+        <source>gdy podstawą przetwarzania danych jest zgoda – do momentu jej odwołania, a po odwołaniu zgody do przedawnienia roszczeń.</source>
+        <target>gdy podstawą przetwarzania danych jest zgoda – do momentu jej odwołania, a po odwołaniu zgody do przedawnienia roszczeń.</target>
+      </trans-unit>
+      <trans-unit id="HJqsGtH" resname="W obu przypadkach termin przedawnienia wynosi 6 lat, a dla roszczeń o świadczenia okresowe i roszczeń dotyczących prowadzenia działalności gospodarczej – 3 lata (jeśli przepis szczególny nie stanowi inaczej).">
+        <source>W obu przypadkach termin przedawnienia wynosi 6 lat, a dla roszczeń o świadczenia okresowe i roszczeń dotyczących prowadzenia działalności gospodarczej – 3 lata (jeśli przepis szczególny nie stanowi inaczej).</source>
+        <target>W obu przypadkach termin przedawnienia wynosi 6 lat, a dla roszczeń o świadczenia okresowe i roszczeń dotyczących prowadzenia działalności gospodarczej – 3 lata (jeśli przepis szczególny nie stanowi inaczej).</target>
+      </trans-unit>
+      <trans-unit id="14gZPZd" resname="VI. Udostępnianie danych osobowych ">
+        <source>VI. Udostępnianie danych osobowych </source>
+        <target>VI. Udostępnianie danych osobowych </target>
+      </trans-unit>
+      <trans-unit id="unkfdDg" resname="Dane osobowe Użytkowników mogą być przekazywane: podmiotom powiązanym z Administratorem, jego podwykonawcom, podmiotom współpracującym z&#9;Administratorem np. firmom obsługującym e-płatności, firmom &#9;świadczącym usługi kurierskie/pocztowe, kancelariom prawnym.">
+        <source>Dane osobowe Użytkowników mogą być przekazywane: podmiotom powiązanym z Administratorem, jego podwykonawcom, podmiotom współpracującym z	Administratorem np. firmom obsługującym e-płatności, firmom 	świadczącym usługi kurierskie/pocztowe, kancelariom prawnym.</source>
+        <target>Dane osobowe Użytkowników mogą być przekazywane: podmiotom powiązanym z Administratorem, jego podwykonawcom, podmiotom współpracującym z	Administratorem np. firmom obsługującym e-płatności, firmom 	świadczącym usługi kurierskie/pocztowe, kancelariom prawnym.</target>
+      </trans-unit>
+      <trans-unit id="6MAqwQG" resname="Dane osobowe Użytkowników nie będą/będą przekazywane poza teren Europejskiego Obszaru Gospodarczego (EOG).">
+        <source>Dane osobowe Użytkowników nie będą/będą przekazywane poza teren Europejskiego Obszaru Gospodarczego (EOG).</source>
+        <target>Dane osobowe Użytkowników nie będą/będą przekazywane poza teren Europejskiego Obszaru Gospodarczego (EOG).</target>
+      </trans-unit>
+      <trans-unit id="17k725L" resname="VII. Prawa Użytkowników">
+        <source>VII. Prawa Użytkowników</source>
+        <target>VII. Prawa Użytkowników</target>
+      </trans-unit>
+      <trans-unit id="AT5avHb" resname="Użytkownik Serwisu&#9;ma prawo do: dostępu do treści swoich danych osobowych, ich &#9;sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, wniesienia sprzeciwu wobec przetwarzania, cofnięcia zgody w każdej &#9;chwili (co nie ma wpływu na zgodność z prawem przetwarzania &#9;dokonanego w oparciu o zgodę przed jej cofnięciem).">
+        <source>Użytkownik Serwisu	ma prawo do: dostępu do treści swoich danych osobowych, ich 	sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, wniesienia sprzeciwu wobec przetwarzania, cofnięcia zgody w każdej 	chwili (co nie ma wpływu na zgodność z prawem przetwarzania 	dokonanego w oparciu o zgodę przed jej cofnięciem).</source>
+        <target>Użytkownik Serwisu	ma prawo do: dostępu do treści swoich danych osobowych, ich 	sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, wniesienia sprzeciwu wobec przetwarzania, cofnięcia zgody w każdej 	chwili (co nie ma wpływu na zgodność z prawem przetwarzania 	dokonanego w oparciu o zgodę przed jej cofnięciem).</target>
+      </trans-unit>
+      <trans-unit id="3LrAzxa" resname="Zgłoszenie o &#9;wystąpieniu przez Użytkownika z uprawnieniem wynikającym &#9;z wymienionych praw należy przesłać na adres kontakt@2dev.com.pl">
+        <source>Zgłoszenie o 	wystąpieniu przez Użytkownika z uprawnieniem wynikającym 	z wymienionych praw należy przesłać na adres kontakt@2dev.com.pl</source>
+        <target>Zgłoszenie o 	wystąpieniu przez Użytkownika z uprawnieniem wynikającym 	z wymienionych praw należy przesłać na adres kontakt@2dev.com.pl</target>
+      </trans-unit>
+      <trans-unit id="scaHhbh" resname="Administrator &#9;spełnia lub odmawia spełnienia żądania niezwłocznie – &#9;maksymalnie w ciągu miesiąca od jego otrzymania.">
+        <source>Administrator 	spełnia lub odmawia spełnienia żądania niezwłocznie – 	maksymalnie w ciągu miesiąca od jego otrzymania.</source>
+        <target>Administrator 	spełnia lub odmawia spełnienia żądania niezwłocznie – 	maksymalnie w ciągu miesiąca od jego otrzymania.</target>
+      </trans-unit>
+      <trans-unit id="_L.tjOz" resname="Użytkownik ma &#9;prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych, &#9;jeśli uzna, że przetwarzanie narusza jego prawa i wolności &#9;(RODO). ">
+        <source>Użytkownik ma 	prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych, 	jeśli uzna, że przetwarzanie narusza jego prawa i wolności 	(RODO). </source>
+        <target>Użytkownik ma 	prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych, 	jeśli uzna, że przetwarzanie narusza jego prawa i wolności 	(RODO). </target>
+      </trans-unit>
+      <trans-unit id="f1Rug3N" resname="VIII. Pliki cookies">
+        <source>VIII. Pliki cookies</source>
+        <target>VIII. Pliki cookies</target>
+      </trans-unit>
+      <trans-unit id="x9NBbw5" resname="Serwis zbiera&#9;informacje za pomocą plików cookies – sesyjnych, stałych i podmiotów zewnętrznych.">
+        <source>Serwis zbiera	informacje za pomocą plików cookies – sesyjnych, stałych i podmiotów zewnętrznych.</source>
+        <target>Serwis zbiera	informacje za pomocą plików cookies – sesyjnych, stałych i podmiotów zewnętrznych.</target>
+      </trans-unit>
+      <trans-unit id="X0jFfhd" resname="Zbieranie plików cookies wspiera poprawne świadczenie usług w Serwisie i służy celom statystycznym.">
+        <source>Zbieranie plików cookies wspiera poprawne świadczenie usług w Serwisie i służy celom statystycznym.</source>
+        <target>Zbieranie plików cookies wspiera poprawne świadczenie usług w Serwisie i służy celom statystycznym.</target>
+      </trans-unit>
+      <trans-unit id="7zwGmTH" resname="Użytkownik może określić zakres dostępu plików cookies do swojego urządzenia w ustawieniach przeglądarki.">
+        <source>Użytkownik może określić zakres dostępu plików cookies do swojego urządzenia w ustawieniach przeglądarki.</source>
+        <target>Użytkownik może określić zakres dostępu plików cookies do swojego urządzenia w ustawieniach przeglądarki.</target>
+      </trans-unit>
+      <trans-unit id="BTEhak7" resname="IX. Zautomatyzowane podejmowanie decyzji i profilowanie ">
+        <source>IX. Zautomatyzowane podejmowanie decyzji i profilowanie </source>
+        <target>IX. Zautomatyzowane podejmowanie decyzji i profilowanie </target>
+      </trans-unit>
+      <trans-unit id="SAUzvV." resname="Dane Użytkowników&#9;nie mogą być przetwarzane w zautomatyzowany sposób tak, że na skutek tego mogłyby zapaść wobec nich jakiekolwiek decyzje.">
+        <source>Dane Użytkowników	nie mogą być przetwarzane w zautomatyzowany sposób tak, że na skutek tego mogłyby zapaść wobec nich jakiekolwiek decyzje.</source>
+        <target>Dane Użytkowników	nie mogą być przetwarzane w zautomatyzowany sposób tak, że na skutek tego mogłyby zapaść wobec nich jakiekolwiek decyzje.</target>
+      </trans-unit>
+      <trans-unit id="NXRfc8H" resname="Dane Użytkowników &#9;mogą być profilowane celem dostosowania treści i personalizacji&#9;oferty po wyrażeniu przez nich zgody. ">
+        <source>Dane Użytkowników 	mogą być profilowane celem dostosowania treści i personalizacji	oferty po wyrażeniu przez nich zgody. </source>
+        <target>Dane Użytkowników 	mogą być profilowane celem dostosowania treści i personalizacji	oferty po wyrażeniu przez nich zgody. </target>
+      </trans-unit>
+      <trans-unit id="qoW3OkR" resname="X. Postanowienia końcowe">
+        <source>X. Postanowienia końcowe</source>
+        <target>X. Postanowienia końcowe</target>
+      </trans-unit>
+      <trans-unit id="L0hraS1" resname="Administrator ma prawo do wprowadzenia zmian w Polityce prywatności, przy czym prawa &#9;Użytkowników nie zostaną ograniczone.">
+        <source>Administrator ma prawo do wprowadzenia zmian w Polityce prywatności, przy czym prawa 	Użytkowników nie zostaną ograniczone.</source>
+        <target>Administrator ma prawo do wprowadzenia zmian w Polityce prywatności, przy czym prawa 	Użytkowników nie zostaną ograniczone.</target>
+      </trans-unit>
+      <trans-unit id="qhDBVa4" resname="Informacja o&#9;wprowadzonych zmianach pojawi się w formie komunikatu dostępnego w&#9;Serwisie.">
+        <source>Informacja o	wprowadzonych zmianach pojawi się w formie komunikatu dostępnego w	Serwisie.</source>
+        <target>Informacja o	wprowadzonych zmianach pojawi się w formie komunikatu dostępnego w	Serwisie.</target>
+      </trans-unit>
+      <trans-unit id="eVPIRde" resname="W sprawach nieuregulowanych w niniejszej Polityce prywatności obowiązują&#9;przepisy RODO i przepisy prawa polskiego.">
+        <source>W sprawach nieuregulowanych w niniejszej Polityce prywatności obowiązują	przepisy RODO i przepisy prawa polskiego.</source>
+        <target>W sprawach nieuregulowanych w niniejszej Polityce prywatności obowiązują	przepisy RODO i przepisy prawa polskiego.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,5 @@
+devcore_core:
+    resource:
+        path: '@DevcoreCoreBundle/src/Controller'
+        namespace: 'Devcore\CoreBundle\Controller'
+    type: attribute

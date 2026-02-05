@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="NZPpcdi" resname="agencja brandingowa.">
+        <source>agencja brandingowa.</source>
+        <target>agencja brandingowa.</target>
+      </trans-unit>
+      <trans-unit id="PIvHKhz" resname="Zobacz więcej">
+        <source>Zobacz więcej</source>
+        <target>Zobacz więcej</target>
+      </trans-unit>
+      <trans-unit id="khU9GgF" resname="oferta">
+        <source>oferta</source>
+        <target>oferta</target>
+      </trans-unit>
+      <trans-unit id="RbKZlsl" resname="Budowa marki">
+        <source>Budowa marki</source>
+        <target>Budowa marki</target>
+      </trans-unit>
+      <trans-unit id="mqVrfYY" resname="Nazewnictwo&#10;                    Barwa&#10;                    Przekaz&#10;                    Wygląd&#10;                    Strategia&#10;                    Komunikacja&#10;                    Wizerunek">
+        <source>Nazewnictwo
+                    Barwa
+                    Przekaz
+                    Wygląd
+                    Strategia
+                    Komunikacja
+                    Wizerunek</source>
+        <target>Nazewnictwo
+                    Barwa
+                    Przekaz
+                    Wygląd
+                    Strategia
+                    Komunikacja
+                    Wizerunek</target>
+      </trans-unit>
+      <trans-unit id="77h7V6y" resname="Strony internetowe">
+        <source>Strony internetowe</source>
+        <target>Strony internetowe</target>
+      </trans-unit>
+      <trans-unit id="Jh5Cxge" resname="Sklepy internetowe&#10;                    Web Design&#10;                    Front-end&#10;                    Back-end&#10;                    Wdrożenie">
+        <source>Sklepy internetowe
+                    Web Design
+                    Front-end
+                    Back-end
+                    Wdrożenie</source>
+        <target>Sklepy internetowe
+                    Web Design
+                    Front-end
+                    Back-end
+                    Wdrożenie</target>
+      </trans-unit>
+      <trans-unit id="6mptjas" resname="Rebranding">
+        <source>Rebranding</source>
+        <target>Rebranding</target>
+      </trans-unit>
+      <trans-unit id="ksJTAz6" resname="Ścieżka rozwoju&#10;                    Rozwój marketingowy&#10;                    Nauczanie&#10;                    Konsultacje&#10;                    Ćwiczenia&#10;                    Pobudzenie aktywności">
+        <source>Ścieżka rozwoju
+                    Rozwój marketingowy
+                    Nauczanie
+                    Konsultacje
+                    Ćwiczenia
+                    Pobudzenie aktywności</source>
+        <target>Ścieżka rozwoju
+                    Rozwój marketingowy
+                    Nauczanie
+                    Konsultacje
+                    Ćwiczenia
+                    Pobudzenie aktywności</target>
+      </trans-unit>
+      <trans-unit id="FkOQfGK" resname="Identyfikacja wizualna">
+        <source>Identyfikacja wizualna</source>
+        <target>Identyfikacja wizualna</target>
+      </trans-unit>
+      <trans-unit id="cI81n1Z" resname="Logo&#10;                    Key-visual&#10;                    Opakowania&#10;                    Submarki&#10;                    Infografika&#10;                    Wizytówki&#10;                    Użytki reklamowe">
+        <source>Logo
+                    Key-visual
+                    Opakowania
+                    Submarki
+                    Infografika
+                    Wizytówki
+                    Użytki reklamowe</source>
+        <target>Logo
+                    Key-visual
+                    Opakowania
+                    Submarki
+                    Infografika
+                    Wizytówki
+                    Użytki reklamowe</target>
+      </trans-unit>
+      <trans-unit id="0bIpbu9" resname="Aplikacje">
+        <source>Aplikacje</source>
+        <target>Aplikacje</target>
+      </trans-unit>
+      <trans-unit id="Hr10UgT" resname="Webowe&#10;                    Mobilne&#10;                    Konsolowe&#10;                    Oprogramowanie serwerowe">
+        <source>Webowe
+                    Mobilne
+                    Konsolowe
+                    Oprogramowanie serwerowe</source>
+        <target>Webowe
+                    Mobilne
+                    Konsolowe
+                    Oprogramowanie serwerowe</target>
+      </trans-unit>
+      <trans-unit id="31Xl5pT" resname="Dyrektor artystyczny">
+        <source>Dyrektor artystyczny</source>
+        <target>Dyrektor artystyczny</target>
+      </trans-unit>
+      <trans-unit id="x3cAsjL" resname="cms">
+        <source>cms</source>
+        <target>System CMS</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

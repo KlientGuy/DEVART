@@ -1,0 +1,5 @@
+devcore_blog:
+    resource:
+        path: '@DevcoreBlogBundle/src/Controller'
+        namespace: Devcore\BlogBundle\Controller
+    type: attribute

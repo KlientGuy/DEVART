@@ -21,3 +21,5 @@
 .env.test
 .env.dev
 symfony
+
+/files

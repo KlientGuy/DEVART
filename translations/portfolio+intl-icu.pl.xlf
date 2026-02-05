@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="n.aXMW4" resname="#Wszystkie">
+        <source>#Wszystkie</source>
+        <target>#Wszystkie</target>
+      </trans-unit>
+      <trans-unit id="KfLh4IG" resname="#Branding">
+        <source>#Branding</source>
+        <target>#Branding</target>
+      </trans-unit>
+      <trans-unit id="p5e4fcH" resname="#Strony internetowe">
+        <source>#Strony internetowe</source>
+        <target>#Strony internetowe</target>
+      </trans-unit>
+      <trans-unit id="SUMYnpe" resname="#Aplikacje">
+        <source>#Aplikacje</source>
+        <target>#Aplikacje</target>
+      </trans-unit>
+      <trans-unit id="AD4_8G6" resname="#Opakowania">
+        <source>#Opakowania</source>
+        <target>#Opakowania</target>
+      </trans-unit>
+      <trans-unit id="9hDbhnq" resname="#Social media">
+        <source>#Social media</source>
+        <target>#Social media</target>
+      </trans-unit>
+      <trans-unit id="YtNxwXo" resname="#Fashion">
+        <source>#Fashion</source>
+        <target>#Fashion</target>
+      </trans-unit>
+      <trans-unit id="Hes3bZp" resname="Niestety nic tutaj jeszcze nie ma">
+        <source>Niestety nic tutaj jeszcze nie ma</source>
+        <target>Niestety nic tutaj jeszcze nie ma</target>
+      </trans-unit>
+      <trans-unit id="097s4aD" resname="Projekt dla ESC SA. Strona internetowa BiuroLand skutecznie łączy atrakcyjny wygląd z funkcjonalnością, tworząc angażujące  informacyjne doświadczenie zakupowe dla kupujących meble biurowe. Doskonale przekazuje profesjonalizm, wiedzę i podejście zorientowane na klienta.">
+        <source>Projekt dla ESC SA. Strona internetowa BiuroLand skutecznie łączy atrakcyjny wygląd z funkcjonalnością, tworząc angażujące  informacyjne doświadczenie zakupowe dla kupujących meble biurowe. Doskonale przekazuje profesjonalizm, wiedzę i podejście zorientowane na klienta.</source>
+        <target>Projekt dla ESC SA. Strona internetowa BiuroLand skutecznie łączy atrakcyjny wygląd z funkcjonalnością, tworząc angażujące  informacyjne doświadczenie zakupowe dla kupujących meble biurowe. Doskonale przekazuje profesjonalizm, wiedzę i podejście zorientowane na klienta.</target>
+      </trans-unit>
+      <trans-unit id=".UzcGu3" resname="Opakowania">
+        <source>Opakowania</source>
+        <target>Opakowania</target>
+      </trans-unit>
+      <trans-unit id="Qq6gkUl" resname="Projekt etykiety łączy głębokie, szlachetne kolory, elegancką typografię i subtelne motywy trufli, tworząc ekskluzywny, naturalny charakter. Minimalistyczny design podkreśla dziedzictwo marki i jej luksusowy charakter.">
+        <source>Projekt etykiety łączy głębokie, szlachetne kolory, elegancką typografię i subtelne motywy trufli, tworząc ekskluzywny, naturalny charakter. Minimalistyczny design podkreśla dziedzictwo marki i jej luksusowy charakter.</source>
+        <target>Projekt etykiety łączy głębokie, szlachetne kolory, elegancką typografię i subtelne motywy trufli, tworząc ekskluzywny, naturalny charakter. Minimalistyczny design podkreśla dziedzictwo marki i jej luksusowy charakter.</target>
+      </trans-unit>
+      <trans-unit id="HsrxU5t" resname="Ten nowoczesny i dynamiczny design etykiety nosi nazwę „GOOD DRINK EXTRA ENERGY”. Łączy elegancką, sportową estetykę z wyrazistym stylem wizualnym, podkreślającym moc, energię i wydajność.">
+        <source>Ten nowoczesny i dynamiczny design etykiety nosi nazwę „GOOD DRINK EXTRA ENERGY”. Łączy elegancką, sportową estetykę z wyrazistym stylem wizualnym, podkreślającym moc, energię i wydajność.</source>
+        <target>Ten nowoczesny i dynamiczny design etykiety nosi nazwę „GOOD DRINK EXTRA ENERGY”. Łączy elegancką, sportową estetykę z wyrazistym stylem wizualnym, podkreślającym moc, energię i wydajność.</target>
+      </trans-unit>
+      <trans-unit id="X1FEHEP" resname="Główna grafika z hasłem „I'm the Beast” przedstawia spadochroniarza w akcji, otoczonego stylizowanym zarysem spadochronu. Przerywane linie dodają dynamiki, a hasło, napisane energicznym, odręcznym stylem, podkreśla pewność siebie i adrenalinę. Zielone tło z gradientem i postarzonym efektem nadaje projektowi świeży i naturalny charakter.">
+        <source>Główna grafika z hasłem „I'm the Beast” przedstawia spadochroniarza w akcji, otoczonego stylizowanym zarysem spadochronu. Przerywane linie dodają dynamiki, a hasło, napisane energicznym, odręcznym stylem, podkreśla pewność siebie i adrenalinę. Zielone tło z gradientem i postarzonym efektem nadaje projektowi świeży i naturalny charakter.</source>
+        <target>Główna grafika z hasłem „I'm the Beast” przedstawia spadochroniarza w akcji, otoczonego stylizowanym zarysem spadochronu. Przerywane linie dodają dynamiki, a hasło, napisane energicznym, odręcznym stylem, podkreśla pewność siebie i adrenalinę. Zielone tło z gradientem i postarzonym efektem nadaje projektowi świeży i naturalny charakter.</target>
+      </trans-unit>
+      <trans-unit id="wUH_9ab" resname="Ten projekt charakteryzuje się żywym, artystycznym wyglądem z odważnymi akcentami bieli, żółci, pomarańczu i niebieskiego. Nieregularny efekt rozprysków farby dodaje energii i kreatywności, nadając koszulce dynamiczny i nowoczesny charakter.">
+        <source>Ten projekt charakteryzuje się żywym, artystycznym wyglądem z odważnymi akcentami bieli, żółci, pomarańczu i niebieskiego. Nieregularny efekt rozprysków farby dodaje energii i kreatywności, nadając koszulce dynamiczny i nowoczesny charakter.</source>
+        <target>Ten projekt charakteryzuje się żywym, artystycznym wyglądem z odważnymi akcentami bieli, żółci, pomarańczu i niebieskiego. Nieregularny efekt rozprysków farby dodaje energii i kreatywności, nadając koszulce dynamiczny i nowoczesny charakter.</target>
+      </trans-unit>
+      <trans-unit id="rccwR5f" resname="Optident">
+        <source>Optident</source>
+        <target>Optident</target>
+      </trans-unit>
+      <trans-unit id="zyeoPdU" resname="Strona internetowa one-page powstała dla gabinetu stomatologicznego w Libiążu.">
+        <source>Strona internetowa one-page powstała dla gabinetu stomatologicznego w Libiążu.</source>
+        <target>Strona internetowa one-page powstała dla gabinetu stomatologicznego w Libiążu.</target>
+      </trans-unit>
+      <trans-unit id="Bc_SbyZ" resname="Dodatkowo stworzyliśmy Logotyp gabinetu, który idealnie wpasowuje się na stronę internetową.">
+        <source>Dodatkowo stworzyliśmy Logotyp gabinetu, który idealnie wpasowuje się na stronę internetową.</source>
+        <target>Dodatkowo stworzyliśmy Logotyp gabinetu, który idealnie wpasowuje się na stronę internetową.</target>
+      </trans-unit>
+      <trans-unit id="3OoFViC" resname="Projekt dla ESC SA. Ekskluzywny sklep internetowy, który skutecznie komunikuje luksus, elegancję i personalizację. Połączenie wysokiej jakości zdjęć, minimalistycznego designu i intuicyjnej nawigacji tworzy płynne doświadczenie zakupowe dla mężczyzn poszukujących wysokogatunkowych koszul. www.e-merceria.pl">
+        <source>Projekt dla ESC SA. Ekskluzywny sklep internetowy, który skutecznie komunikuje luksus, elegancję i personalizację. Połączenie wysokiej jakości zdjęć, minimalistycznego designu i intuicyjnej nawigacji tworzy płynne doświadczenie zakupowe dla mężczyzn poszukujących wysokogatunkowych koszul. www.e-merceria.pl</source>
+        <target>Projekt dla ESC SA. Ekskluzywny sklep internetowy, który skutecznie komunikuje luksus, elegancję i personalizację. Połączenie wysokiej jakości zdjęć, minimalistycznego designu i intuicyjnej nawigacji tworzy płynne doświadczenie zakupowe dla mężczyzn poszukujących wysokogatunkowych koszul. www.e-merceria.pl</target>
+      </trans-unit>
+      <trans-unit id="3gR0egE" resname="Logotyp łączy nowoczesność i dynamikę. Prosta typografia w połączeniu z kontrastującą zielenią podkreśla energię i ekologiczną świadomość marki, tworząc świeży i nowoczesny wizerunek firmy transportowej.">
+        <source>Logotyp łączy nowoczesność i dynamikę. Prosta typografia w połączeniu z kontrastującą zielenią podkreśla energię i ekologiczną świadomość marki, tworząc świeży i nowoczesny wizerunek firmy transportowej.</source>
+        <target>Logotyp łączy nowoczesność i dynamikę. Prosta typografia w połączeniu z kontrastującą zielenią podkreśla energię i ekologiczną świadomość marki, tworząc świeży i nowoczesny wizerunek firmy transportowej.</target>
+      </trans-unit>
+      <trans-unit id="UovhF8T" resname="Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.">
+        <source>Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.</source>
+        <target>Połączenie symboli błyskawicy, ciemnych tonów i wyrazistej typografii wpisuje się w branżę związaną z technologią, energią lub wysoką wydajnością.</target>
+      </trans-unit>
+      <trans-unit id="lquHrxV" resname="Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.">
+        <source>Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.</source>
+        <target>Ta wizytówka emanuje profesjonalizmem, innowacyjnością i efektywnością, co czyni ją idealnym wyborem dla firmy technologicznej, inżynieryjnej lub przemysłowej. Jej nowoczesna estetyka i wysokiej jakości design gwarantują trwałe wrażenie na klientach i partnerach biznesowych.</target>
+      </trans-unit>
+      <trans-unit id="FcnfX3c" resname="Aplikacja">
+        <source>Aplikacja</source>
+        <target>Aplikacja</target>
+      </trans-unit>
+      <trans-unit id="pdXds9s" resname="Aplikacja, która ma na celu ograniczenie czasu poświęcanego na social-media, w ramach kamieni milowych użytkownik otrzymuje punkty, które wymienia na kupony do wykorzystania.">
+        <source>Aplikacja, która ma na celu ograniczenie czasu poświęcanego na social-media, w ramach kamieni milowych użytkownik otrzymuje punkty, które wymienia na kupony do wykorzystania.</source>
+        <target>Aplikacja, która ma na celu ograniczenie czasu poświęcanego na social-media, w ramach kamieni milowych użytkownik otrzymuje punkty, które wymienia na kupony do wykorzystania.</target>
+      </trans-unit>
+      <trans-unit id="Tdg1cI7" resname="Branding Foco, marki przyjemnej oraz miłej dla odbiorców. Misja marki polega na wpłynięciu na czas spędzony przed ekranem.">
+        <source>Branding Foco, marki przyjemnej oraz miłej dla odbiorców. Misja marki polega na wpłynięciu na czas spędzony przed ekranem.</source>
+        <target>Branding Foco, marki przyjemnej oraz miłej dla odbiorców. Misja marki polega na wpłynięciu na czas spędzony przed ekranem.</target>
+      </trans-unit>
+      <trans-unit id="JYmzI5." resname="Minimalizm, luksus i komfort – tak krótko opisałbym mój najnowszy projekt dla sklepu TUKUPTU. Stworzyłem przestrzeń, w której estetyka spotyka się z funkcjonalnością, a elegancja łączy się z nowoczesnością.">
+        <source>Minimalizm, luksus i komfort – tak krótko opisałbym mój najnowszy projekt dla sklepu TUKUPTU. Stworzyłem przestrzeń, w której estetyka spotyka się z funkcjonalnością, a elegancja łączy się z nowoczesnością.</source>
+        <target>Minimalizm, luksus i komfort – tak krótko opisałbym mój najnowszy projekt dla sklepu TUKUPTU. Stworzyłem przestrzeń, w której estetyka spotyka się z funkcjonalnością, a elegancja łączy się z nowoczesnością.</target>
+      </trans-unit>
+      <trans-unit id="gtba71q" resname="Marka kosmetyczna premium, która łączy luksus, naturę i nowoczesną technologię. Każdy produkt jest stworzony dla najwyższego poziomu pielęgnacji – skuteczny, delikatny i doskonale zbalansowany.">
+        <source>Marka kosmetyczna premium, która łączy luksus, naturę i nowoczesną technologię. Każdy produkt jest stworzony dla najwyższego poziomu pielęgnacji – skuteczny, delikatny i doskonale zbalansowany.</source>
+        <target>Marka kosmetyczna premium, która łączy luksus, naturę i nowoczesną technologię. Każdy produkt jest stworzony dla najwyższego poziomu pielęgnacji – skuteczny, delikatny i doskonale zbalansowany.</target>
+      </trans-unit>
+      <trans-unit id="2Muh91k" resname="Interaktywna mapa pomaga odwiedzającym szybko znaleźć miejsca, w których mogą załatwić konkretne sprawy administracyjne. Dzięki przedstawieniu wszystkich dostępnych usług, usprawnia komunikację między miastem a mieszkańcami, czyniąc cały proces bardziej efektywnym.">
+        <source>Interaktywna mapa pomaga odwiedzającym szybko znaleźć miejsca, w których mogą załatwić konkretne sprawy administracyjne. Dzięki przedstawieniu wszystkich dostępnych usług, usprawnia komunikację między miastem a mieszkańcami, czyniąc cały proces bardziej efektywnym.</source>
+        <target>Interaktywna mapa pomaga odwiedzającym szybko znaleźć miejsca, w których mogą załatwić konkretne sprawy administracyjne. Dzięki przedstawieniu wszystkich dostępnych usług, usprawnia komunikację między miastem a mieszkańcami, czyniąc cały proces bardziej efektywnym.</target>
+      </trans-unit>
+      <trans-unit id="9BQBc.5" resname="Miasto i Gmina Skawina">
+        <source>Miasto i Gmina Skawina</source>
+        <target>Miasto i Gmina Skawina</target>
+      </trans-unit>
+      <trans-unit id="T6mQy.u" resname="Projekt dla ESC SA. Strona internetowa to dobrze zaprojektowana, estetyczna i funkcjonalna platforma miejska. Intuicyjna nawigacja, interaktywne funkcje i nowoczesny design sprawiają, że jest skutecznym narzędziem dla mieszkańców, firm i turystów, wspierając komunikację oraz zaangażowanie obywatelskie. www.gminaskawina.pl">
+        <source>Projekt dla ESC SA. Strona internetowa to dobrze zaprojektowana, estetyczna i funkcjonalna platforma miejska. Intuicyjna nawigacja, interaktywne funkcje i nowoczesny design sprawiają, że jest skutecznym narzędziem dla mieszkańców, firm i turystów, wspierając komunikację oraz zaangażowanie obywatelskie. www.gminaskawina.pl</source>
+        <target>Projekt dla ESC SA. Strona internetowa to dobrze zaprojektowana, estetyczna i funkcjonalna platforma miejska. Intuicyjna nawigacja, interaktywne funkcje i nowoczesny design sprawiają, że jest skutecznym narzędziem dla mieszkańców, firm i turystów, wspierając komunikację oraz zaangażowanie obywatelskie. www.gminaskawina.pl</target>
+      </trans-unit>
+      <trans-unit id="9SKsPDp" resname="Projekt dla &lt;a href=&quot;https://www.escsa.pl/&quot; target=&quot;_blank&quot; style=&quot;color: #0A84FF&quot;&gt;ESC SA.&lt;/a&gt; Strona internetowa GOPR (Górskie Ochotnicze Pogotowie Ratunkowe) została zaprojektowana jako nowoczesna, funkcjonalna i wizualnie atrakcyjna platforma, dostarczająca kluczowe informacje o bezpieczeństwie w górach, akcjach ratunkowych oraz aktualnych warunkach pogodowych.">
+        <source>Projekt dla &lt;a href="https://www.escsa.pl/" target="_blank" style="color: #0A84FF"&gt;ESC SA.&lt;/a&gt; Strona internetowa GOPR (Górskie Ochotnicze Pogotowie Ratunkowe) została zaprojektowana jako nowoczesna, funkcjonalna i wizualnie atrakcyjna platforma, dostarczająca kluczowe informacje o bezpieczeństwie w górach, akcjach ratunkowych oraz aktualnych warunkach pogodowych.</source>
+        <target><![CDATA[Projekt dla <a href="https://www.escsa.pl/" target="_blank" style="color: #0A84FF">ESC SA.</a> Strona internetowa GOPR (Górskie Ochotnicze Pogotowie Ratunkowe) została zaprojektowana jako nowoczesna, funkcjonalna i wizualnie atrakcyjna platforma, dostarczająca kluczowe informacje o bezpieczeństwie w górach, akcjach ratunkowych oraz aktualnych warunkach pogodowych.]]></target>
+      </trans-unit>
+      <trans-unit id="pH9t80Y" resname="Fundacja GOPR">
+        <source>Fundacja GOPR</source>
+        <target>Fundacja GOPR</target>
+      </trans-unit>
+      <trans-unit id="nUQ5Pb3" resname="Fundacja GOPR wraz ze sklepem internetowym została zaprojektowana w czystej, nowoczesnej i profesjonalnej estetyce, która współgra z misją wsparcia górskiego ratownictwa.">
+        <source>Fundacja GOPR wraz ze sklepem internetowym została zaprojektowana w czystej, nowoczesnej i profesjonalnej estetyce, która współgra z misją wsparcia górskiego ratownictwa.</source>
+        <target>Fundacja GOPR wraz ze sklepem internetowym została zaprojektowana w czystej, nowoczesnej i profesjonalnej estetyce, która współgra z misją wsparcia górskiego ratownictwa.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

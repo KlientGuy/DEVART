@@ -18,6 +18,6 @@ jobs:
       - name: Rsync
         run: rsync -avrz ./* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/2dev/domains/2dev.com.pl/devart/
       - name: Composer Install
-        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'source ~/.bash_profile && cd ~/domains/2dev.com.pl/devart/ && composer install'
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'source ~/.bash_profile && cd ~/domains/2dev.com.pl/devart/ && COMPOSER_AUTH="${{ secrets.COMPOSER_TOKEN }}" composer install'
       - name: Cache clear
         run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'source ~/.bash_profile && cd ~/domains/2dev.com.pl/devart/ && php bin/console c:c'

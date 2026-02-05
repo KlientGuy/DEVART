@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+.post-blocks a {
+    color: #0A84FF;
+}
+</style>
+{{ include('blog/_post.html.twig', {post: post}) }}
+{% endblock %}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="de" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="SLV5Ijj" resname="business_card.title">
+        <source>business_card.title</source>
+        <target>2DEV - Branding-Agentur</target>
+      </trans-unit>
+      <trans-unit id="FSQz7Gc" resname="business_card.span_branding">
+        <source>business_card.span_branding</source>
+        <target>Branding</target>
+      </trans-unit>
+      <trans-unit id="egsJB.0" resname="business_card.span_identity_visualisations">
+        <source>business_card.span_identity_visualisations</source>
+        <target>Visuelle Markenidentität</target>
+      </trans-unit>
+      <trans-unit id="VmVFXzs" resname="business_card.span_packages">
+        <source>business_card.span_packages</source>
+        <target>Verpackungen</target>
+      </trans-unit>
+      <trans-unit id="jdUJGVe" resname="business_card.span_websites">
+        <source>business_card.span_websites</source>
+        <target>Websites</target>
+      </trans-unit>
+      <trans-unit id="R76zBi8" resname="business_card.span_webapps">
+        <source>business_card.span_webapps</source>
+        <target>Online-Anwendungen</target>
+      </trans-unit>
+      <trans-unit id="p3tmqQ3" resname="business_card.telephone">
+        <source>business_card.telephone</source>
+        <target>Telefon</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

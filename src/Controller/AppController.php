@@ -166,7 +166,7 @@ class AppController extends AbstractController
             $posts = $postRepository->findByCategory($cat);
         }
         else {
-            $posts = $postRepository->findBy(['active' => 1]);
+            $posts = $postRepository->findBy(['active' => 1], ['weight' => 'ASC']);
         }
         $locale = $request->attributes->get('_locale');
 

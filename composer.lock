@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1800c4777b37d802617720ab74e44784",
+    "content-hash": "3b3b127aad6b5068f44db99015ae9a24",
     "packages": [
         {
             "name": "2dev/devcore",
-            "version": "1.0.6",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:studio2dev/devcore.git",
-                "reference": "6004ae40d06e08bd76fc7c646f843f6486d95e8a"
+                "reference": "26be14f599742ce61d26116a8ddfb71c73593bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studio2dev/devcore/zipball/6004ae40d06e08bd76fc7c646f843f6486d95e8a",
-                "reference": "6004ae40d06e08bd76fc7c646f843f6486d95e8a",
+                "url": "https://api.github.com/repos/studio2dev/devcore/zipball/26be14f599742ce61d26116a8ddfb71c73593bf8",
+                "reference": "26be14f599742ce61d26116a8ddfb71c73593bf8",
                 "shasum": ""
             },
             "require": {
@@ -71,23 +71,23 @@
             ],
             "description": "CMS",
             "support": {
-                "source": "https://github.com/studio2dev/devcore/tree/1.0.6",
+                "source": "https://github.com/studio2dev/devcore/tree/1.0.5",
                 "issues": "https://github.com/studio2dev/devcore/issues"
             },
-            "time": "2026-02-05T19:25:27+00:00"
+            "time": "2026-02-10T21:17:30+00:00"
         },
         {
             "name": "2dev/devcore-blog",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:studio2dev/devcore-blog.git",
-                "reference": "6a003950411feafc25b241390d5912309a49274d"
+                "reference": "304e4674c13feb7adfcb1973435d2218c9d83671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studio2dev/devcore-blog/zipball/6a003950411feafc25b241390d5912309a49274d",
-                "reference": "6a003950411feafc25b241390d5912309a49274d",
+                "url": "https://api.github.com/repos/studio2dev/devcore-blog/zipball/304e4674c13feb7adfcb1973435d2218c9d83671",
+                "reference": "304e4674c13feb7adfcb1973435d2218c9d83671",
                 "shasum": ""
             },
             "require": {
@@ -109,10 +109,10 @@
             ],
             "description": "Blog module for Devcore CMS",
             "support": {
-                "source": "https://github.com/studio2dev/devcore-blog/tree/1.0.5",
+                "source": "https://github.com/studio2dev/devcore-blog/tree/1.0.6",
                 "issues": "https://github.com/studio2dev/devcore-blog/issues"
             },
-            "time": "2026-02-05T19:18:49+00:00"
+            "time": "2026-02-10T21:29:49+00:00"
         },
         {
             "name": "doctrine/collections",

@@ -37,9 +37,11 @@
         window.dataLayer = window.dataLayer || [];
 
         function gtag(){dataLayer.push(arguments);}
+        loadGtag();
 
         if(consentCookie === 'true') {
-            loadAnalytics();
+            // loadGtag();
+            // loadAnalytics();
         }
         else if(consentCookie !== 'false') {
             document.addEventListener('DOMContentLoaded', () => {
@@ -50,12 +52,35 @@
         function acceptCookies() {
             document.cookie = 'consent=true';
             document.querySelector('.cookie-consent').remove();
-            loadAnalytics();
+            // loadAnalytics();
+            // loadGtag();
+            gtag('consent', 'update', {
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              ad_storage: 'denied',
+              analytics_storage: 'granted'
+            });
         }
 
         function declineCookies() {
             document.cookie = 'consent=false';
             document.querySelector('.cookie-consent').remove();
+            gtag('consent', 'update', {
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              ad_storage: 'denied',
+              analytics_storage: 'denied'
+            });
+        }
+
+
+        function loadGtag() {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-KJ4L6HGC';
+            script.async = "true";
+            document.querySelector('head').append(script);
+            gtag('js', new Date());
+            gtag('config', 'GTM-KJ4L6HGC');
         }
 
         function loadAnalytics() {

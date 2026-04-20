@@ -49,6 +49,9 @@
         if(consentCookie === 'true') {
             // loadGtag();
             // loadAnalytics();
+            document.addEventListener('DOMContentLoaded', () => {
+                acceptCookies();
+            })
         }
         else if(consentCookie !== 'false') {
             document.addEventListener('DOMContentLoaded', () => {
